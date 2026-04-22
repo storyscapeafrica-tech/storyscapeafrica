@@ -1,84 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Storyscape Africa</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #0b0f0c;
-      color: #f5f5dc;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)),
-      url('storyscape africa vignette 2.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .glow-fire {
-      text-shadow: 0 0 10px #ff7a00, 0 0 25px #ff3c00;
-    }
-
-    .logo {
-      height: 60px;
-    }
-
-    .pattern-overlay {
-      position: absolute;
-      inset: 0;
-      background-image: url('2.png');
-      background-size: cover;
-      opacity: 0.05;
-      pointer-events: none;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, #ff7a00, #ff3c00);
-      transition: all 0.3s ease;
-    }
-
-    .cta:hover {
-      transform: scale(1.05);
-    }
-
-    .story-link {
-      display: block;
-      margin-top: 8px;
-      color: #fb923c;
-      text-decoration: underline;
-      transition: 0.2s ease;
-    }
-
-    .story-link:hover {
-      color: #fdba74;
-    }
-
-    .error-box {
-      background: #7f1d1d;
-      color: #fecaca;
-      padding: 10px;
-      margin-top: 12px;
-      border-radius: 10px;
-      display: none;
-      font-size: 14px;
-    }
-
-    .success-box {
-      background: #14532d;
-      color: #bbf7d0;
-      padding: 10px;
-      margin-top: 12px;
-      border-radius: 10px;
-      display: none;
-      font-size: 14px;
-    }
-  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -147,10 +78,8 @@
 
   <div class="grid md:grid-cols-3 gap-6 relative z-10">
 
-    <!-- UNBOWED -->
     <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
       <img src="book1.jpg" class="mb-3 rounded" />
-
       <h3 class="text-xl">Unbowed: Women Defying Control</h3>
       <p class="text-sm mb-3">Underdogs in male-privileged societies.</p>
 
@@ -159,10 +88,8 @@
       <a href="Percussion.html" class="story-link gated-link">Percussion</a>
     </div>
 
-    <!-- PENITENT -->
     <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
       <img src="book2.jpg" class="mb-3 rounded" />
-
       <h3 class="text-xl">The Penitent</h3>
       <p class="text-sm mb-3">
         Heretic father. Pariah daughter. The truth brings them face-to-face.
@@ -174,10 +101,8 @@
       <a href="3. Children of Misfortune.html" class="story-link gated-link">Children of Misfortune</a>
     </div>
 
-    <!-- COMING SOON -->
     <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
       <img src="book3.jpg" class="mb-3 rounded" />
-
       <h3 class="text-xl">Coming Soon</h3>
       <p class="text-sm">
         A new myth is forming beneath the surface.
@@ -246,4 +171,3 @@
 
 </body>
 </html>
-```

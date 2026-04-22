@@ -1,0 +1,78 @@
+/* GLOBAL */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #0b0f0c;
+  color: #f5f5dc;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)),
+  url('storyscape africa vignette 2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* TEXT EFFECTS */
+.glow-fire {
+  text-shadow: 0 0 10px #ff7a00, 0 0 25px #ff3c00;
+}
+
+/* LOGO */
+.logo {
+  height: 60px;
+}
+
+/* OVERLAY */
+.pattern-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('2.png');
+  background-size: cover;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* CTA BUTTON */
+.cta {
+  background: linear-gradient(135deg, #ff7a00, #ff3c00);
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.story-link {
+  display: block;
+  margin-top: 8px;
+  color: #fb923c;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+.story-link:hover {
+  color: #fdba74;
+}
+
+/* ALERT BOXES */
+.error-box {
+  background: #7f1d1d;
+  color: #fecaca;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 10px;
+  display: none;
+  font-size: 14px;
+}
+
+.success-box {
+  background: #14532d;
+  color: #bbf7d0;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 10px;
+  display: none;
+  font-size: 14px;
+}
