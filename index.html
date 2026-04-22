@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storyscape Africa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #0b0f0c;
+      color: #f5f5dc;
+    }
+
+    /* HERO BACKGROUND */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)), url('storyscape africa vignette 2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* FIRE GLOW EFFECT */
+    .glow-fire {
+      text-shadow: 0 0 10px #ff7a00, 0 0 25px #ff3c00;
+    }
+
+    /* LOGO STYLING */
+    .logo {
+      height: 60px;
+    }
+
+    /* SUBTLE PATTERN OVERLAY */
+    .pattern-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: url('2.png');
+      background-size: cover;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    /* BUTTON STYLE */
+    .cta {
+      background: linear-gradient(135deg, #ff7a00, #ff3c00);
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="flex justify-between items-center p-6 relative z-10">
+    <div class="flex items-center gap-3">
+      <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+      <h1 class="text-xl tracking-widest">Storyscape Africa</h1>
+    </div>
+    <div>
+      <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
+      <a href="#about" class="mx-3 hover:text-orange-400">About</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero h-screen flex flex-col justify-center items-center text-center px-4 relative">
+    <div class="pattern-overlay"></div>
+
+    <h2 class="text-5xl md:text-6xl mb-4 glow-fire relative z-10">
+      There is a world here.
+    </h2>
+
+    <p class="max-w-xl mb-6 text-lg relative z-10">
+      Enter it.
+    </p>
+
+    <!-- EMAIL FORM (CONNECT TO MAILCHIMP / CONVERTKIT) -->
+    <form action="#" method="POST"
+      class="bg-black bg-opacity-80 p-6 rounded-2xl shadow-xl w-full max-w-md relative z-10">
+      <h3 class="mb-3 text-lg">Unlock Your Free Chapter</h3>
+
+      <input type="email" name="email" placeholder="Enter your email" required
+        class="w-full p-3 mb-3 rounded bg-gray-900 border border-gray-700" />
+
+      <button type="submit"
+        class="w-full cta p-3 rounded font-semibold">
+        Begin the Story
+      </button>
+    </form>
+
+  </section>
+
+  <!-- BOOKS -->
+  <section id="books" class="py-16 px-6 relative">
+    <div class="pattern-overlay"></div>
+
+    <h2 class="text-3xl mb-8 text-center relative z-10">Books</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 relative z-10">
+
+      <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
+        <img src="book1.jpg" class="mb-3 rounded" />
+        <h3 class="text-xl">Unbowed: Women Defying Control</h3>
+        <p class="text-sm">Underdogs in male-privileged societies.</p>
+      </div>
+
+      <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
+        <img src="book2.jpg" class="mb-3 rounded" />
+        <h3 class="text-xl">The Penitent</h3>
+        <p class="text-sm">Heretic father. Pariah daughter. The truth brings them face‑to‑face. Ally… or enemy?</p>
+      </div>
+
+      <div class="bg-gray-900 p-4 rounded-2xl shadow-lg">
+        <img src="book3.jpg" class="mb-3 rounded" />
+        <h3 class="text-xl">Coming Soon</h3>
+        <p class="text-sm">A new myth is forming beneath the surface.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 px-6 text-center max-w-2xl mx-auto relative">
+    <div class="pattern-overlay"></div>
+
+    <h2 class="text-3xl mb-4 relative z-10">About</h2>
+
+    <p class="relative z-10">
+      Storyscape Africa is a literary platform dedicated to African-rooted storytelling—where mythology,
+      speculative fiction, and psychological depth converge.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-6 text-sm opacity-60">
+    <p>© 2026 Storyscape Africa</p>
+  </footer>
+
+</body>
+</html>
