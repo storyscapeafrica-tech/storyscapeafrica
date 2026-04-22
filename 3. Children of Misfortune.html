@@ -1,253 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Children of Misfortune</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Children of Misfortune</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
-      margin: 40px auto;
-      max-width: 900px;
-      background-color: #f9f9f9;
-      color: #222;
-    }
+        body {
+            background: #1c2420;
+            color: #dfddce;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.58;
+            font-size: 1.08rem;
+            padding: 2rem 1rem;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      letter-spacing: 1px;
-    }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #2a2f28;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            border: 1px solid #5c6b53;
+        }
 
-    p {
-      margin-bottom: 1.1em;
-      text-align: justify;
-    }
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.4rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            border-left: 6px solid #9bba7a;
+            padding-left: 1.2rem;
+            color: #f2f0df;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 0 #2e3428;
+        }
 
-    .spacer {
-      text-align: center;
-      margin: 30px 0;
-      letter-spacing: 4px;
-    }
-  </style>
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #b9d28c;
+            margin-bottom: 2rem;
+            margin-top: 0.2rem;
+            border-left: 6px solid #9bba7a;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #dde8be;
+        }
+
+        .yoruba-word {
+            font-family: 'Courier Prime', monospace;
+            background: #3f493b;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #cfeca0;
+            font-style: normal;
+        }
+
+        .inner-thought {
+            font-style: italic;
+            color: #cbdba4;
+            background: #363f30;
+            padding: 0.05rem 0.2rem;
+            border-radius: 6px;
+        }
+
+        .dream-flash {
+            background: #313b2c;
+            padding: 1.2rem 1.8rem;
+            border-radius: 32px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border-left: 4px solid #9bba7a;
+            color: #eff0dc;
+            font-style: normal;
+            box-shadow: inset 0 0 6px #00000020, 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .dream-flash p {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #5c6b53, #9bba7a, #5c6b53);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #9bba7a;
+            margin: 1.8rem 0;
+            padding: 0.7rem 1.4rem;
+            background: #353f31;
+            color: #eef0db;
+            border-radius: 24px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        .divider-stars {
+            text-align: center;
+            letter-spacing: 4px;
+            color: #9bba7a;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #aec586;
+            border-top: 1px solid #5c6b53;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+
+        .secret-beat {
+            font-weight: 600;
+            color: #d8f0b0;
+        }
+        .child-pov {
+            background: #2a3125;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
 <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles2.css" />
 </head>
 <body>
 <!-- NAV -->
 <nav class="flex justify-between items-center p-6 relative z-10">
   <div class="flex items-center gap-3">
     <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
-    <h1 class="text-xl tracking-widest">Storyscape Africa</h1>
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
   </div>
 
   <div>
+    <a href="index.html" class="mx-3 hover:text-orange-400">Home</a>
     <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
     <a href="#about" class="mx-3 hover:text-orange-400">About</a>
   </div>
 </nav>
-<h2>CHILDREN OF MISFORTUNE</h2>
 
-<p>I was four when some men stormed into our compound, caught my cousin by the arm, and spoke to him as if he were a grown-up: “Why did you close their wombs? Why are you causing harm?” My cousin swore that it wasn’t him, but his cries met deaf ears. They led him away, and that was that. It was the last time I saw him.</p>
-
-<p>I asked Mother why they took him away, and she said, “Because he is an ajogun.”</p>
-
-<p>“What’s that?”</p>
-
-<p>“They’re children of misfortune. They make bad things happen to people without meaning to.”</p>
-
-<p>I’ve carried that explanation with me ever since.</p>
-
-<p>I’ve carried the fear too.</p>
-
-<p>But no one explained ajoguns to me the way Tinu did. She was an older girl from the next hamlet, who used to teach the younger ones how to dance. Kolade and I went to drum, but really, we went to breathe in her air. When her students were spent from dancing, they collapsed into the grass, and she filled the lull with stories or answers to their questions.</p>
-
-<p>They have energies that harm those around them.<br>
-Some say they were born with a spell.<br>
-We remove them because there is no cure. Where?—I don’t know where.<br>
-No, we don’t hate them; we just want them far from us and to never return.<br>
-How are they discovered? Oracles sense their energies.</p>
-
-<p>Her words stayed with me.</p>
-
-<p>So did her face. (I get dizzy thinking about her.)</p>
-
-<p>She was the most beautiful girl I had ever seen.</p>
-
-<p>Those lips, that perfect smile—they made you steal glances until she felt like a secret—your secret.</p>
-
-<p>I’ve dreamed about her more times than I can count. Mother knows how I feel about her, but she doesn’t know I’m a peeper.</p>
-
-<div class="spacer">***</div>
-
-<p>The night the rain nearly fell, our soldiers limped into the village like rain-beaten dogs. No drums greeted them—no parade through the market. No bonfires. No dances. Nothing.</p>
-
-<p>People say they ran from spirits in the forest.</p>
-
-<p>A stupor hangs over us like a bedtime lantern with its flame dimmed. Mother hovers over the simmering bathwater while Kolade and I watch the goats in the yard. A male goat mounts a female and rides it.</p>
-
-<p>“Those goats never get tired of that game,” I say.</p>
-
-<p>“It’s not a game. They’re making a baby.”</p>
-
-<p>Oh. So, those nighttime grown-up plays I saw were not games.</p>
-
-<p>Kolade notices my hesitation and asks, “What?”</p>
-
-<p>“Can they change it from a girl to a boy when there is a baby already?”</p>
-
-<p>“I don’t know. Why do you ask?”</p>
-
-<p>“Baba Ojo told Aunty Mufin she’s carrying a girl, and he can make it a boy.”</p>
-
-<p>“Baba Ojo has medicines for everything, you know that.”</p>
-
-<p>“It wasn’t medicine.”</p>
-
-<p>“What, then?”</p>
-
-<p>“That.”</p>
-
-<p>I point to the goat on the back of another, bumping furiously.</p>
-
-<p>Kolade whips his head around and stares. “Where did you see them?”</p>
-
-<p>I shake my head. “I didn’t see. I heard.”</p>
-
-<p>“What did he say?”</p>
-
-<p>“Why do you want to know?”</p>
-
-<p>He twisted my arm until I cried out in pain. “Tell me,” he says.</p>
-
-<p>“He said... Let me climb your back and change it to a boy.”</p>
-
-<p>Kolade fell on his back and laughed hard. “Liar. Grownups say, ‘let me lie with you.’”</p>
-
-<p>“No, they don’t. That doesn’t even make sense.”</p>
-
-<p>“Kolade,” Mother calls. “Put some wood in the fire.”</p>
-
-<p>Kolade gathers wood and feeds the fire. I go to Grandfather and climb onto his lap.</p>
-
-<p>“Better a coward than a loser in battle,” Mother says.</p>
-
-<p>Grandfather snorts. “What’s the difference?”</p>
-
-<p>“What about the carnival?” Kolade asks.</p>
-
-<p>“It will hold,” Mother says.</p>
-
-<p>“Yay!”</p>
-
-<p>“It should’ve been canceled,” Grandfather mutters.</p>
-
-<p>Mother stirs the water. “And what becomes of Modekun’s marriageable girls?”</p>
-
-<p>“They’ll use a wrestling contest,” Kolade says.</p>
-
-<p>Mother sighs. “Soldiers make better husbands.”</p>
-
-<p>They talk like boring adults.</p>
-
-<p>Kolade challenges me to wrestle. We circle, stamping and feinting. In my mind, I fight for Tinu.</p>
-
-<p>He hooks my foot and throws me down. Before I can recover, he pins me, pressing my arms against my throat.</p>
-
-<p>“Say I’m the winner.”</p>
-
-<p>“Iya!” I scream.</p>
-
-<p>He releases me.</p>
-
-<p>I go to bed—not because I’m sleepy, but so I can be with Tinu.</p>
-
-<div class="spacer">***</div>
-
-<p>I open my eyes.</p>
-
-<p>I’m cold. And wet.</p>
-
-<p>A wooden mask slips off my face and clatters to the floor.</p>
-
-<p>Talismans. Beads. Gourds.</p>
-
-<p>My family crowds around me.</p>
-
-<p>“Akindele?” Mother calls.</p>
-
-<p>Her eyes are red.</p>
-
-<p>“He’s alive!” she cries.</p>
-
-<p>Grandfather squints. “Back from the dead.”</p>
-
-<p>I shiver.</p>
-
-<p>“Kolade! Wrapper!” Mother shouts.</p>
-
-<p>They say I wouldn’t wake. They poured water on me.</p>
-
-<p>“He wasn’t sleeping,” Baba Ojo says. “He was missing from his body.”</p>
-
-<p>I say nothing.</p>
-
-<p>I know the truth.</p>
-
-<p>Ajoguns never know what they cause.</p>
-
-<div class="spacer">***</div>
-
-<p>Baba Ojo sends everyone out.</p>
-
-<p>“You left your body,” he says. “Where did you go?”</p>
-
-<p>I lie. “I was here.”</p>
-
-<p>He studies me.</p>
-
-<p>I think of Tinu.</p>
-
-<p>The creek.</p>
-
-<p>Moonlight on her skin.</p>
-
-<p>I say nothing more.</p>
-
-<p>The curtain rustles.</p>
-
-<p>Mother returns—with Baba Folarin.</p>
-
-<p>An amoye.</p>
-
-<p>My heart stops.</p>
-
-<p>“The boy’s soul left his body,” Baba Ojo says.</p>
-
-<p>“I was sleeping,” I insist.</p>
-
-<p>Baba Folarin smiles.</p>
-
-<p>“Who reincarnates in his old body?”</p>
-
-<p>I smile back.</p>
-
-<p>He doesn’t believe him.</p>
-
-<p>Relief floods me.</p>
-
-<p>Then laughter.</p>
-
-<p>His laughter.</p>
-
-<p>My laughter.</p>
-
-<p>It spills out, uncontrollable.</p>
-
+<div class="container">
+    <h1>Children of Misfortune</h1>
+    <div class="sub">Modekun, Oyo Kingdom · 1813 · where souls wander and secrets hide</div>
+
+    <p>I was four when some men stormed into our compound, caught my cousin by the arm, and spoke to him as if he were a grown-up: <span class="dialogue">"Why did you close their wombs? Why are you causing harm?"</span> My cousin swore that it wasn't him, but his cries met deaf ears. They led him away, and that was that. It was the last time I saw him.</p>
+    <p>I asked Mother why they took him away, and she said, <span class="dialogue">"Because he is an ajogun."</span></p>
+    <p><span class="dialogue">"What's that?"</span></p>
+    <p><span class="dialogue">"They're children of misfortune. They make bad things happen to people without meaning to."</span></p>
+    <p>I've carried that explanation with me ever since.</p>
+    <p>I've carried the fear too.</p>
+    <p>But no one explained ajoguns to me the way Tinu did. She was an older girl from the next hamlet, who used to teach the younger ones how to dance. Kolade and I went to drum, but really, we went to breathe in her air. When her students were spent from dancing, they collapsed into the grass, and she filled the lull with stories or answers to their questions.</p>
+    <p><em>They have energies that harm those around them.</em></p>
+    <p><em>Some say they were born with a spell.</em></p>
+    <p><em>We remove them because there is no cure. Where? — I don't know where.</em></p>
+    <p><em>No, we don't hate them; we just want them far from us and to never return.</em></p>
+    <p><em>How are they discovered? Oracles sense their energies.</em></p>
+    <p>Her words stayed with me.</p>
+    <p>So did her face. (I get dizzy thinking about her.)</p>
+    <p>She was the most beautiful girl I had ever seen.</p>
+    <p>Those lips, that perfect smile — they made you steal glances until she felt like a secret — your secret.</p>
+    <p>I've dreamed about her more times than I can count. Mother knows how I feel about her, but she doesn't know I'm a peeper.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>The night the rain nearly fell, our soldiers limped into the village like rain-beaten dogs. No drums greeted them — no parade through the market. No bonfires. No dances. Nothing.</p>
+    <p>People say they ran from spirits in the forest.</p>
+    <p>A stupor hangs over us like a bedtime lantern with its flame dimmed. Mother hovers over the simmering bathwater while Kolade and I watch the goats in the yard. A male goat mounts a female and rides it.</p>
+    <p><span class="dialogue">"Those goats never get tired of that game,"</span> I say.</p>
+    <p><span class="dialogue">"It's not a game. They're making a baby."</span></p>
+    <p>Oh. So, those nighttime grown-up plays I saw were not games.</p>
+    <p>Kolade notices my hesitation and asks, <span class="dialogue">"What?"</span></p>
+    <p><span class="dialogue">"Can they change it from a girl to a boy when there is a baby already?"</span></p>
+    <p><span class="dialogue">"I don't know. Why do you ask?"</span></p>
+    <p><span class="dialogue">"Baba Ojo told Aunty Mufin she's carrying a girl, and he can make it a boy."</span></p>
+    <p><span class="dialogue">"Baba Ojo has medicines for everything, you know that."</span></p>
+    <p><span class="dialogue">"It wasn't medicine."</span></p>
+    <p><span class="dialogue">"What, then?"</span></p>
+    <p><span class="dialogue">"That."</span> I point to the goat on the back of another, bumping furiously.</p>
+    <p>Kolade whips his head around and stares. <span class="dialogue">"Where did you see them?"</span></p>
+    <p>I saw them in Baba Ojo's hut, but I will be in trouble if I say that. Kolade can't be trusted.</p>
+    <p>I shake my head. <span class="dialogue">"I didn't see. I heard."</span></p>
+    <p><span class="dialogue">"What did he say?"</span></p>
+    <p><span class="dialogue">"Why do you want to know?"</span></p>
+    <p>He twisted my arm until I cried out in pain. <span class="dialogue">"Tell me,"</span> he says.</p>
+    <p><span class="dialogue">"He said... He said... Let me climb your back and change it to a boy."</span></p>
+    <p>Kolade fell on his back and laughed hard. <span class="dialogue">"Liar. You didn't hear anything. Grownups say, 'let me lie with you.'"</span></p>
+    <p><span class="dialogue">"No, they don't. That doesn't even make sense."</span></p>
+    <p><span class="dialogue">"Kolade,"</span> Mother calls. <span class="dialogue">"Put some wood in the fire."</span></p>
+    <p>Kolade gathers wood from the stack beside our hut and slips it into the fire heating a big pot of bath water. The flames throb and settle. I go to Grandfather and climb onto his lap.</p>
+    <p><span class="dialogue">"Better a coward than a loser in battle,"</span> Mother says to Grandfather, and he snorts.</p>
+    <p><span class="dialogue">"What's the difference? Lose in battle, and you run like a coward."</span> He laughs to himself.</p>
+    <p>Grandfather was never a soldier; after falling from a tree and injuring his leg, he chose woodwork instead.</p>
+    <p><span class="dialogue">"What about the carnival?"</span> Kolade asks.</p>
+    <p><span class="dialogue">"It will hold,"</span> Mother says.</p>
+    <p><span class="dialogue">"Yay!"</span> I shout as Kolade spins and breaks into a quick dance.</p>
+    <p><span class="dialogue">"It should've been canceled,"</span> Grandfather mutters.</p>
+    <p>Mother feeds the stove more firewood. <span class="dialogue">"And what, then, becomes of Modekun's marriageable girls?"</span> She stirs the simmering water, her eyes narrowing against the steam.</p>
+    <p><span class="dialogue">"Wait for next time, or accept private proposals."</span></p>
+    <p><span class="dialogue">"Seems to me like you have ideas."</span></p>
+    <p>Grandfather laughs like a little boy.</p>
+    <p><span class="dialogue">"The palace says, since there are no war heroes this season, they'll use a wrestling contest to decide who gets first pick of the brides."</span></p>
+    <p><span class="dialogue">"Why the long face?"</span> Grandfather asks.</p>
+    <p>Mother turns the water with a stick. <span class="dialogue">"Wrestlers fight for themselves. Soldiers fight for each other. Soldiers make better husbands."</span></p>
+    <p>They argue and talk like boring adults.</p>
+    <p>Kolade is restless. He puts his fists up and makes wrestling gestures at me. He's challenging me to a match. I slip out of Grandfather's grasp and square up, hands raised. We circle the yard, stamping and faking blows until one of us grows bold enough to lunge. It's only play, but in my mind, I'm fighting for Tinu in a real contest. It doesn't help. He hooks my foot behind the ankle and sends me crashing to the ground. Before I can recover, he's on top of me, folding my arms over my chest and shoving them up against my throat. His weight bears down, his sneer tightening as he cuts off my breath. <span class="inner-thought">Stop.</span> His eyes are intense.</p>
+    <p class="inner-thought">It began as a game, or so it seemed. Is it my fault? Am I giving off bad energy that's making him act crazy?</p>
+    <p><span class="dialogue">"Say I'm the winner,"</span> he says, pressing harder on my chest.</p>
+    <p><span class="dialogue">"Iya!"</span> I scream.</p>
+    <p>Kolade quickly climbs off me before Mother turns on him.</p>
+    <p>I go to bed — not because I'm sleepy, but so I can be with Tinu.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>I open my eyes, and my sight slowly sharpens.</p>
+    <p>I'm cold. And wet.</p>
+    <p>I try to sit up, and something slips off my face and clatters to the floor. A wooden mask. Who put it on me? Obviously Kolade. <span class="inner-thought">Not funny.</span></p>
+    <p>Talismans. Prayer beads. Gourds — our wall protection from evil spirits.</p>
+    <p>What happened? Why is my family crowding around me — Mother, Father, Grandfather, Aunty Tade, and Aunty Mufin? They're all staring at me — faces too close. Even the familiar ones seem strange as I've never seen them inside my room before, or anywhere near my bed. I haven't taken my bath. Is that why they woke me?</p>
+    <p><span class="dialogue">"Akindele?"</span> Mother calls.</p>
+    <p>Her eyes are red and shiny, like she's been crying. Father stares, lost, like he wants to say something but can't find the right words.</p>
+    <p><span class="dialogue">"He's alive! He's alive!"</span> Mother jumps up and spins around the room. Prayerfully, she raises her hands to the roof.</p>
+    <p>Grandfather isn't convinced. He squints at me like a startled hare ready to run.<br>
+    Baba Ojo rises from the floor. His body shines with a black, sticky substance like charcoal potion. <span class="inner-thought">Did he fall?</span></p>
+    <p><span class="dialogue">"Back from the dead,"</span> Grandfather says.</p>
+    <p>I'm shivering. I think I'm sick — no. I'm wet. Soaked. My bed is too.</p>
+    <p><span class="dialogue">"Ekwele,"</span> Mother says, pulling me into her arms. <span class="dialogue">"Kolade! Wrapper! He's freezing!"</span><br>
+    She says they shook me and called my name. When that didn't work, she told Kolade to dump a bucket of water on me. She meant for him to carry me outside first.</p>
+    <p>Aunty Mufin sighs. <span class="dialogue">"You frightened all of us. I've never seen anyone sleep so deeply."</span></p>
+    <p><span class="dialogue">"Sleep?"</span> Baba Ojo frowns. <span class="dialogue">"He wasn't sleeping. He was missing from his body."</span></p>
+    <p>Aunty Tade shakes her head. <span class="dialogue">"Sorry, Dele. We beat you to wake you. But you're stubborn like a tortoise in its shell."</span></p>
+    <p><span class="dialogue">"Dele the dead shell!"</span> Kolade snickers.</p>
+    <p>I watch them all, distant. My secret is still safe. But I'm getting careless. This is the worst time for me to get caught: everyone thinks an ajogun gave the warriors nightmares in the forest. I know it wasn't me, but I can't be sure: ajoguns never know what they cause.</p>
+    <p>Baba Ojo sends everyone out so he can examine me. When it's just us, he asks:</p>
+    <p><span class="dialogue">"You left your body. So where did you go?"</span></p>
+    <p>I pretend not to understand. How can I tell him I can leave my body and take a walk? That I see and hear things I shouldn't — things I'm too young to hear?</p>
+    <p>Each time he presses me, I think of Tinu. I remember happier times:</p>
+
+    <div class="dream-flash">
+        <p><strong>✦ The Modakeke Creek ✦</strong></p>
+        <p>She's alone.</p>
+        <p>She's playing with ripples, waiting for it to get dark.</p>
+        <p>Her leggy form wraps around a trunk and climbs out of the water.</p>
+        <p>She hauls herself high and jumps back down, making a big splash.</p>
+        <p>The creek isn't deep; it barely rises to her thighs.</p>
+        <p>Sometimes the moon would throw some light on her teats — or her buns, fluttering as she runs along the banks.</p>
+    </div>
+
+    <p><span class="dialogue">"I didn't go anywhere,"</span> I say to Baba Ojo. <span class="dialogue">"I was here."</span></p>
+    <p><span class="dialogue">"So you <em>were</em> here?"</span></p>
+    <p><span class="dialogue">"I am here. I never left."</span></p>
+    <p>Baba Ojo nods as if that means something. <span class="dialogue">"How do you feel?"</span> he asks. <span class="dialogue">"Different?"</span></p>
+    <p>I've felt different since I was four — ever since I found out I could spy on others in my sleep. At first, I thought they were dreams, but when I saw myself asleep beside Kolade, I knew they were out-of-body experiences. It's like holding my breath. When I stay out too long, I pass out and wake up in my body. In spirit, I saw Baba Ojo treating Tinu's injuries — she had been in a fight with her friends. It wasn't long ago. Now, he's here.</p>
+    <p>Oh. So the people who hurried him away were talking about me.</p>
+    <p><span class="dialogue">"Does anyone know about you?"</span> Baba Ojo asks. His necklace has the skull of a young goat as its centerpiece.</p>
+    <p>No one. I nearly gave myself away today — to Kolade. What a mistake that would have been.</p>
+    <p>I'm under the weight of Baba Ojo's stare — the tang of his medicines returns along with the damp scent of my soaked straw bed.</p>
+    <p>The curtain at the doorway rustles, and Mother enters the room.</p>
+    <p><span class="dialogue">"Akindele has a visitor,"</span> she says to Baba Ojo.</p>
+    <p><span class="dialogue">"Let him in,"</span> he says. <span class="dialogue">"I'm almost done."</span></p>
+    <p>Mother disappears behind the curtain and returns with...</p>
+    <p>Baba Folarin!</p>
+    <p>My heart stops. I can't think. I can't breathe. He's an amoye. If I were an ajogun, he'd be the one to know.</p>
+    <p><span class="dialogue">"Welcome, Baba,"</span> Baba Ojo greets. <span class="dialogue">"If you had come earlier, you would have witnessed the most amazing thing."</span></p>
+    <p><span class="inner-thought">Shut up!</span></p>
+    <p>Baba Folarin grins. <span class="dialogue">"Yes. I hear you made the most startling discovery."</span></p>
+    <p>Mother's glare snaps me back to my manners. <span class="dialogue">"Eku iro le, Baba,"</span> I say to our guest.</p>
+    <p><span class="dialogue">"The boy's ori inu left his body,"</span> Baba Ojo says.</p>
+    <p><span class="dialogue">"I was sleeping,"</span> I blurt.</p>
+    <p>Baba Folarin muses. <span class="dialogue">"And where is it now?"</span></p>
+    <p><span class="dialogue">"It has returned."</span></p>
+    <p><span class="dialogue">"I see. You must be proud."</span></p>
+    <p class="inner-thought">He can't return or change anything. He's a quack.</p>
+    <p><span class="dialogue">"And how did you perform this miracle?"</span> Baba Folarin asks.</p>
+    <p><span class="dialogue">"I hid his face with a mask. So that when the thief passed back to taunt the boy, it didn't recognize him. So he released his soul. Examine him for yourself."</span></p>
+    <p><span class="dialogue">"Of what use? He's back, isn't he?"</span></p>
+    <p><span class="dialogue">"It was a miracle, Baba Folarin,"</span> Mother says. <span class="dialogue">"Dele was slumped like a sack."</span></p>
+    <p>Baba Ojo stuffs his mask and medicines into a bag. Mother waits in the doorway. He's halfway out when he stops and asks, <span class="dialogue">"Any news on the ajogun?"</span></p>
+    <p><span class="dialogue">"What ajogun?"</span> Baba Folarin asks.</p>
+    <p><span class="dialogue">"The one responsible for the army's nightmare."</span></p>
+    <p><span class="dialogue">"Who said it was an ajogun?"</span></p>
+    <p><span class="dialogue">"What else could it be?"</span></p>
+    <p><span class="dialogue">"If we are looking for a reason why termites fled a pot of soup, we should first check the pot's temperature before its contents."</span></p>
+    <p>Baba Ojo stares, confused.</p>
+    <p>Mother asks Baba Folarin to explain the proverb, and he replies, <span class="dialogue">"Always check the surface before delving into what you cannot see — check the ordinary before the extraordinary."</span></p>
+    <p>Baba Ojo's jaw drops. He studies Baba Folarin for a heart-thumping while, and says, <span class="dialogue">"It is odd to hear that from an amoye. Let others look for the ordinary. We need you for —"</span></p>
+    <p><span class="dialogue">"You need me for insight and advice. Now that the soldiers are back, they will sleep better. I advise that we move forward."</span></p>
+    <p>Baba Ojo stares at Baba Folarin, brows wrinkled, brain thinking. To my great relief, he cackles and stumbles out, laughing hysterically.</p>
+    <p>Alone with the oracle, he says to me, <span class="dialogue">"You scared a lot of us tonight — kept us up when we should be asleep."</span></p>
+    <p><span class="dialogue">"I'm sorry."</span></p>
+    <p><span class="dialogue">"It is not your fault. Ojo loves to make ordinary things look extraordinary. So he can get a big reward."</span></p>
+    <p>I nod, keeping my gaze down. My toes won't stop their wriggling. <span class="inner-thought">Relax, Dele.</span></p>
+    <p><span class="dialogue">"They woke me up this late to see a boy whose soul has gone out of him. Well, I am here. Apparently, I am too late. How convenient."</span></p>
+    <p>He lifts my chin gently and looks into my eyes. <span class="dialogue">"Who reincarnates in his old body?"</span></p>
+    <p>I smile shyly as he grins. He doesn't know, nor does he believe the medicine man.</p>
+    <p>I'm snorting inside and imagining things going back to normal. I must have tittered because it's all he needs to explode into a full-blown cackle. His laughter rings like music. I only smiled with relief, but he thinks I was laughing at Baba Ojo. The harder he laughs, the sharper a twitch jabs at my belly. <span class="inner-thought">Can't fight it anymore.</span> I roll on the bed, clutching my ribs.</p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div>
+    <a href="index.html" class="mx-3 hover:text-orange-400">Home</a>
+    <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
+    <a href="#about" class="mx-3 hover:text-orange-400">About</a>
+  </div>
+</nav>
+
+    <footer>“Children of Misfortune” — where a boy carries a dangerous secret, and the oracle laughs at the healer’s miracle.</footer>
+</div>
 </body>
 </html>

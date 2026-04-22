@@ -1,95 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percussion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Percussion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #222;
-      max-width: 900px;
-    }
+        body {
+            background: #faf6ed;
+            color: #1e1b1a;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.55;
+            font-size: 1.1rem;
+            padding: 2rem 1rem;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fffef7;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+        }
 
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
+        /* rhythm & percussion accents */
+        h1, h2 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
 
-    p {
-      margin-bottom: 1em;
-      text-align: justify;
-    }
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.25rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 600;
+            border-left: 6px solid #c47a44;
+            padding-left: 1.2rem;
+            color: #2c2b28;
+        }
 
-    .spacer {
-      height: 20px;
-    }
-  </style>
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #9b7b5c;
+            margin-bottom: 2rem;
+            margin-top: 0.25rem;
+            border-left: 6px solid #c47a44;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1.5px solid #e2dcd0;
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+        }
+
+        h2:first-of-type {
+            margin-top: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .sting {
+            font-style: italic;
+            color: #a7582c;
+            font-weight: 450;
+            background: #fff1e6;
+            display: inline-block;
+            padding: 0.1rem 0.3rem;
+            border-radius: 8px;
+        }
+
+        .musical-meta {
+            font-family: monospace;
+            background: #f2ede3;
+            font-size: 0.85rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            color: #6b4c2c;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #e0cfbc, #c47a4422, #e0cfbc);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #c47a44;
+            margin: 1.5rem 0;
+            padding: 0.6rem 1.2rem;
+            background: #fef7ef;
+            color: #3e2c1f;
+            border-radius: 20px;
+        }
+
+        .memory-flash {
+            background: #f2e9df;
+            padding: 1.2rem 1.5rem;
+            border-radius: 32px;
+            font-style: normal;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border: 1px solid #e7d9cc;
+            color: #3f2d1b;
+        }
+
+        .memory-flash p {
+            margin-bottom: 0.5rem;
+        }
+
+        .drum-beat {
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #b45f2b;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #2c3e2b;
+        }
+
+        .italic-thought {
+            font-style: italic;
+            color: #6b4b2e;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #af9a82;
+            border-top: 1px solid #e9e0d4;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+    </style>
 <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles2.css" />
 </head>
 <body>
 <!-- NAV -->
 <nav class="flex justify-between items-center p-6 relative z-10">
   <div class="flex items-center gap-3">
     <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
-    <h1 class="text-xl tracking-widest">Storyscape Africa</h1>
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
   </div>
 
   <div>
+    <a href="index.html" class="mx-3 hover:text-orange-400">Home</a>
     <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
     <a href="#about" class="mx-3 hover:text-orange-400">About</a>
   </div>
 </nav>
+<div class="container">
+    <h1>Percussion</h1>
+    <div class="sub">A story of rhythm, panic & survival · Damascus, 2015</div>
 
-<h2>PERCUSSION</h2>
+    <!-- PART ONE -->
+    <h2>Part One: The Propagandist</h2>
+    <p>She's at a coffeehouse for a secret meeting with an informant who promised to reveal Zee-Zee's location for a price. The informant, who introduces himself as Jamal, reaches into his thobe and pulls out a badge.</p>
+    <p>C-I-A.</p>
+    <p>A guitar flicks in her ear, a <span class="sting">musical sting</span>. The banjo player's timing rattles her. Busking between tables, he picks the moment she realizes she's been played to strum a short, needling solo.</p>
+    <p>The banjo player leaves, and her thoughts flood in.</p>
+    <p>So he's CIA? But why the deception? Why lure her to a coffeehouse on the south side of Damascus? What's their angle? To gauge what she knows, then hunt Zee-Zee themselves? What could they possibly want with her?</p>
+    <p>It's 9:15 p.m. No women in the coffeehouse. Too late for respectable women to be out. Husbands and fathers would disapprove. As a tourist, she can bend a few rules, but even though she craves a smoke, she won't risk it.</p>
+    <p>Groups of men in keffiyehs eat and laugh, sputtering as they talk with full mouths.</p>
+    <p>She turns to the man at her table.</p>
+    <p><em>What's he saying?</em></p>
+    <p>The sight of his badge put her in a time capsule; she missed everything he said after that, focusing on the banjo's fading rhythm, the soft clatter of dishes in the kitchen, and the chatter of guests. The sounds — chatter, dishes, rhythm — fuse into a haunting musical score.</p>
+    <p>Episodes like this aren't new. No fight, no flight. Just panic beneath the surface, amid dulled reflexes and senses that fragment. They've followed her for as long as she can remember. If she were ambushed, she'd freeze. Growing up, her parents punished her siblings for startling her, treating her like a fragile thing. <span class="italic-thought">"The day she runs is the day she's cured,"</span> she once overheard her father say.</p>
+    <p>Jamal's words rise and fall, slick and oily. She picks out the words <span class="musical-meta">"direct conflict with her country."</span> How?</p>
+    <p>A waiter sets down their drinks with two soft thuds: a mug of goat's milk for Jamal, a "punch" for her.</p>
+    <p>She waits for him to leave. <span class="dialogue">"How exactly will I be in direct conflict with the United States?"</span></p>
+    <p><span class="dialogue">"Zee-Zee... accomplice... CIA..."</span> — the words blur, but the implication chills her: was the cleric her father sought to interview actually working for them?</p>
+    <p><em>Zalawi is on their side?</em></p>
+    <p>The crockery's rhythm shifts — sharp, syncopated, wrong.</p>
+    <p>That's how it begins: the world tapping out a foreign beat.</p>
+    <p>Her pulse quickens, vision swimming. For a grace note, she hovers outside her body — untethered, raw.</p>
+    <p>It occurs to her that her mouth is open. She snaps it shut. <span class="dialogue">"That man ordered Lester's murder. Are you saying...?"</span></p>
+    <p>Jamal shakes his head. Zalawi, he says, had no hand in her father's death. The Group is divided into factions — cabals. It was one of them. Her Iranian boyfriend, he adds, leads one.</p>
+    <p>Time slides.</p>
+    <p>She downs her drink and flicks her tongue against her teeth. It isn't punch at all — no alcohol, just fruit syrup. It's another sucker punch. Nothing here is what she signed up for.</p>
+    <p>She wants to leave but fears he won't let her.</p>
+    <p>It's 2015, eleven months since U.S.-led airstrikes on Syria began a brutal cycle of reprisals. Three Americans and two Britons are missing, presumed dead.</p>
+    <p>Jamal says Zalawi is what they call a propagandist — a religious front man selling American concert tickets in the Middle East. The Group, he explains, is the biggest ticket broker in the region. They control the music. He leans back, waiting for applause.</p>
+    <p>She imagines Taffy line-dancing to country music. But of course, he's speaking proverbially. Just wait till Taffy learns he once took orders from America.</p>
+    <p>Jamal smiles. He wants to know what she finds amusing.</p>
+    <p><span class="dialogue">"America — running terrorist groups."</span></p>
+    <p><em>Not running — guiding. From the inside.</em></p>
+    <p>He means leading. Like in a waltz. <span class="dialogue">"Then why did Zee-Zee invite Lester to Syria with the promise of an exclusive interview?"</span></p>
+    <p>He insists Zalawi never contacted her father; someone else posed as his agent. They didn't know Lester was even in Syria until he was kidnapped. They did everything they could, he says.</p>
+    <p>Maybe Zalawi didn't trick Lester — but that doesn't mean he didn't have him killed, perhaps to prove his loyalty.</p>
+    <p>Jamal leans forward, lowering his voice. Some members of The Group, he says, thought Zalawi too soft. They made an example of Lester to raise their own profiles. Zalawi had forbidden the killing, but they ignored him.</p>
+    <p>He rumbles and crackles when he whispers, his voice all wicked-witchy.</p>
+    <p><span class="dialogue">"So who killed Lester?"</span></p>
+    <p>He gives a long answer to a simple question. The gist: if he were her, he'd look at her Iranian boyfriend.</p>
+    <p>She studies his beard — the dense, woolly curtain concealing his jaw. Like many men here, he hides half his face. The rest is a void she has to fill.</p>
+    <p>Then comes the offer: if she helps them, they'll help her find her father's killers.</p>
+    <p><span class="dialogue">"Help you do what, exactly?"</span></p>
+    <p>They want to know Taffy's whereabouts. He drawls through Tafida Mo'ammar Abbas, blending the syllables until they sound foreign.</p>
+    <p>She notes the musicality of his accent — the smooth violin pitch of a trained American tongue. Locals have tried to imitate it for her; none come close.</p>
+    <p>He wants her as his mole.</p>
+    <p>She's tempted to correct him — it's "Moo-armor," not "Mo'hammer" — but instead says, <span class="dialogue">"Taffy's the spear carrier. I'm the mastermind. If I tell him to stop, he will."</span></p>
+    <p>He laughs softly.</p>
+    <p>He apologizes for putting her in such a difficult spot, then hints that Taffy is using her. By her own admission, she's his sponsor. That makes her a terrorist sponsor.</p>
+    <p>She frowns. Taffy isn't a terrorist. He's a freedom fighter — a mercenary fighting for the oppressed. Against Americans, Israelis, Turks — whoever the oppressor is. People like him call Muslim soldiers terrorists.</p>
+    <p><span class="dialogue">"You've got it wrong,"</span> she snaps. <span class="dialogue">"I'm the one using him — to find my father's killers."</span></p>
+    <p>He tells her that her mother is worried — she left home without her medication.</p>
+    <p><span class="dialogue">"You met my mother?"</span></p>
+    <p>He nods and recites her biography as if reading from a dossier: From Wisconsin. Teaches ballet. Loves photography. Amateur filmmaker. Each word drops like a stamp on her forehead. Then comes the mention of her pills. Does he know about her diagnosis?</p>
+    <p>He slides a small black bag <em>from her mother</em> across the table.</p>
+    <p>Inside: five packs of Sertraline.</p>
+    <p><span class="dialogue">"Thank you,"</span> she murmurs, tucking them away. Her mother must have been desperate. She must have told the CIA about her DPDR diagnosis so they'd treat it as urgent. It wouldn't be past her.</p>
+    <p>The CIA? Shipping her antidepressants? It's a gesture they hope will win them favors.</p>
+    <p>Receiving medication from a stranger reminds her of the time a clown pulled out a quarter from her ass. It's a dental probe from a traffic cop — who should be breathalyzing. What follows is worse. Jamal keeps reading her bio, switching to her love life this time. She's fallen for an Iranian chemist, he says, trained in Turkey, now leading a faction opposed to Zalawi.</p>
+    <p>His tone is cordial, but it probes like a dentist's hook — searching for soft spots.</p>
+    <p><span class="dialogue">"I'm sorry,"</span> she cuts in. <span class="dialogue">"Are we done here?"</span></p>
+    <p>He ignores the question. Says he's part Lebanese, part Delawarean.</p>
+    <p>She doesn't care if he's American, Arab, or an actor researching a role.</p>
+    <p>When he's done posturing, he pulls a brown envelope from his robe and slides it toward her.</p>
+    <p><span class="dialogue">"What's this?"</span></p>
+    <p>He doesn't answer, so she opens it.</p>
+    <p>Three photographs. Taffy with his arm around an Arab woman; Taffy tossing a laughing child; Taffy behind the wheel of a battered Mercedes, a veiled woman beside him, two kids in back.</p>
+    <p>Her "informant" says Taffy has two wives and five children in Tehran.</p>
+    <p>She shuffles through the photos, going back and forth, aware of his eyes on her. Then slides them back. Her face remains steady — embarrassed, not shocked. Taffy said a shelling in the West Bank killed his wife.</p>
+    <p><span class="dialogue">"I know about his wives,"</span> she lies. <span class="dialogue">"He told me."</span></p>
+    <p>Jamal smirks. He inquires if Taffy told her he planned to leave them for her, intruding with the aplomb of a greeter.</p>
+    <p><strong>CRACK.</strong></p>
+    <p>A waiter's tray hits the floor.</p>
+    <p>The sound drills through her skull. Fluorescent lights buzz overhead, bleaching the room to a sterile haze. Her hands look foreign — pale and distant. The air clots. Sounds warp into a meaningless static.</p>
+    <p>Pantomime music. A bouncy rhythm. It rises.</p>
+    <p>Laughing faces. Swirling — spinning.</p>
+    <p>Jamal. He leans close enough for her to read his lips: <em>Are you okay?</em></p>
+    <p>She taps twice under the table — her therapist's trick. One, two. The room solidifies. Hookahs hiss, cups clatter, voices rise and tumble as card players slap the table, and steam swirls through shafts of amber light.</p>
+    <p><span class="dialogue">"For a whole year, you people said nothing to my mother. Now that I'm in Syria — close to the truth — you tell me my father was collateral damage? You think we don't deserve the truth?"</span> Her words spill before she can stop them.</p>
+    <p>She doesn't remember everything she says — just the heat of it.</p>
+    <p>He hushes her, urging calm.</p>
+    <p>She buries her face in her hands and cries. Her heart throbs, echoing in her ears. She's a cavity of sound — hollow as a drumhead.</p>
+    <p>Then Jamal's voice again, smooth as a sermon. He addresses her by her full name, Marion Ursula Ashcroft, and says the U.S. government deeply regrets her loss.</p>
+    <p>How dare he speak for America? Which America — the one of men in black suits seeking extra-territorials? She doesn't want his pity. If they all dropped dead tomorrow, her nerves would thank them.</p>
+    <p><span class="dialogue">"If you don't mind,"</span> she says, <span class="dialogue">"I'd like to leave."</span></p>
+    <p>But Jamal hasn't finished. He outlines her new role: she is to report everything she learns about Taffy and his splinter group. He'll find her when he needs her. Taffy's whereabouts aren't their priority — it's his sponsors, his operations, any foreign hostages he might hold.</p>
+    <p>He tells her exactly what to say when Taffy asks about this meeting, warns her not to mention that she met an American agent. Taffy might question her loyalty — and her life would be in danger. If she wants answers about her father, Jamal says, she should start with Taffy's video library. Terrorists archive their executions.</p>
+    <p>He rises, nods politely, and leaves.</p>
+    <p>Her lungs unclench. The fear that he'd whisk her away in a helicopter, vanishing her to a base somewhere, dissolves. But it isn't over. Jamal is the kind of American who thinks a shared passport guarantees allegiance. She's the worm at the end of his line now.</p>
+    <p>Betray Taffy? After all he's done? When her film project fell through, he arranged interviews that no one else would grant. He opened doors that Lester's neighbors kept shut. The local supermarket staff only talked because of him.</p>
+    <p>Too bad he's married. Because she's three weeks pregnant.</p>
 
-<h2>Part One: The Propagandist</h2>
+    <hr />
 
-<p>She’s at a coffeehouse for a secret meeting with an informant who promised to reveal Zee-Zee’s location for a price. The informant, who introduces himself as Jamal, reaches into his thobe and pulls out a badge. <br><strong>C-I-A.</strong></p>
+    <!-- PART TWO -->
+    <h2>Part Two: The Pantomime</h2>
+    <p><em>Allahu Akbar.</em> The pre-dawn call to prayer drifts through the dim streets of Damascus, thin and metallic, like breath caught in a flute.</p>
+    <p>Marion swallows her pills, sips water, and slips her Qatar Airways tickets into her purse. She scans the room for anything she might forget. Any moment now, Ahmed's taxi will honk downstairs. She hasn't heard from Taffy since meeting Jamal. To stay and finish her film would mean acting as bait, and she won't do that to him. She's leaving — for his sake, and for her own.</p>
+    <p>At 6:11 a.m., Ahmed arrives, helping her carry her trunk down the narrow stairs. In the taxi, he hands her a folded black hijab. <span class="dialogue">"Wear this,"</span> he says. She hesitates, confused, but obeys. His tone is different — firm, unyielding. Not the diffident driver she's known. This Ahmed is brisk, sure, almost military.</p>
+    <p>He tells her a green Volvo will meet them down the road. When he signals, she's to switch cars and keep her head low until the new driver says otherwise.</p>
+    <p>The taxi bumps over a dirt road, its hood rattling like the lid of a boiling kettle. Mountains loom, their slopes cluttered with boulders that look ready to roll. A nomad rides past on a camel, a child bundled against his chest. Dust plumes rise behind them, curling through the air like smoke. She coughs. Ahmed doesn't seem to notice — or care.</p>
+    <p>At a gas station, he pulls up behind a tan Volvo. A moving truck slides forward, blocking them from the road. <span class="dialogue">"Now,"</span> he says. Before she can protest, another woman in a black hijab slides into the taxi. Marion darts out and scurries to the Volvo. In the backseat, she lowers her head.</p>
+    <p>Seconds tick. A minute. Two. The Volvo moves off. Wind sweeps through the open windows, tugging at her scarf and the driver's keffiyeh. Her stomach knots. Every instinct screams: <em>Get out now.</em> This could be a kidnapping. Or worse.</p>
+    <p>It's a long drive. The driver doesn't speak. She peers outside, scanning for familiar faces — Americans, anyone who might anchor her to safety. But every woman wears a burka, even toddlers. Strangers everywhere. For all she knows, Taffy could be one of them — a stranger, too. The woman at the gas station must have been a decoy. Her double.</p>
+    <p>The Volvo stops in a market district. A cow lows in the distance. The air carries a metallic tang. <span class="dialogue">"Come,"</span> the driver says. She follows, quick and wary. They weave past beggars with outstretched arms — some missing fingers. Punishment or disease, she can't tell. The gutters run red. Flies rise in clouds. The reek of blood and rot hits her throat. She gags, retches, the world spinning. The smell must be the trigger for morning sickness — the nausea of being two-in-one.</p>
+    <p>Her driver waits ahead, impatient. She wipes her mouth, clutches her bag, and hurries after him.</p>
+    <p>They enter Al-Hamidiyah Souk, its iron arches filtering sunlight into shards of color. Thwack. Thwack-thwack-thwack. A butcher cleaves goat bones with surgical precision. She trails her guide through alleys reeking of cheap perfume and smoke, from room to room, the air heavy with old tobacco. A cathode-ray TV sits on a desk. A VCR hums beside it. Drawers beneath are half open — rows of videotapes inside. Labels in Arabic, French, English.</p>
+    <p><span class="dialogue">"Wait here,"</span> the driver says, disappearing behind a curtain. The silence that follows is thick enough to touch. Then: footsteps. Taffy enters. Sand still clings to his forehead — he's just finished the dawn prayer. His face softens. He draws her into an embrace, muttering <em>"Sweet Marion."</em></p>
+    <p>She hugs him back, surprised at her stiffness. He studies her, peering for so long that she fears he can sense her unease. So she says, <span class="dialogue">"My luggage. They took my luggage."</span> He assures her it's safe and asks why she's planning to leave without telling him. <span class="dialogue">"I've finished my documentary,"</span> she lies. <span class="dialogue">"And when I didn't hear from you, I worried something had happened."</span></p>
+    <p>He asks about the informant. She pulls off the hijab to mask her anxiety. <span class="dialogue">"I met him. One of Zee-Zee's men. He warned you to flee Syria."</span> What is she saying? That isn't her line. Taffy curses softly, then kisses her forehead. He asks if the informant showed her anything. His question makes her flinch.</p>
+    <p><span class="dialogue">"Nothing,"</span> she says. <span class="italic-thought">Think carefully.</span> <span class="dialogue">"I'm certain."</span> <span class="italic-thought">Anything in an envelope, perhaps?</span> This revelation stops her cold. <span class="dialogue">"Did you have me followed?"</span></p>
+    <p>He slaps her — sudden, brutal. Her head jerks sideways. Then he grips her hair and throws her onto the couch. <span class="dialogue">"He showed me pictures,"</span> she cries. <span class="dialogue">"Of you. And your family. You lied to me."</span> His eyes glaze with a slow, dreadful calm. He walks to the cabinet. He pours two drinks and returns with two wineglasses. <span class="dialogue">"No, thank you,"</span> she blurts. <span class="dialogue">"You don't trust me, so you had me followed, yet you're the one who can't be trusted."</span> <em>Maazerat mikhaam, I am sorry.</em></p>
+    <p>Her ear hums, high and metallic. She presses her temple, whimpering. He replaces her hand with his, gentle now. She pulls away. <span class="dialogue">"I want to go home. It's not safe here. I'm not angry anymore."</span> He sweet-talks her: <em>Love your hazel eyes — love getting lost in them.</em> <span class="dialogue">"You're married, Taffy. With two wives. Two."</span> His voice softens. <em>It would have been an insult not to. They were gifts — a sheikh's daughters. I will leave them if you wish. I love you. Only you.</em></p>
+    <p>She sees Jamal's smirk in her mind's eye. <span class="dialogue">"And your kids?"</span> <em>"I love my children too,"</em> he says, grinning. She shakes her head. So wrong — to treat affection as a game of conquest. <span class="dialogue">"I can help you find Zee-Zee. After that, you're free. I release you."</span> She returns to Jamal's script.</p>
+    <p>He puts away the drinks and sits beside her. He kisses her cheek, then breaks it off. <em>"I'm about to tell you something that will blow your mind. Good thing you are seated."</em> She braces. <em>"Two days ago, my men captured five American soldiers — Zee-Zee's allies."</em> She blinks. <span class="dialogue">"You're joking."</span> He shakes his head. <em>"Zee-Zee is an American spy."</em> She cups her mouth and tries to look stunned. <em>"Your father uncovered it, so your country handed him over to the radicals because they could not risk him talking. He is a reporter, after all."</em></p>
+    <p>The room tilts. <span class="dialogue">"Are you sure?"</span> she whispers. His look says everything. She slumps forward, face in her hands, sobbing until she's hollow again. Her heartbeat bounces around her ears like a ringing from a bass drum. He runs a hand up her back, fingers threading through her hair. She nudges him away. <em>"You want to be alone?"</em> She nods. He rises. Footsteps fade.</p>
 
-<p>A guitar flicks in her ear, a musical sting. The banjo player’s timing rattles her. Busking between tables, he picks the moment she realizes she’s been played to strum a short, needling solo.</p>
+    <div class="memory-flash">
+        <p>In that silence, her mind fractures open. She sees her mother, face veiled like a beekeeper, waving. The jagged skyline of Madison rises. Saturday air, cool, on her cheeks as she pedals down State Street, the bicycle chain humming like a musical score.</p>
+        <p>Panic always births the same fugue. She was four when it began. Nola Rae performed on stage — a giant toy wound tight by unseen hands, her painted grin grotesque. From the front row, Marion had stared, terrified, as Nola descended. The other children ran. Marion couldn't. She was paralyzed. Caught, she was chosen as the next volunteer.</p>
+        <p>Nola displayed both sides of a handkerchief, then covered Marion's nose. A rude honk — laughter everywhere. Quarters emerged from her nose, her ears, her clothes. Even from her butt. The crowd howled. Her parents had loved it. Only later a psychologist explained: early symptoms of Depersonalization-Derealization Disorder.</p>
+        <p>Mrs. Nazareth taught her to ground herself through dance — to turn fear into movement. To spin, to control rhythm. And it worked. Most days. But now the old feeling is back — exploitation, humiliation. Only this time she isn't the doll. She's the puppet. A marionette worked by Jamal and Taffy.</p>
+    </div>
 
-<p>The banjo player leaves, and her thoughts flood in.</p>
+    <p>She sits up, wiping her face. Her eyes drift to the desk. The drawers. She slides one out further and runs her fingers along the videotapes. Names in Arabic, some in French. She opens another drawer. More videotapes. Their labels are names. In three languages. Then one name stops her: <strong>Ashcroft</strong>.</p>
+    <p>A presence behind her. Taffy. He's been standing there, watching. <em>"What are you doing?"</em> She brandishes the tape like a weapon. <span class="dialogue">"What is this?"</span> He smiles. <em>"It's a copy of your film. For my personal collection. A keepsake. To remember when we fell in love."</em> The wall clock rings out a nursery rhyme. The sound pierces her — bright, childish notes clashing with the scene. Circus music. Nola Rae grins — a plasticky stretch of lips.</p>
+    <p>Taffy bends toward the player. <span class="dialogue">"I can play it for you, if you like,"</span> his voice bending. She's pregnant. She has someone else to protect now. He turns his back to slide the tape into the VCR. It's her chance. She moves for the door, twists the knob. It sticks. She pulls harder. The door creaks open.</p>
+    <p>She bolts into the street — narrow, sunstruck, alive with noise. Behind her, a door bangs open — footsteps, a shout. Lungs burning, heart pounding in rhythm with the fragile pulse inside her. The air reeks of spice and sweat. Vendors shout. A bicycle bursts out of the crowd — <strong>CRASH!</strong> Crates of eggs explode. She doesn't stop. Can't. Her sandals skid on a slick of egg and water. A man grabs at her arm, but she jerks free and runs harder.</p>
+    <p>The lane tightens. Canvas awnings hang low. She ducks, bursts through, smelling frying oil and roasted lamb. Pots crash behind her. Her breath rasps. Her vision tunnels. She veers right, into a side passage. A motorbike revs at the other end. Its headlight flicks on — searching. She darts behind wooden crates, presses herself flat. The motorbike growls closer. A shadow sweeps across the wall.</p>
+    <p>Her heartbeat counts the distance — not fear this time, but tempo. The same haunting rhythm now drives her forward. She waits — one breath, two — then bolts again. Round a corner. Down the slope toward the open street. She doesn't look back. The noise fades behind her, replaced by the drum in her chest — pulsating, rhythmic, and alive. Fear once hollowed her; now it fills her. Strength made of terror. And a mother's devotion to her unborn.</p>
+    <p class="drum-beat">Every stride is a promise — the drumbeat of survival. She will run. And this time, she will not freeze.</p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
 
-<p>So he’s CIA? But why the deception? Why lure her to a coffeehouse on the south side of Damascus? What’s their angle? To gauge what she knows, then hunt Zee-Zee themselves? What could they possibly want with her?</p>
-
-<p>It’s 9:15 p.m. No women in the coffeehouse. Too late for respectable women to be out. Husbands and fathers would disapprove. As a tourist, she can bend a few rules, but even though she craves a smoke, she won’t risk it.</p>
-
-<p>Groups of men in keffiyehs eat and laugh, sputtering as they talk with full mouths.</p>
-
-<p>She turns to the man at her table.</p>
-
-<p>What’s he saying?</p>
-
-<p>The sight of his badge put her in a time capsule; she missed everything he said after that, focusing on the banjo’s fading rhythm, the soft clatter of dishes in the kitchen, and the chatter of guests. The sounds—chatter, dishes, rhythm—fuse into a haunting musical score.</p>
-
-<p>Episodes like this aren’t new. No fight, no flight. Just panic beneath the surface, amid dulled reflexes and senses that fragment...</p>
-
-<p><em>[Content continues unchanged — paste remaining paragraphs exactly as in your document to complete the file]</em></p>
-
-<h2>Part Two: The Pantomime</h2>
-
-<p><em>Allahu Akbar.</em></p>
-
-<p>The pre-dawn call to prayer drifts through the dim streets of Damascus, thin and metallic, like breath caught in a flute.</p>
-
-<p>Marion swallows her pills, sips water, and slips her Qatar Airways tickets into her purse...</p>
-
-<p><em>[Continue pasting remaining content here to preserve full text]</em></p>
-
+  <div>
+    <a href="index.html" class="mx-3 hover:text-orange-400">Home</a>
+    <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
+    <a href="#about" class="mx-3 hover:text-orange-400">About</a>
+  </div>
+</nav>
+    <footer>“Percussion” — rhythm, panic, and the music of resistance. Marion’s fugue becomes a fight.</footer>
+</div>
 </body>
 </html>

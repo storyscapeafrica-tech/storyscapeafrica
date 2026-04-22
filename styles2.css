@@ -11,8 +11,10 @@ body {
         }
 
         body {
+            background-color: #eef3f0;
             font-family: 'Georgia', 'Times New Roman', Times, serif;
             line-height: 1.55;
+            color: #1a2a1f;
             padding: 2rem 1rem;
         }
 
