@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>An Inglorious Return</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1f2a1e;
+            color: #e2e0d4;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.58;
+            font-size: 1.08rem;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #2b2a22;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            border: 1px solid #5b5a48;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.4rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            border-left: 6px solid #c2a14f;
+            padding-left: 1.2rem;
+            color: #f3efda;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 0 #2d2b1c;
+        }
+
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #dbba6c;
+            margin-bottom: 2rem;
+            margin-top: 0.2rem;
+            border-left: 6px solid #c2a14f;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1.5px solid #5b5a48;
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+            color: #efe1b3;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #ecdca8;
+        }
+
+        .yoruba-word {
+            font-family: 'Courier Prime', monospace;
+            background: #3e3d30;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #e9cf8b;
+            font-style: normal;
+        }
+
+        .inner-thought {
+            font-style: italic;
+            color: #cfbc86;
+            background: #3a382b;
+            padding: 0.05rem 0.2rem;
+            border-radius: 6px;
+        }
+
+        .dream-sequence {
+            background: #2f3025;
+            padding: 1.2rem 1.8rem;
+            border-radius: 32px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border-left: 4px solid #b28b4c;
+            color: #e9e0c7;
+            font-style: normal;
+            box-shadow: inset 0 0 6px #00000020, 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .dream-sequence p {
+            margin-bottom: 0.8rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #5b5a48, #c2a14f, #5b5a48);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #c2a14f;
+            margin: 1.8rem 0;
+            padding: 0.7rem 1.4rem;
+            background: #36352a;
+            color: #ede6cf;
+            border-radius: 24px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+            h2 {
+                font-size: 1.65rem;
+            }
+        }
+
+        .divider-stars {
+            text-align: center;
+            letter-spacing: 4px;
+            color: #b89a54;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #b89f64;
+            border-top: 1px solid #5b5a48;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+
+        .shame-beat {
+            font-weight: 600;
+            color: #e2bc71;
+        }
+        .royal-command {
+            background: #2b2a1f;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
+<!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+<div class="container">
+    <h1>An Inglorious Return</h1>
+    <div class="sub">Modekun, Oyo Kingdom · 1813 · after the night of witches</div>
+
+    <p><span class="yoruba-word">Kúkọ́rọ̀ọ̀ kò!</span></p>
+    <p>What in Olódùmarè's name — ?</p>
+    <p>Your eyes fly open, dread rising, but fall away when you realise a mere cockerel woke you. You blink at the straw beneath you, confused for a heartbeat before memory settles. You staggered home last night. You slipped into your hut like a guilty man and asked for no food, no bath, no conversation, nothing but sleep. You only spoke to your first wife, and she guarded your door like a sentry.</p>
+    <p><span class="dialogue">"No one nears that hut,"</span> Kemi said to the children. <span class="dialogue">"Your father is well, but please let him wake whole."</span></p>
+    <p>You roll onto your back, staring at the thatch above, wishing instead for the airy shelter of a forest canopy. The room hasn't changed: masks, charms, and gourds in their straw rigs. Ogun's figurine stands watch beside your bed, incense burning in slow, ghost-like ribbons. Kemi must have lit the censer — the prayers she said for you still hanging in the air.</p>
+    <p>The mat where your tools rest lies bare.</p>
+    <p>Your dagger, your machete, your axe, your shaving blade — every one of them lost to the forest.</p>
+    <p>You catch Kemi's whisper to someone else outside the doorway: <span class="dialogue">"Dúró níbẹ̀. Let me see if he's awake."</span></p>
+    <p>She slips inside, sees you alert, and gives you a smile that softens your cramps.</p>
+    <p><span class="dialogue">"Good morning, Baba Dayo. Will you eat now?"</span></p>
+    <p>You nod.</p>
+    <p>A quick call, muffled footsteps, and your meal appears on two trays and a jug.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>When breakfast is done, you step out into the morning sun — and stop. What's that there in the yard?</p>
+    <p>Your clan has remade the old gazebo into a king's corner.</p>
+    <p>You blink.</p>
+    <p>Bolanle leads you to your chair. Your family forms a line and, one by one, they greet you.</p>
+    <p>You sigh. You had other plans involving a commode, but no worries — no hurry.</p>
+    <p><span class="dialogue">"Welcome back,"</span> they say — wives first, then each child according to rank in age...</p>
+    <p>Atinuke's face makes you sit up. What happened to her? Why is her face bruised and swollen?</p>
+    <p>For now, she must wait her turn: she's eighth in the row.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>Adeola's only child finally arrives.</p>
+    <p>Her swollen, half-closed eye draws a wince from you.</p>
+    <p><span class="dialogue">"Tinu,"</span> you whisper. <span class="dialogue">"What happened?"</span></p>
+    <p><span class="dialogue">"I fell into a well, Baba. At night."</span></p>
+    <p>You know a lie when you hear one. You have similar scratches, and you were in a fight.</p>
+    <p>Still, you nod. <span class="dialogue">"Pẹ̀lẹ́. Get Baba Ojo to look at it. Is Wande back?"</span></p>
+    <p><span class="dialogue">"He is,"</span> she says and gives way for the next child.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>Later in the day, a young warrior arrives. His face stirs a memory.</p>
+    <p><span class="dialogue">"I know you,"</span> you say. <span class="dialogue">"You are from the Kakanfo's clan."</span></p>
+    <p><span class="dialogue">"I am his nephew, Kunle,"</span> he replies. <span class="dialogue">"I bring tidings from him."</span></p>
+    <p><span class="dialogue">"A deputy goes to his superior. Take me to him."</span></p>
+    <p><span class="dialogue">"He is still in the forest. It is safer for him there."</span></p>
+    <p>He holds your gaze until the message becomes clear. Of course. Modekun accepts only the corpse of a defeated war general.</p>
+    <p><span class="dialogue">"Speak,"</span> you command.</p>
+    <p><span class="dialogue">"He will not be with you when you are summoned. If, after hearing you, the oba still insists he take his life... I will take you to where his body lies."</span></p>
+    <p>Adeola bursts into your hut. <span class="dialogue">"Baba Dayo, you must hear this."</span></p>
+    <p><span class="dialogue">"Not now,"</span> you snap. <span class="dialogue">"Can't you see I have a guest?"</span></p>
+    <p>Kunle rises from the mat. <span class="dialogue">"I am done here. Thank you. I will take my leave."</span></p>
+    <p><span class="dialogue">"Tell the Kakanfo that Shango will go before us to the palace — and we will be vindicated."</span></p>
+    <p>The young warrior prostrates and departs.</p>
+    <p>You are alone with your third wife.</p>
+    <p><span class="dialogue">"What is it, Adeola?"</span></p>
+    <p>She turns toward the doorway. <span class="dialogue">"Enter."</span></p>
+    <p>Olaitan and her daughter, Eniola, shuffle into the hut.</p>
+    <p><span class="dialogue">"Please tell him what you told me,"</span> Adeola urges.</p>
+    <p><span class="dialogue">"I brought my daughter to apologize for what she did to Tinu yesterday,"</span> Olaitan says.</p>
+    <p><span class="dialogue">"And what did she do?"</span></p>
+    <p><span class="dialogue">"She, Remi, and two others beat your daughter."</span></p>
+    <p><span class="dialogue">"Why?"</span></p>
+    <p>Olaitan nudges the girl. <span class="dialogue">"Tell him."</span></p>
+    <p>Eniola clears her throat. <span class="dialogue">"She called us names for not going into the forest."</span></p>
+    <p><span class="dialogue">"What names?"</span></p>
+    <p><span class="dialogue">"A chicken... and an asiere."</span></p>
+    <p><span class="dialogue">"You are a chicken and a lowlife for betraying your friend like that,"</span> Adeola snaps. <span class="dialogue">"Over Remi?"</span></p>
+    <p><span class="dialogue">"Easy, Adeola,"</span> you say. <span class="dialogue">"They came to make peace."</span></p>
+    <p><span class="dialogue">"There is no peace, Baba Dayo. They want to maim my daughter before the carnival. Abiodun must pay for this. Her daughter, Remi, should be disqualified."</span></p>
+    <p><span class="dialogue">"Let us talk privately. First, thank Olaitan — and show them out."</span></p>
+    <p><span class="dialogue">"Thank her for what?"</span></p>
+    <p><span class="dialogue">"If not for her, would we have known?"</span></p>
+    <p>Olaitan and Eniola offer their farewells and leave.</p>
+    <p>There is much you must explain to your wife. Abiodun's husband is an Ogboni leader, a voice the people heed — one that could easily turn Modekun against you. This is no time to make such an enemy, not when you and the Kakanfo stand on the knife-edge between death and dishonor.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>The next day, six of you answer the royal summons. The crowd you meet at the palace is not there to receive you. They have gathered to witness what becomes of the fallen. They part for you and your men, forming a narrow throat of passage, as though ushering you into the mouth of some patient beast. Each step tightens the knowledge of your fall. Greatness, once lost, clings like dust; it will not brush off so easily.</p>
+    <p>Their silence is its own tribunal. No jeers, no cheers — only the cold stare of pity on faces that once brightened at your approach. Once, children ran to touch the hardness of your arm, women crooned your name: <em>Dayo, Dayo.</em> There had been a spring in your gait then, a lightness born of certainty. Now, the same voices rustle at your back — <span class="yoruba-word">poltroons</span>, <span class="yoruba-word">runaways</span> — whispering barbs meant to hook you into reacting.</p>
+    <p>You ignore them. Replying would make them your equals. You refuse to kneel that low.</p>
+    <p><span class="dialogue">"Where is your Kakanfo?"</span> someone calls.</p>
+    <p><span class="dialogue">"We hear he is dead,"</span> another adds, <span class="dialogue">"took his own life."</span></p>
+    <p>The words fall on you, the intended target. You — his deputy, now at the head of the five-man remnant that should have been his escort. Tongues wag because absence loves speculation. Suicide is honor's last refuge; better a dead general than a failed one.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>Inside the palace, the six of you sit on mats facing an empty throne. Your men crouch small, folding themselves inward. Once, they sat with the poise of cobras — spines straight, hoods opened wide. Oba Balogun is taking his time; he is in no hurry to host men of disrepute. Your gaze wanders until it lands on the oba's announcer, a heavy-lidded man who tilts between sleep and wakefulness like a cockerel anticipating dawn.</p>
+    <p>A lion's head decorates the wall above the throne. Its jaw hangs slightly open, a permanent sneer carved into its features — as if mocking you: <span class="inner-thought">"Your head should be up here instead."</span></p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>The oba shuffles in. The announcer jerks awake and jumps to his feet. <span class="dialogue">"Kabiyesi,"</span> he exclaims, his voice like a flute in a shaky hand. You all rise. You prostrate and step back only when permitted.</p>
+    <p>The king's gaze sweeps the six of you and settles on you.</p>
+    <p><span class="dialogue">"Where is my Kakanfo?"</span> he asks.</p>
+    <p><span class="dialogue">"He is in hiding, Kabiyesi. Many wish him dead. He does not wish to provoke them with his presence. But he will take his life if it is your wish."</span></p>
+    <p>The oba nods once. <span class="dialogue">"Tell me what happened. Then I will decide."</span></p>
+    <p>You clear your throat. <span class="dialogue">"Two nights ago, Kabiyesi, many of us awoke with terror — we had the same dream."</span></p>
+    <p><span class="dialogue">"The same dream?"</span> The oba's eyes sharpen. <span class="dialogue">"All of you?"</span></p>
+    <p><span class="dialogue">"Almost all, Kabiyesi."</span></p>
+    <p><span class="dialogue">"Continue."</span></p>
+    <p><span class="dialogue">"The Kakanfo feared our minds were unfit for battle. So he called off the mission."</span></p>
+    <p><span class="dialogue">"So you were not defeated?"</span></p>
+    <p><span class="dialogue">"No, Kabiyesi. No army has yet defeated Modekun's warriors."</span></p>
+    <p><span class="dialogue">"Then how did you lose your way?"</span></p>
+    <p><span class="dialogue">"A mischief-maker among us claimed to see women gliding in the shadows. Panic and confusion scattered our ranks. Some fell into ravines; others climbed hills."</span></p>
+    <p>You turn to your companions, and they mutter their agreement.</p>
+    <p>The oba strokes his bulbous nose. <span class="dialogue">"Women gliding in the shadows?"</span></p>
+    <p><span class="dialogue">"Old women. Witches — from the dreams we had."</span></p>
+    <p><span class="dialogue">"Aah."</span></p>
+    <p>You keep your eyes low. You are not expecting sympathy, certainly not the thunderous laughter that bursts out of him.</p>
+    <p>You stiffen. Why is he laughing? Is he picturing how his army ran in circles with eyes stretched wide? Or how you — yes, you, who once pried open a leopard's jaws — cried out for your mother? Your shoulders drop as you wait upon your king.</p>
+    <p>His laughter grows and spills like curds from an overturned calabash.</p>
+    <p><span class="dialogue">"Modekun's bravest... running from women! Old women!"</span></p>
+    <p>Your men erupt, too, laughing without a sense of where they are. Their mirth strikes harder than scorn, not ruffles — tickles. You feel a twitch tugging the corners of your lip. If you do not let it out, it will choke you.</p>
+    <p>Turning away, you press your forehead to the wall. You had cried for your mother. Why not Oshun, Oya, or the gods you pray to? Why your mother? You thought you were about to join her. The humiliation bubbles into reluctant hilarity. Eshu be praised for your moment of madness.</p>
+    <p>All of you laugh until the oba commands silence.</p>
+    <p><span class="dialogue">"Are you telling me,"</span> he says, voice iron again, <span class="dialogue">"that you ran from women?"</span></p>
+    <p><span class="dialogue">"Witches, Kabiyesi. They leapt like grasshoppers and had tongues as long as toads'."</span></p>
+    <p><span class="dialogue">"Tell me your dream, Dayo."</span></p>
+    <p>You swallow hard. The shame is raw. You are about to recall an encounter you have spent nights trying to forget.</p>
+
+    <div class="dream-sequence">
+        <p><strong>✧ The dream of Dayo ✧</strong></p>
+        <p>They emerge from the darkness — first as alluring women, skin glowing like rain-wet earth. Then the shift: eyes clouding white, hair falling away in brittle clumps, teeth sharpening into jagged cones.</p>
+        <p>They snap at you and pull back, circling with the playful cruelty of children toying with a cornered creature.</p>
+        <p>A sting in your eye. You reach up — and something pulls it clean from its socket.</p>
+        <p>Your scream shakes the night.</p>
+        <p>You glimpse your men fighting, torches wavering like dying stars. Flames cast shadows that reveal the witches fully: mangy skin, hair sprouting from moles, teeth stained with old blood.</p>
+        <p>Their shrieks split the trees. Severed heads continue laughing. A stray arm clutches your throat until you hack it off — yet its fingers stay latched.</p>
+        <p>You run blind and crash into a tree. The world folds.</p>
+        <p>When you wake, taloned hands pin you down. A witch lifts something red and raw to the firelight — your manhood.</p>
+        <p>Your cries delight them. They gut you and toss you into a boiling cauldron. The heat flays your nerves; you dissolve into pain as they feast on your flesh.</p>
+    </div>
+
+    <p><span class="dialogue">"So they took your manhood?"</span> the oba asks when you finish.</p>
+    <p><span class="dialogue">"In the dream, yes, Kabiyesi."</span></p>
+    <p><span class="dialogue">"What if it was not a dream? What if a tribe bewitched you first, then did these things?"</span></p>
+    <p><span class="dialogue">"Since I am whole, Kabiyesi, I believe it was only a nightmare."</span></p>
+    <p><span class="dialogue">"Show me."</span></p>
+    <p>His words land like a slap.</p>
+    <p><span class="dialogue">"Show you what, my king?"</span></p>
+    <p><span class="dialogue">"Your manhood."</span></p>
+    <p>Your blood chills. He means it. He wants confirmation that you are still a man. Refusing is not an option. You drop your girdle, slip off your loincloth, and stand naked before your king.</p>
+    <p><span class="dialogue">"Ah! There it is,"</span> the oba says, pointing at your member as though it were a festival mask. <span class="dialogue">"Dimeji, come. Adigun, look well."</span></p>
+    <p>Your men crowd around, their breath warm on your skin. You fix your eyes on the lion's head above the throne.</p>
+    <p><span class="dialogue">"Touch it,"</span> the oba commands your men.</p>
+    <p>Dimeji's hand trembles as it grips your shaft. You remain statue-still as indignity stiffens you, betraying you.</p>
+    <p>The oba rubs his nose. <span class="dialogue">"Good. You are intact,"</span> he concludes.</p>
+    <p>You dress quickly, swallowing your mortification.</p>
+    <p>The discussion shifts to spirits — <span class="yoruba-word">egbéré burúkús</span>, <span class="yoruba-word">ajoguns</span>, curses that twist dreams. Jide, the spirit-watch, sensed nothing supernatural.</p>
+    <p>The oba exhales gloom. <span class="dialogue">"Until we find the culprit, the army cannot go to war. Shall we live like ground squirrels, fearing the eagle?"</span></p>
+    <p>You bow your head. A nation that trembles invites conquest.</p>
+
+    <div class="divider-stars">✧ ✧ ✧</div>
+
+    <p>The meeting ends. The oba instructs a messenger on what to tell the people. Warriors never carry shameful news. They are supposed to be conquerors — symbols of greatness.</p>
+    <p>You and your men stand hidden behind the palace wall as the messenger begins.</p>
+    <p><span class="dialogue">"Omo Modekun! Omo Modekun-o!"</span></p>
+    <p>The crowd stills. A man lifts the messenger onto his shoulders, perhaps as a prank, perhaps out of eagerness.</p>
+    <p>The messenger bellows: <span class="dialogue">"Our Kabiyesi is troubled by what he has heard. But rejoice! All our warriors have returned safely."</span></p>
+    <p>Cheers rise.</p>
+    <p>Then come the truths:</p>
+    <p>The mission uncompleted.<br>
+    The warriors struck by visions.<br>
+    No battle fought.<br>
+    No defeat — only the exhaustion of men plagued by nightmares.</p>
+    <p>The crowd murmurs, gasps, and hums with half-belief. But they erupt when told that the Maiden Carnival will still hold. With no war heroes to honour, a wrestling match will decide the champions.</p>
+    <p>You and your men step away from the wall, relief washing over you.</p>
+    <p class="inner-thought">The Kakanfo will be pleased.</p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+    <footer>“An Inglorious Return” — where warriors flee from shadows, and the king demands proof of manhood before mercy.</footer>
+</div>
+</body>
+</html>

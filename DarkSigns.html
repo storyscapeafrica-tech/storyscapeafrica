@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dark Signs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1e1915;
+            color: #e6dfd7;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.58;
+            font-size: 1.08rem;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #2b241f;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            border: 1px solid #4f3e32;
+        }
+
+        h1 {
+            font-size: 3.3rem;
+            margin-bottom: 0.4rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            border-left: 6px solid #c2823a;
+            padding-left: 1.2rem;
+            color: #f7e5cf;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 0 #3a2a1e;
+        }
+
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #cb9e6b;
+            margin-bottom: 2rem;
+            margin-top: 0.2rem;
+            border-left: 6px solid #c2823a;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1.5px solid #4f3e32;
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+            color: #f0dbba;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #f0cfa0;
+        }
+
+        .yoruba-word {
+            font-family: 'Courier Prime', monospace;
+            background: #3f2e24;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #e7bc7e;
+            font-style: normal;
+        }
+
+        .inner-thought {
+            font-style: italic;
+            color: #c8aa7a;
+            background: #36271f;
+            padding: 0.05rem 0.2rem;
+            border-radius: 6px;
+        }
+
+        .spirit-whisper {
+            color: #ccaa7c;
+            font-family: 'Crimson Text', serif;
+            letter-spacing: 0.3px;
+            background: #2f231c;
+            display: inline-block;
+            padding: 0 0.2rem;
+            border-radius: 6px;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #4f3e32, #b87a3a, #4f3e32);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #c2823a;
+            margin: 1.8rem 0;
+            padding: 0.7rem 1.4rem;
+            background: #342820;
+            color: #eedbbc;
+            border-radius: 24px;
+        }
+
+        .omen-box {
+            background: #2f241d;
+            padding: 1.2rem 1.8rem;
+            border-radius: 32px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border: 1px solid #5f4636;
+            color: #eedbc8;
+            box-shadow: inset 0 0 6px #00000015, 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .omen-box p {
+            margin-bottom: 0.7rem;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+            h2 {
+                font-size: 1.65rem;
+            }
+        }
+
+        .divider-stars {
+            text-align: center;
+            letter-spacing: 4px;
+            color: #b87a3a;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #ad8662;
+            border-top: 1px solid #4f3e32;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+
+        .drum-beat {
+            font-weight: 600;
+            color: #e2b27c;
+        }
+
+        .carnival-fade {
+            background: #2a1f18;
+            padding: 0.2rem 0.4rem;
+            border-radius: 20px;
+        }
+    </style>
+<!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+<div class="container">
+    <h1>Dark Signs</h1>
+    <div class="sub">Modekun, Oyo Kingdom · 1813 · where the wind carries omens</div>
+
+    <p>Modekun, Oyo Kingdom. 1813.</p>
+    <p>Tinu straightens her back as Baba Folarin tips the keg and guzzles, his throat leaping with each swallow. Anxious, she reaches for Eniola's hand and gives it a small squeeze. He likes it, her touch says.</p>
+    <p>Baba Folarin drains the keg and burps.</p>
+    <p><span class="dialogue">"So how is it, Baba?"</span> Tinu asks.</p>
+    <p>He smears the white dribble from his chin, jerks his head up, and scans the room. <em>What is it?</em></p>
+    <p>A blast of wind whips the beaded curtain open and pummels the walls.</p>
+    <p><span class="dialogue">"It's just a strong breeze,"</span> Tinu says.</p>
+    <p>Figurines and clay pots shatter on the floor.</p>
+    <p>Baba Folarin heaves a deep sigh. <span class="dialogue">"It is no ordinary wind."</span></p>
+    <p><span class="dialogue">"Back to what you were saying, Baba,"</span> Eniola says.</p>
+    <p>A frown creases the old man's forehead. <span class="dialogue">"And what was that?"</span></p>
+    <p><span class="dialogue">"You were telling me about my chances at the carnival?"</span></p>
+    <p>Tinu hisses. <span class="inner-thought">Not true.</span> He was about to tell them what he thought of their wine offering.</p>
+    <p><span class="dialogue">"Oh, yes,"</span> he says quickly. <span class="dialogue">"Your beauty will fetch you the suitor you desire. If I were much younger myself, you would have been my prize."</span></p>
+    <p><span class="dialogue">"It's not about who we desire, but who we are made for,"</span> Tinu blurts. <span class="dialogue">"How will she know the one?"</span></p>
+    <p>Eniola leans to her side and mutters to Tinu, <span class="dialogue">"I know who I'm made for, thank you."</span> She turns to Baba Folarin. <span class="dialogue">"But you're an oracle, Baba. How would I have been your prize? Carnival brides are for warriors only."</span></p>
+    <p>He shakes his head. <span class="dialogue">"For the brave. For heroes."</span></p>
+    <p><span class="dialogue">"But then you would have proposed to me privately. No, thank you. I want a carnival proposal. Although both would be nice."</span></p>
+    <p>Baba Folarin simpers like a little boy. <span class="dialogue">"I would have done things to you in private that would have changed your mind."</span></p>
+    <p>Tinu groans. <span class="inner-thought">Abomination. Eniola could be his granddaughter.</span></p>
+    <p>Eniola's eyes flicker wide with glee. <span class="dialogue">"You're so funny, Baba. I didn't know you could talk like that."</span></p>
+    <p><span class="dialogue">"Will you pray for us?"</span> Tinu asks.</p>
+    <p>Baba Folarin pushes himself up from his mat, toes crackling like dry twigs. <span class="dialogue">"Watch me."</span> He waddles like a duck shaking its tail feathers, a musty whiff following him. <span class="dialogue">"When you dance at the carnival, show them your big behind."</span></p>
+    <p>Tinu stiffens. Is this where they once gathered to listen to stories? He was quite a storyteller then; now he's just an old drunk.</p>
+    <p>Eniola cups her mouth to hide a smirk. She flicks a knowing glance at Tinu, and Tinu jerks her gaze away. If she catches her staring, she'll assume it's envy. And it's not. Eniola is pretty, true, but she doesn't turn heads like her. Even she knows. Surely, she doesn't expect her great-uncle to make such racy comments about her.</p>
+    <p>Behind the beaded curtain, the courtyard basks in a brooding afternoon. The sky is gravid with rain.</p>
+    <p><span class="dialogue">"We should go,"</span> Tinu whispers. <span class="dialogue">"He's tipsy."</span></p>
+    <p><span class="dialogue">"You can go. I'm staying,"</span> Eniola rasps.</p>
+    <p><span class="dialogue">"Hey, I brought you here. If I leave, you should too."</span></p>
+    <p><span class="dialogue">"I know this place well. I could have come here on my own."</span></p>
+    <p><span class="dialogue">"But you didn't."</span></p>
+    <p><span class="dialogue">"Will you let your heart dance a little? Or is it because I'm getting all the attention?"</span></p>
+    <p>Tinu hisses. <span class="yoruba-word">Asiere</span>, lowlife.</p>
+    <p>Outside the hut, the drumming intensifies — chanting rising into something fevered. A rain dance. Tinu clenches her jaw. If the rains fall early, carnival dances will be a muddy affair.</p>
+    <p>Baba Folarin slaps his forehead. <span class="dialogue">"Did you hear voices?"</span></p>
+    <p><span class="dialogue">"They're singing,"</span> Eniola says.</p>
+    <p><span class="dialogue">"No, not them. Voices in the wind."</span></p>
+    <p><span class="dialogue">"What did they sound like?"</span> Tinu asks.</p>
+    <p><span class="dialogue">"Mumbles. Voices from far away."</span></p>
+    <p>Eniola grins. <span class="dialogue">"Sometimes the wind sounds like that."</span></p>
+    <p><span class="dialogue">"It could have been us whispering to each other,"</span> Tinu says.</p>
+    <p><span class="dialogue">"I didn't like the way they sounded,"</span> Baba mutters. <span class="dialogue">"It growled. Like it was angry."</span></p>
+    <p>Tinu laughs. <span class="dialogue">"That was Eniola trying to keep her voice down."</span></p>
+    <p>Eniola turns to her and mouths the word '<span class="yoruba-word">ifarasin</span>' — jealousy — lashes fluttering.</p>
+    <p>What in Oya's name made her bring Eniola? All she wanted was for her great uncle's mediation to settle over them so they would choose wisely at the Maiden Carnival — a time when they would be expected to betroth strangers and could easily accept the wrong proposal for the thrill of envy. Instead, she's fed Eniola's vanity.</p>
+    <p>The drumming cuts off. More screams.</p>
+    <p><span class="dialogue">"What's happening?"</span> Baba tilts his head.</p>
+    <p>Blessed timing — the chaos has snapped him out of his stupor.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Tinu rushes to the doorway and stops dead. She stares at the heavens — at the premature night. The sun peeks through black clouds, the day pulsing between shadow and light. Thunder rumbles.</p>
+    <p class="inner-thought">A sky in the throes of labor. A storm is about to break.</p>
+    <p>Eniola bumps past her. <span class="dialogue">"E gba mi."</span> She freezes. <span class="dialogue">"This can't be happening. Our men are still in the forest. Aren't we supposed to be married before this?"</span></p>
+    <p>Tinu shrugs, throat tight.</p>
+    <p><span class="dialogue">"What is the Modakeke doing up there?"</span> Baba says, stepping past them — indeed, the clouds resemble the churn of riverbed mud.</p>
+    <p><span class="dialogue">"This is not good,"</span> he whispers.</p>
+    <p><span class="dialogue">"It's just rain,"</span> Tinu says, willing herself to believe it.</p>
+    <p><span class="dialogue">"No. See how the cloud's shadow falls only on parts of the village?"</span> His voice drops. <span class="dialogue">"Dark forces are about. And they feed on strong emotions. Things like fear and lust. They bring out the worst in people."</span></p>
+    <p><span class="dialogue">"I thought it was the wine,"</span> Tinu mutters.</p>
+    <p><span class="dialogue">"I have drunk many wines,"</span> he says sharply, <span class="dialogue">"and none turned me into... that."</span></p>
+    <p>Eniola forces a laugh. <span class="dialogue">"Baba, you're telling stories again."</span></p>
+    <p>But Baba's gaze sobers in a way Tinu has never seen. He returns to his hut without a word.</p>
+    <p><span class="dialogue">"What if he's right?"</span> Tinu whispers. <span class="dialogue">"He didn't sound drunk."</span></p>
+    <p><span class="dialogue">"He's old,"</span> Eniola says. <span class="dialogue">"His memory is failing. Some ordinary things are new and exciting again."</span></p>
+    <p><span class="dialogue">"I agree,"</span> Tinu says and mutters, <span class="dialogue">"Like you."</span></p>
+    <p><span class="dialogue">"What did you say?"</span></p>
+    <p><span class="dialogue">"Nothing."</span></p>
+    <p>Eniola sighs. Then she grins, an idea forming. <span class="dialogue">"Do you think my butt is big?"</span> She doesn't wait for an answer; she spins away to the dancers in the yard, gloating, her head swelling with pride, like a ripe <span class="yoruba-word">elegede</span>.</p>
+    <p>The wind howls, bending the obeche trees like reeds beneath an unseen giant's sweep. Goats bleat in panic.</p>
+    <p>Baba emerges. <span class="dialogue">"I'm going to see Yetunde. She may know something."</span></p>
+    <p><span class="dialogue">"It's only rain,"</span> Tinu says.</p>
+    <p><span class="dialogue">"Then why are you disturbed? You don't want to farm just yet?"</span></p>
+    <p><span class="dialogue">"It's not that. We'll have to dance in mud at the carnival."</span></p>
+    <p><span class="dialogue">"You are thinking of yourself, child. What about the army? If anything has happened to our warriors, what will be the point of the carnival?"</span></p>
+    <p><span class="dialogue">"That's a scary thought. Please let's not imagine things."</span></p>
+    <p><span class="dialogue">"Your imagination is like a storm. Remember the story of the ferryman and the river siren? What did it teach you?"</span></p>
+    <p><span class="dialogue">"A crisis is to fortitude what a storm is to an iroko tree."</span></p>
+    <p><span class="dialogue">"Exactly."</span></p>
+    <p>He shuffles out of the hamlet. Tinu scampers after him, but doesn't follow him down the road.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Outside the gate, she watches Baba Folarin shuffle away, growing smaller and smaller until the bend takes him. A bonfire gutters in the wind, cowering. People scream and sway — a celebration warped by anxiety. Children cartwheel wildly, freed from watchful eyes.</p>
+    <p>Tinu settles onto the familiar old log as drums thunder. Thick-set mothers pinch dimples in their buttocks and shake them, daring the storm. They shriek and square off in dance duels, reliving their carnival days.</p>
+    <p>The spectacle is a mockery that taunts Tinu's dread. Baba Folarin could be right about there being no carnival this season. If that's the case, those dances are painful reminders. There'll be nothing left to do but farm work. The first rains are like gongs that call everyone to the tall, itchy grasses in the fields — and to all the creatures hiding in them: snakes, gnats, mosquitoes...</p>
+    <p>Fire ants!</p>
+    <p>She springs up, swatting her bottom.</p>
+    <p>The old log is their fortress. And they punish anyone who sits on it.</p>
+    <p>Nothing bit her. Thank goodness. Even the ants know when they have bigger worries.</p>
+    <p>The wind fades. Trees remain leaning, as if caught mid-bow. The sky brightens. Shango's practical joke? The festive crowd gasps. Some mock Iya Pelumi and her rain-dance crew: <span class="dialogue">"Don't stop now! Continue! Perhaps it will rain in your huts."</span></p>
+    <p><span class="dialogue">"It must be raining somewhere,"</span> Iya Pelumi retorts.</p>
+    <p>Tinu's mother returns from the neighboring hamlet. She explains that it is not rain, but something darker. The villagers react with skepticism, exchanging looks and murmuring dismissively. When she reveals that Baba Folarin said that the wind carried voices, laughter follows — her audience waves it away as another of his drunken foolishness, insisting he cannot be taken seriously.</p>
+    <p><span class="dialogue">"And what did the voices say?"</span> Aburo Laide leans her pregnant body against a wall.</p>
+    <p>Her mother sighs. <span class="dialogue">"Nothing clear, he said. He was on his way to see Iya Yetunde when I ran into him."</span></p>
+    <p><span class="dialogue">"She is a clairvoyant,"</span> Iya Kemi says. <span class="dialogue">"She doesn't remember her strange dreams, but luckily, she talks in her sleep."</span></p>
+    <p><span class="dialogue">"I hope this isn't a bad omen,"</span> Iya Temi says, voice trembling. <span class="dialogue">"Our men are yet to return—"</span></p>
+    <p><span class="dialogue">"Don't,"</span> Iya Bolanle snaps. <span class="dialogue">"You'll call misfortune to them by linking the two!"</span></p>
+    <p><span class="dialogue">"That's your business. I've said what I've said."</span></p>
+    <p>The two women hurl insults back and forth, their voices clanging like cooking lids. Abosede beats her drum to drown them out, but the racket only feeds the chaos. Why is everyone so irritable today?</p>
+    <p>Her mother storms away, heading for their hamlet. She could easily have expressed Iya Temi's concern and walked straight into their barrage. Thank heavens, she didn't. Tinu hurries after her.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Inside the Awíse of Modekun's hut, Yetunde sleeps on a raffia mat, breathing heavy. An assembly of <span class="yoruba-word">amoyes</span> waits patiently. Perhaps she will talk in her sleep. Or remember her vision this time when she wakes up. Folarin sits apart from them as always.</p>
+    <p><em>...mmm...</em></p>
+    <p>Folarin flinches. <span class="dialogue">"Did you hear that?"</span></p>
+    <p><span class="dialogue">"Hear what?"</span> Dosu says.</p>
+    <p><span class="dialogue">"She spoke."</span></p>
+    <p>Skepticism prickles around him.</p>
+    <p><span class="dialogue">"I didn't hear anything,"</span> someone mutters. <span class="dialogue">"Probably one of us."</span></p>
+    <p><span class="dialogue">"No. Her,"</span> Folarin insists.</p>
+    <p>They listen.</p>
+    <p>Nothing but snores.</p>
+    <p><em>...don't panic... mmm...</em></p>
+    <p><span class="dialogue">"There!"</span> Folarin shrieks. <span class="dialogue">"She said the word 'panic.'"</span></p>
+    <p><span class="dialogue">"Panic over what?"</span> Oladipo sneers.</p>
+    <p>Folarin shrugs.</p>
+    <p><span class="dialogue">"Well, that helps little. Perhaps the ancestors are trying to reach you. But you've ruined it by calling our attention."</span></p>
+    <p>Folarin doubts that. He hasn't heard spirit voices since he became the oba's wine taster.</p>
+    <p><span class="dialogue">"Maybe it's the kparaga in his belly,"</span> someone mocks.</p>
+    <p>A few laugh. One cackles outright.</p>
+    <p>Their amusement grates on him. He wants to snap back, 'It was your mother's uncle; he just farted.' But with sinister forces baiting and waiting, it's better not to let anger take hold.</p>
+    <p>Yetunde whispers breathily.</p>
+    <p>Folarin crawls closer, presses his ear close to the Ìyánífá's lips, and repeats what he hears.</p>
+    <p>Her words flow through him, cold as the Modakeke River:</p>
+    <blockquote>“A wave of terror has cast your warriors into flight, and the storm rolling through your village is but the echo of the fear that unmade their resolve.”</blockquote>
+    <p>Gasps resound around the room. Oladipo asks others to hush so they can listen.</p>
+    <p>Folarin's pulse races. He repeats more words as Yetunde's murmuring pours through him:</p>
+    <blockquote>“Daylight wavers, for their minds have broken. They race from phantoms only they behold, leaping like gazelles before an enemy conjured from within.”</blockquote>
+    <p>Yetunde stops speaking.</p>
+    <p>He lifts his head and is met by stares from his fellow <span class="yoruba-word">amoyes</span> — eyes sharp and sober. They aren't sure who he is: the fool, the drunk, or the vessel Yetunde's divination has been waiting for. Aren't they the same folks who called him an old campfire, burned out but still babbling? But what is happening now? Without him, Yetunde's message would have been lost.</p>
+    <p>The Ìyánífá's words don't stay within the hut. An emissary of the Awise's council steps out for the oba's palace, only to be waylaid by the crowd. Soon, the news is loose, riding the village like the very wind Folarin feared.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Back in Tinu's home, Iya Adeola sweeps the clay floor in long, mechanical strokes, letting the broom's bristles scrape the floor until her worries are arranged into neat little piles.</p>
+    <p><span class="dialogue">"Iya, stop worrying. Baba Dayo is fine,"</span> Tinu says.</p>
+    <p>Her mother doesn't look up. <span class="dialogue">"Something has happened. I feel it. And I hate feeling useless."</span></p>
+    <p><span class="dialogue">"It doesn't help to panic."</span></p>
+    <p><span class="dialogue">"What if your father... and Wande... are gone? Slaughtered like goats?"</span></p>
+    <p>Tinu stiffens. <span class="dialogue">"Mother, don't speak like that. Words have—"</span></p>
+    <p><span class="dialogue">"Be quiet,"</span> her mother snaps, eyes flashing. <span class="dialogue">"Keep that sermon to yourself."</span></p>
+    <p>Talking drums thunder nearer as they approach. Every soul in Modekun knows a summons when they hear one.</p>
+    <p>Tinu's mother inhales sharply, smooths her wrapper, and presses her palms over her face. <span class="dialogue">"Let's go,"</span> she says.</p>
+    <p>They slip into the courtyard — quieter now, only the dull thud of a pestle against mortar. They join small crowds streaming down the dust path between hamlets.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>At the village square, a multitude squeezes tight around an empty center. A child whimpers and is swiftly shushed. The Oba's Aròkìn steps onto an old stump and towers above them. A hush ripples outward as the court messenger's eyes sweep across their anxious faces like a judge. Tinu clings to her mother, standing on her toes. The messenger clears his throat.</p>
+    <p><span class="dialogue">"Modekun does not put her women in harm's way,"</span> he says, <span class="dialogue">"but the time has come for them to play a different role."</span></p>
+    <p>The crowd erupts:</p>
+    <p><span class="dialogue">"What happened?"</span></p>
+    <p><span class="dialogue">"Are the warriors alive?"</span></p>
+    <p><span class="dialogue">"Where are they?"</span></p>
+    <p>Sweat beads down Tinu's temples.</p>
+    <p>Bodies press forward, straining for answers.</p>
+    <p><span class="dialogue">"Alive, they are, but lost,"</span> the Aròkìn shouts.</p>
+    <p>The voices trickle down to murmurs: Lost? How is that possible?</p>
+    <p><span class="dialogue">"We must assemble search parties immediately,"</span> he says. <span class="dialogue">"Fetch your cutlasses and food. Be swift. We leave before nightfall. Nothing to worry about besides mosquitoes and snakes."</span></p>
+    <p>He jumps down from the stump, and people swarm him with questions:</p>
+    <p><span class="dialogue">"For how many nights will we camp?"</span></p>
+    <p><span class="dialogue">"What came over them?"</span></p>
+    <p><span class="dialogue">"Aren't there wild animals in the forest?"</span></p>
+    <p>The crowd fragments. Some rush home; others freeze, drowning in uncertainty.</p>
+    <p>Tinu moves quickly. <span class="dialogue">"Mother, come on—"</span></p>
+    <p>Her mother grabs her wrist.</p>
+    <p><span class="dialogue">"But you heard—"</span></p>
+    <p><span class="dialogue">"We're not going."</span></p>
+    <p><span class="dialogue">"But you said—"</span></p>
+    <p><span class="dialogue">"I said I hate feeling powerless. I also hate having more things to worry about."</span></p>
+    <p><span class="dialogue">"Oh, mother."</span></p>
+    <p><span class="dialogue">"Think!"</span> she rasps. <span class="dialogue">"How can grown men lose their way home? What if we're being sent to gather corpses?"</span></p>
+    <p>The words land like claws. Tinu stomps away from her mother before she drowns her in her worst fears.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>When they return to the breathless heat of their hut, her mother shreds ewedu leaves by the window and calls out to a few passersby. Tinu sinks onto a stool in the far corner. It's hard to think straight with her mother constantly talking.</p>
+    <p><span class="dialogue">"Have you considered that if you maim yourself, it would ruin your chances at the carnival?"</span> her mother says. <span class="dialogue">"You think Wande will pick a girl with one eye?"</span></p>
+    <p><span class="dialogue">"Wande is like a brother."</span></p>
+    <p><span class="dialogue">"He was a boy then; he's a warrior, now."</span></p>
+    <p>Tinu's eyes sting. Marriage promises a new kind of freedom. She was worried about getting married, but now she can't wait.</p>
+    <p><span class="dialogue">"What will I tell your father if something happens to you?"</span> her mother says. <span class="dialogue">"What will I say to Oshun, whom I cried to for a child for many years? After enduring so much ridicule from Bolanle and the others?"</span></p>
+    <p>Her mother turns to look at her, and she cries harder.</p>
+    <p>Her mother points the knife's tip toward her. <span class="dialogue">"I have tried to reason with you, but you want adventure — you want romance."</span></p>
+    <p><span class="dialogue">"I'm going there to help."</span></p>
+    <p><span class="dialogue">"And they don't need it. Now, look. I don't want to hear another whimper from you. Spare a thought for me? I could die of too much worry."</span> She picks up the knife and resumes chopping ewedu leaves.</p>
+    <p><span class="dialogue">"Father would have let me go. He knows what I'm made of. He used to give me warrior lessons as a child."</span></p>
+    <p><span class="dialogue">"I said no."</span> Her mother screams, her voice warped, almost unearthly. She looms over Tinu, eyes fever-bright. <span class="dialogue">"Now leave me alone. I'm busy."</span></p>
+    <p><span class="dialogue">"You're the one holding me."</span></p>
+    <p>She flings the knife, low and wild. It skitters across the floor and dies at Tinu's feet. The snarl loosens; her face softens.</p>
+    <p>She blinks at the knife. <span class="dialogue">"I'm sorry, Tinu. I don't know what came over me."</span> She turns away, stiff as a stalk, and lowers her head to the windowsill. She breaks into sobs.</p>
+    <p>Tinu wipes the damp from her face, her heart tugging her toward her mother. No. She won't take the old path — the one where pity softens her resolve, and she folds.</p>
+    <p><span class="dialogue">"If you don't want to keep me company, I won't hold you prisoner,"</span> her mother says calmly. <span class="dialogue">"You may leave. But make sure you return to this house before Bedtime."</span></p>
+    <p>Tinu steps out into the courtyard, indignant.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Shadows pool beneath the eaves. The once-bright yard now lies under an evening sky, its clay floor dulled.</p>
+    <p>Iya Bolanle and her team are examining a pile of utensils, things they plan to carry with them into the forest.</p>
+    <p><span class="dialogue">"Who brought this bucket?"</span> Iya Kemi laughs. <span class="dialogue">"There are no bath sheds in the forest. There are rivers bigger than the Modakeke."</span></p>
+    <p><span class="dialogue">"Look,"</span> Iya Bolanle says. <span class="dialogue">"Listen well."</span> She scans each face before continuing — there is a confused pause when she sees Tinu's teary-eyed face. <span class="dialogue">"Leave the food. We don't need extra weight. Think about those you are about to rescue and bring anti-venom and medicines we'll need to treat their wounds. The only things that look like weapons we'll need are — cutlasses, for cutting through thickets."</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>The sun surrenders completely, leaving only a sliver of a crescent moon to watch over the village. Lanterns drift through the deepening dusk like embers as her clan disappears around the bend — bodies first, then shadows.</p>
+    <p>Wande would have been surprised to see her on his first outing with the army. It would have seemed as though they still did things together and nothing could separate them, not even war missions. How amusing would that have been?</p>
+    <p>No. She won't go back inside. She'll look for Eniola instead. Did she leave with her clan? Did fortune favor her more?</p>
+    <p>Across the hamlets, clans stream toward the square, lanterns hovering along a path in a procession. Children lag, stooping to pick up shiny stones before sprinting after adults.</p>
+    <p><span class="dialogue">"Aburo Tinu!"</span> A girl's voice splits the twilight. Wunmi leans from a hut window with her half-brothers — Wale and another boy, Dele, or something like that. <span class="dialogue">"You'll be on our team, yes?"</span></p>
+    <p>Tinu forces a smile. <span class="dialogue">"Maybe."</span></p>
+    <p>Once, she dazzled them with folktales from Baba Folarin and her grandfather. Now they stand on the brink of their own adventures. How merciless life is.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>At Eniola's hut, a slim woman stirs a pot over a brazier. It's Eniola's mother.</p>
+    <p><span class="dialogue">"Good evening, Iya Olaitan,"</span> Tinu greets.</p>
+    <p>She glances up. <span class="dialogue">"Welcome, Tinu. How is your mother?"</span></p>
+    <p><span class="dialogue">"She's fine. Is Eniola home?"</span></p>
+    <p><span class="dialogue">"She left for Remi's hamlet."</span> She scoops some soup into a bowl. <span class="dialogue">"Want to taste?"</span></p>
+    <p><span class="dialogue">"Thank you."</span> Tinu declines.</p>
+    <p><span class="dialogue">"Hope you're not going into the woods?"</span></p>
+    <p><span class="dialogue">"No, I'm not."</span></p>
+    <p><span class="dialogue">"Good. No one expects you girls to. Not with the carnival at hand."</span></p>
+    <p>Tinu trudges out of the gate, the long walk to Remi's clan home — several hamlets away — weighing heavily on her mind. She squares her shoulders and straightens her back, determined not to let the distance, or Iya Olaitan's words, break her spirit.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Halfway down the road, cupped hands come together in muffled pops. It's a hand-tossed drumbeat that echoes softly through the evening haze. The measured clapping increases Tinu's heartbeat. Are they practicing their dances? At a time like this? When the very husbands they'll be seeking could be wounded or dead? And even if they're alive, isn't the carnival meant for a conquering army?</p>
+    <p>Remi and her fawning friends are so naïve — Eniola, too. Do they think the carnival will still hold? How can it? It's a celebration of heroes, a fete for victors, and from what they've heard, the army is returning in disarray, winless.</p>
+    <p>Remi's mother's chicken coop reeks of feathers and dried droppings. Crouching, she slinks behind it.</p>
+    <p>Two nondescript girls spin and tap to a rhythm spun from voices and clapping, their slender forms cut into the dim glow of a bush lamp on the ground. Remi and Eniola — easier to pick out — pound out the beat, shouting and clapping harder, pushing the dancers into a fierce dance duel with the frenetic muffled-pop sounds of their palms. Chickens stir and cluck warily, sensing Tinu nearby. But even their restless squawks can't pierce the spell holding all four girls.</p>
+    <p>Tinu bursts into the open field beside the chicken coop. <span class="dialogue">"What's wrong with all of you?"</span> she yells.</p>
+    <p><span class="dialogue">"Who's there?"</span> Eniola stammers, looking around her.</p>
+    <p>Tinu steps into the light. <span class="dialogue">"You're dancing here while the whole village is in chaos."</span></p>
+    <p>A dark-skinned girl peers at her. It's Bukola. <span class="dialogue">"Tinu? You scared us. This is not amusing?"</span></p>
+    <p>Tinu stomps up to her. <span class="dialogue">"You're all hiding. We've never practised here. Or sung in such low, dreadful voices."</span></p>
+    <p><span class="dialogue">"We're not hiding?"</span> the last girl says. <span class="dialogue">"Our public performance will be at the carnival."</span></p>
+    <p><span class="dialogue">"Shut up, Bisi,"</span> Remi snaps. <span class="dialogue">"Don't explain yourself. Who does she think she is?"</span> Turning to Tinu, she says, <span class="dialogue">"Atinuke, you can believe what you like. You're not our leader."</span> She minces away, exaggerating her hip movements.</p>
+    <p>A squall lashes around them, blowing the sharp tang of poultry in their faces.</p>
+    <p><span class="dialogue">"Chickens,"</span> Tinu yells after her, her voice cracking.</p>
+    <p>Bukola wags a finger at Tinu, her bracelets clinking with her words. <span class="dialogue">"Wo, Tinu. Be very careful."</span></p>
+    <p>Tinu grins, wide and reckless. <span class="dialogue">"Go on. Scratch the dirt like chickens. Is this the dance you'll show the warriors?"</span> She squawks and flaps her arms, stirring the dust at her feet. She dances around the girls, who stay silent, seething.</p>
+    <p>She eyeballs Remi. <span class="dialogue">"You've never been my friend. You don't want me here because you see me as your biggest rival."</span></p>
+    <p>Remi's breathing hitches. <span class="dialogue">"Correction. I don't see you. Now, blow away."</span></p>
+    <p>Tinu gets in her face. <span class="dialogue">"Do you see me now?"</span></p>
+    <p>Remi's expression remains relaxed — her nostrils flare faster, but that's it.</p>
+    <p><strong>Kerack!</strong></p>
+    <p>Remi catches Tinu square on the jaw.</p>
+    <p>Tiny balls of white pop before Tinu's eyes. She stumbles back, a blistering wave flooding over her face.</p>
+    <p><span class="dialogue">"You witch,"</span> she spits. <span class="dialogue">"Are you trying to maim me? Before the carnival? You're in trouble."</span></p>
+    <p>Remi and Bukola lunge before she can speak. The ground surges up — she's slammed down. She grabs a grit of sand and flings it as she scrambles up, aiming for their eyes. They grab her and shove her back down, and she goes face-first. Bukola and Bisi pin her arms and shoulders. Remi drives a knee into her spine. Hands slap her cheeks and ribs; nails rake fire down her arms. Fingers knot in her hair, wrenching her head sideways. <span class="inner-thought">Get off.</span></p>
+    <p>Heat surges through her as panic rises. Breath gone. Mouth pressing against dust. Fists slamming into her ribs.</p>
+    <p><span class="dialogue">"Wait,"</span> she shouts. <span class="dialogue">"I want to apologize."</span></p>
+    <p>The beating falters, but they still pin her down.</p>
+    <p><span class="dialogue">"Let her go,"</span> Remi commands.</p>
+    <p>They release Tinu, and she staggers to her feet, scraggly and half-naked from the fray. Her face throbs. But what hurts more is her best friend's betrayal. Remi caused it. How long has she waited for a chance to scar her? She licks her front teeth and slips a finger into her mouth to feel for gaps or looseness. Unsure, she slips a finger inside her mouth.</p>
+    <p>Blood on her finger. Mother of Offerings!</p>
+    <p>Tears streamed down her cheeks, and she mewled — not from the pain of her wounds, but from the trouble she knew she was in. Her mother will be so angry. She'll think she wandered into the forest against her instructions.</p>
+    <p>The buzzing in her head says, <span class="inner-thought">Don't give them what they want.</span></p>
+    <p>They stare, waiting.</p>
+    <p>Their eyes, especially Eniola's, trigger hatred, black and blinding.</p>
+    <p><span class="dialogue">"You're not chickens,"</span> she says. <span class="dialogue">"You're asieres — lowlifes lower than the earth."</span></p>
+    <p>Whatever gripped her, dragging the words out of her mouth, was not boldness. It was compulsion. She had to say it.</p>
+    <p>Remi barks a laugh, then skewers Tinu with a cold stare. <span class="dialogue">"Get her."</span></p>
+    <p>Bukola barrels into her, slamming her to the ground. She curls up — she lowers her head, tucks in her chin — against the battery, throwing up an arm to guard her face. An uppercut cracks her jaw, rattling her teeth. A savage yank on her hair drags her head backward, her scalp blazing. Eniola watches with a pained grimace.</p>
+    <p><span class="dialogue">"Stop it! You're hurting me,"</span> Tinu screams. <span class="dialogue">"Egba mi o. Iya mi o."</span></p>
+    <p>Distant shouts. Running feet.</p>
+    <p>The beating stops.</p>
+    <p>Three mothers haul her to her feet.</p>
+    <p><span class="dialogue">"What is happening here?"</span> one of them yells. It's Aunt Abi, Remi's mother. <span class="dialogue">"Why are you disturbing the village at a time when our thoughts are elsewhere?"</span></p>
+    <p><span class="dialogue">"Atinuke won't let us practice in peace,"</span> Remi sputters. <span class="dialogue">"She came here to dampen our spirits."</span></p>
+    <p><span class="dialogue">"Hah,"</span> Tinu says with a clap. <span class="dialogue">"If your spirits aren't damp already, then you can't be from Modekun."</span></p>
+    <p><span class="dialogue">"Shut your mouth,"</span> Aunt Abi barks. <span class="dialogue">"What a horrible thing to say. You are angry that they are rehearsing without you."</span> Not only is she siding with her daughter, but she's sounding like her, too.</p>
+    <p><span class="dialogue">"It's not that, Aunty. It's wrong for us to be practicing at a time like—"</span></p>
+    <p><span class="dialogue">"And who asked for your opinion? Let them be!"</span></p>
+    <p><span class="dialogue">"Tell her, Iya,"</span> Remi says.</p>
+    <p>Aunt Abi leans her face close to Tinu's. Her upper body carries most of her bulk, making her hips seem slimmer in comparison.</p>
+    <p><span class="dialogue">"Besides, I can't go into that mamba-infested forest?"</span> Bukola says. <span class="dialogue">"Certainly not at this time."</span></p>
+    <p><span class="dialogue">"Is that so?"</span> Tinu says with an 'aha' in her tone. <span class="dialogue">"So you care only about saving your own skin?"</span></p>
+    <p><span class="dialogue">"See who's talking."</span> Remi hisses. <span class="dialogue">"Why are you still here?"</span></p>
+    <p><span class="dialogue">"My mother won't allow me, so I'll pray for them at a shrine."</span></p>
+    <p>Aunt Abi echoes Tinu's last words, matching her cadence perfectly and delighting her audience. <span class="dialogue">"And you want the girls to join you."</span></p>
+    <p><span class="dialogue">"No."</span></p>
+    <p><span class="dialogue">"So that you can take the lead as usual."</span></p>
+    <p><span class="dialogue">"No,"</span> Tinu cries.</p>
+    <p><span class="dialogue">"So typical of you. Now get out of my sight before I open my eyes. Go to your shrine and pray! Leave!"</span></p>
+    <p>Tinu skips away, their jeers propelling her to sprint with all her might. Aunt Abi's vehemence stung, but what hurt even more were the nods of the other mothers. What will her mother say when she sees her? She would panic, and the fighting would continue.</p>
+    <p>She wipes her face, crying, running faster.</p>
+    <p>Something yanks her back.</p>
+    <p>The jagged lip of a tree hollow has caught the edge of her wrapper.</p>
+    <p><span class="dialogue">"Haah,"</span> she screams and wrenches her cloth free, ripping it.</p>
+    <p>Clutching the scraps around her body, she flees into the night, ducking between lantern-lit windows and outdoor fires as shadows fold in behind her.</p>
+    <p>On reaching her hamlet, she slips into the shrine, its doorway yawning empty. Something deeper than an afterthought pulls her in.</p>
+    <p>She asked Baba Folarin to pray right before he did a silly dance. Whatever had acted on him does not want anyone to pray. To survive it, she must show character. Isn't that the moral of the ferryman story?</p>
+    <p>The hush inside is thick, broken only by the rasp of her breath and the distant thud of drums elsewhere.</p>
+    <p>Polished figurines stare at her from shelves, cool clay pressing against her bare feet. The air smells of damp earth, old ash, and palm oil gone faint with age.</p>
+    <p>She kneels, sharp crumbs of sand pricking her skin. Modekun needs her prayers.</p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+
+    <footer>“Dark Signs” — where omens whisper through the wind, and a girl’s prayer becomes the village’s last anchor.</footer>
+</div>
+</body>
+</html>

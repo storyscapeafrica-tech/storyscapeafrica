@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>FORSAKEN · Anjorin, the Mindpiercer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1f1e1a;
+            color: #e0dbce;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            font-size: 1.08rem;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #2b2a24;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            border: 1px solid #6e6855;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.2rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            border-left: 6px solid #9e7c5c;
+            padding-left: 1.2rem;
+            color: #f4efdf;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 0 #2d2b1f;
+        }
+
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #c7a26f;
+            margin-bottom: 2rem;
+            margin-top: 0.2rem;
+            border-left: 6px solid #9e7c5c;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #eddbaa;
+        }
+
+        .yoruba-word {
+            font-family: 'Courier Prime', monospace;
+            background: #42402e;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #efdead;
+            font-style: normal;
+        }
+
+        .inner-thought {
+            font-style: italic;
+            color: #dbc88f;
+            background: #3b3929;
+            padding: 0.05rem 0.2rem;
+            border-radius: 6px;
+        }
+
+        .memory-flash {
+            background: #35342a;
+            padding: 1.2rem 1.8rem;
+            border-radius: 32px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border-left: 4px solid #9e7c5c;
+            color: #f0e9d0;
+            font-style: normal;
+            box-shadow: inset 0 0 6px #00000020, 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #6e6855, #9e7c5c, #6e6855);
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        .divider-stars {
+            text-align: center;
+            letter-spacing: 4px;
+            color: #9e7c5c;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #b69465;
+            border-top: 1px solid #6e6855;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+
+        .pleasurepain {
+            font-weight: 600;
+            color: #eacc94;
+        }
+        .empath-mark {
+            background: #423f2e;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
+   <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+<div class="container">
+    <h1>FORSAKEN</h1>
+    <div class="sub">Anjorin · the Mindpiercer · an empath's unraveling</div>
+
+    <p>My earliest memory of my gift was helping my sister catch an old cockerel for slaughter. Other children cheered as we chased our supper, stumbling over each other — they rooted for the bird. What followed shamed me more than wetting myself.</p>
+    <p>I still remember the look on their faces — their cackles.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>I catch the bird and carry it to my sister, Olamide, its heart hammering against my palm.</p>
+    <p>She hands me a knife and says, <span class="dialogue">"Bleed it."</span></p>
+    <p><span class="dialogue">"What?"</span></p>
+    <p><span class="dialogue">"Slit its throat and bleed it."</span></p>
+    <p>I've seen it done before, but I've never been asked to do it.</p>
+    <p>I pin the bird with my foot, crouch over it, and pluck the fine neck feathers to bare its skin for my blade.</p>
+    <p>A twinge shoots up my arm.</p>
+    <p>My grip loosens.</p>
+    <p>I drop the knife.</p>
+    <p>My heart thrashes inside me. I am the cockerel, moments from the blade.</p>
+    <p>I release it and recover from my daze. The laughter of the other children bursts around me like a storm.</p>
+    <p>I run for my mother's hut, my eyes welling with tears.</p>
+    <p>I hoped it would fade like a moonlit tale — bright for a night, gone by morning. But my story grew from that day. I became known as the boy who couldn't kill a chicken. A boy so tender-hearted it was bizarre. The adults shook their heads when I passed them. <span class="dialogue">"Poor child,"</span> they would mutter. <span class="dialogue">"He will never be a warrior."</span></p>
+    <p><span class="dialogue">"Sometimes, it is good to be afraid,"</span> my father says. <span class="dialogue">"Wisdom starts with fear."</span></p>
+    <p>He lied. It's never a good thing to fear killing... a chicken.</p>
+    <p>The laughing stopped.</p>
+    <p>Then came the looks — longer, quieter. Heads tilted. Eyes soft.</p>
+    <p>I would have preferred the laughter.</p>
+    <p>When the oracles in my village discovered I was an empath, the pity stopped. For three moons, they kept me in seclusion. I ate alone and slept on a mat that smelled of herbs. They performed my <span class="yoruba-word">itefa</span>, reread my destiny. They gave me a new name: Anjorin. The old one vanished. I became an <span class="yoruba-word">amoye</span> too — a spiritual guide like them, a wise one. I was now a person people brought their problems to. Not someone expendable. Like a warrior.</p>
+    <p><span class="dialogue">"Forget he is younger,"</span> my mother would say to my cousins. <span class="dialogue">"Take his advice."</span></p>
+    <p>Admiration and resentment followed me in equal measure.</p>
+    <p>Now that I'm grown, I'm the most popular empath in the kingdom, and still the most sensitive of creatures — still the boy who can't kill a chicken or a bug.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>In the middle of a session with a querent. I'm spiritually joined to her. I send her the warmth I've harvested from past experiences — mine and others'. She arches as if my hands rest on her. Her throat catches. Every sensation is real to her. Her jaw loosens, and she gasps. With no images to anchor it, she moves as though blindfolded.</p>
+    <p>Her fingers claw at the mat.</p>
+    <p>Her back arches, holds, and trembles, her voice breaking, <span class="dialogue">"Please —"</span> Not whole, not once.</p>
+    <p>I ease the Pleasurepain, as I call it, and she curls into herself, shuddering.</p>
+    <p>There's a dampness between my legs.</p>
+    <p>The wall against my bare back is cold.</p>
+    <p>My heartbeat steadies. My vision returns in fragments. A woman stands in the doorway of the sanctuary, mouth half-open.</p>
+    <p>My heart stutters.</p>
+    <p><span class="inner-thought">Shola?</span></p>
+    <p><span class="inner-thought">No, my love. It's not what you think.</span></p>
+    <p>She slips out the way she came.</p>
+    <p>I rush after her.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Outside, the field rises and dips with the hills as Shola descends toward the village below. The wind lashes and swirls, stealing my breath until my chest caves. She cuts through my flock, past the sheep herds and the tents of my querents, and bolts across the pasture. After a stretch, she stoops over a ledge, panting.</p>
+    <p><span class="dialogue">"Stay back. Don't come any closer,"</span> she says.</p>
+    <p><span class="dialogue">"Fine. Please listen."</span></p>
+    <p>She claws at her braids and screams into the hills. I motion the gathering crowd away. <span class="inner-thought">I need a moment alone with my wife.</span></p>
+    <p><span class="dialogue">"I haven't been myself since I got back,"</span> I begin.</p>
+    <p>Birds screech overhead.</p>
+    <p><span class="dialogue">"I don't need touch to know what people feel — I sense it through the air."</span></p>
+    <p>Shola's face stills. Her knees buckle, and she sinks to the grass.</p>
+    <p>My words spill out. I explain how I became the most sought-after <span class="yoruba-word">amoye</span> in the land.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>When I finish, she stares into the hills beyond the village.</p>
+    <p><span class="dialogue">"Is that what you call it? Easing tensions?"</span> she says finally, her voice flattening.</p>
+    <p><span class="dialogue">"I take away their pain. If only for a while. And in that moment... they're free. Isn't that what matters?"</span></p>
+    <p><span class="dialogue">"That woman had an orgasm."</span></p>
+    <p><span class="dialogue">"Spirit intrusion. I never touched her."</span></p>
+    <p><span class="dialogue">"It's intimacy. You share what should stay between us."</span></p>
+    <p>I don't respond.</p>
+    <p>She laughs once. <span class="dialogue">"Those people don't want their problems solved; they come for you to satisfy their lust."</span></p>
+    <p><span class="dialogue">"They come to me because nothing else helps."</span></p>
+    <p>She shoots me a glance, her anger rising.</p>
+    <p><span class="dialogue">"You think I do it because I enjoy it?"</span></p>
+    <p>She sighs. <span class="dialogue">"If you did nothing wrong, you wouldn't have kept it from me."</span></p>
+    <p>My silence answers. She knows I'm sorry.</p>
+    <p><span class="dialogue">"I need to be alone tonight. Don't come home tonight."</span></p>
+    <p>In the days that follow, I neither see nor hear from Shola. I cannot focus. I have cravings I no longer wish to indulge. Her words sour in me. Each time I swallow, they rise again — thick, refusing to go down.</p>
+    <p>I miss my sessions. Without them, the world dulls. Unfortunately, the bitter aftertaste of my hindsight hits me before I begin. Rather than deliver my querents the climax they seek, I describe it, hoping it dissuades: <span class="dialogue">"At its peak, desire turns on itself — sweetness curdling into pain."</span></p>
+    <p>The days bleed into one another. I sleep on the same mat. Feel the same wind. Answer the same questions. I stay in the hills and refuse visitors. I listen to the wind. I hear the many questions my querents once asked me.</p>
+    <p>By the third day of my banishment, Shola's continued silence weighs like a judgment. I pick up the calabash I plan to surprise her with. Stop.</p>
+    <p>Set it down.</p>
+    <p>Pick it up again.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>On the fourth, a querent arrives with an unusual plea.</p>
+    <p><span class="dialogue">"My father is dying,"</span> she says. <span class="dialogue">"He's in so much pain. Smallpox. Could you visit us and grant him a pleasant death?"</span></p>
+    <p>A punishment from Shoponna, the god whose name shall not be spoken. Her father must have violated a taboo. She is desperate, or she would not have confessed such news. <span class="dialogue">"Where is he now?"</span> I ask.</p>
+    <p><span class="dialogue">"In a forest north of Odàrà."</span></p>
+    <p><span class="dialogue">"Left to die?"</span></p>
+    <p>She nods, grimacing.</p>
+    <p>No one survives the contagion. With my gift, I could endure its ravages with less peril. An epidemic so absolute would feed my memory stores, making me more formidable.</p>
+    <p>The girl's name is Tade. She belongs to the Ọ̀runṣọlá Clan in Odàrà.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>That evening, Shola sends for me. When I arrive, my supper waits on a tray. She cuts off my attempt at conversation and goes straight to the point.</p>
+    <p>She watches me too long.</p>
+    <p><span class="dialogue">"Here's my decision,"</span> she says. <span class="dialogue">"You have to choose between me and whatever you do in those hills."</span></p>
+    <p><span class="dialogue">"Then I choose you."</span></p>
+    <p><span class="dialogue">"That fast? You didn't even think about it."</span></p>
+    <p><span class="dialogue">"I don't need to. I love you, Shola."</span></p>
+    <p><span class="dialogue">"I love you too."</span></p>
+    <p><span class="dialogue">"There's a problem, though,"</span> I say. I roll a ball of <span class="yoruba-word">eba</span>, and dip it in soup and chunks of fish. <span class="dialogue">"How to drive my followers away. They won't leave. So we will have to."</span></p>
+    <p><span class="dialogue">"Where will we go?"</span></p>
+    <p><span class="dialogue">"Odàrà. A new beginning. Time alone."</span></p>
+    <p>She leans her back against the wall. <span class="dialogue">"I like how that sounds."</span></p>
+    <p><span class="dialogue">"We can leave at dawn."</span></p>
+    <p><span class="dialogue">"So soon? Why the urgency?"</span></p>
+    <p><span class="dialogue">"Why wait? Opportunity deserts those who hesitate."</span></p>
+    <p><span class="dialogue">"No more secrets, Anjorin."</span></p>
+    <p><span class="dialogue">"I swear it."</span></p>
+    <p>We make love.</p>
+    <p>It's the familiar telepathy of mood, our bodies twining with our inner chaos.</p>
+    <p>I breathe into her ear. <span class="dialogue">"Let me show you what I can do now."</span></p>
+    <p>She peers into my eyes. She nods.</p>
+    <p>I introduce her to the Pleasurepain. I intend to show her just a little. But as soon as I open the channel, I spill over the cliff like a waterfall. I no longer steer it. I follow, attacking her sensibility with arousals I borrowed from harlots and princes — royal orgies.</p>
+    <p>She moans, her pleasure twisting into horror.</p>
+    <p><span class="dialogue">"Stop."</span></p>
+    <p>I can't.</p>
+    <p>I bare everything.</p>
+    <p>At last, I tear down the bridge, freeing us both. She stares at me, shaking. As if I've set the bed on fire.</p>
+    <p><span class="inner-thought">I know what she thinks.</span> I've inherited her reaction. I recognize them. I've seen them in first-time querents. I'm still searching for ways to free my partners of such thoughts without taking on their restraints.</p>
+    <p><span class="dialogue">"Was it that horrible?"</span> I ask.</p>
+    <p><span class="dialogue">"Part of me..."</span> She stops. Swallows. <span class="dialogue">"Part of me wants to stay in it."</span></p>
+    <p>And that frightens her more than what I did.</p>
+    <p><span class="dialogue">"You play with things you don't understand,"</span> she says. <span class="dialogue">"Things no oracle should."</span></p>
+    <p>I bite my tongue.</p>
+    <p><span class="dialogue">"Now I see why those who come to you won't leave."</span></p>
+    <p>After a while, she says, <span class="dialogue">"Maybe their pain isn't yours to carry. Maybe the gods put it there for a reason. And you keep interrupting it."</span></p>
+    <p>I shrug. <span class="dialogue">"All very possible."</span></p>
+    <p><span class="dialogue">"What if that's why we haven't been blessed with a child? We need to leave."</span></p>
+    <p><span class="dialogue">"I agree."</span></p>
+    <p><span class="dialogue">"And you need to purge yourself of all those..."</span></p>
+    <p>I nod. <span class="dialogue">"So we leave in the morning?"</span></p>
+    <p><span class="dialogue">"Yes. How could I deny you the chance to start over?"</span></p>
+    <p>Shola sinks into her corner of the bed. She pushes me away when I wrap my arms around her. Once, we folded into each other without thinking, breaths braided in the dark. But tonight, we lie apart, a careful stretch of straw between us.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Dawn arrives gray and reluctant. When I open my eyes, Shola is dressed. She sings softly as she stuffs garments into a pouch. I sit up, and she turns to me and smiles.</p>
+    <p><span class="dialogue">"There's water in the bowl over there,"</span> she says.</p>
+    <p>I wash my face in the bowl beside my altar, gather my cowries into a sack, lash it to a stick, and sling it over my shoulder. We hold hands and stride up the hill that blocks our view of the tableland. At the crest, she looks back at our home, and nostalgia brushes through her. Our neighbors will claim it if we don't return. But we will: I hid my earnings as 'the Mindpiercer' in a hole on that property.</p>
+    <p>I kiss her on the cheek and whisper in her ear, <span class="dialogue">"If we leave all this behind... what do we have left?"</span></p>
+    <p><span class="dialogue">"A chance to start over?"</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>We move along descending roads emptied of voices, following a familiar path to the outskirts, where wild vegetation begins. We no longer need to steady our gait with joined hands.</p>
+    <p>The air thickens with loam; shadows gather at the forest's edge. As sunlight thins among the trees, Shola reaches for my arm.</p>
+    <p>The sounds of human habitation peter out. The distant laughter, the clunking of axe against wood, and braying donkeys are replaced by a dense, listening quiet. The road narrows to uneven tracks; dust gives way to damp, clinging earth, and the smell of loam settles at the back of my throat. A cool breeze blows under tall, leafy canopies. My steps grow shorter and heavier. Shola winces as pain swells at her heel. It hurts. She shows me the blister on the ball of my foot. Each step is a small protest that she refuses to answer. A twig under my foot snaps and startles. Soon fear loosens its grip. Our gait develops a faster rhythm. Shadows close in, and the forest swallows us, the memory of sunlight and an open sky feeling like something we imagined.</p>
+    <p>She stops to listen out for danger. She presses a finger against her lips, and I stand still — even our breathing is too loud.</p>
+    <p><span class="dialogue">"Nothing will surprise us,"</span> I whisper. <span class="dialogue">"I can sense spirits for miles, including the ones wearing bodies."</span></p>
+    <p>She relaxes. <span class="dialogue">"What do you sense now?"</span></p>
+    <p><span class="dialogue">"Little creatures."</span></p>
+    <p>She frowns. <span class="dialogue">"How can you tell?"</span></p>
+    <p><span class="dialogue">"They hunger for food or a mate. Nothing that should frighten us."</span></p>
+    <p><span class="dialogue">"And how will you know if that hunger isn't something large tracking us?"</span></p>
+    <p>I laugh. <span class="dialogue">"I won't. Not always."</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>By the time we reach Inúmìdún, the sun sinks, leaving a bruise of blue-violet across the sky. The market is closing: mats rolled, baskets overturned, goats dragged along as people hurry past.</p>
+    <p><span class="dialogue">"Why the rush?"</span> Shola asks a goat seller, who knots her tether tight.</p>
+    <p><span class="dialogue">"You must be a visitor,"</span> the woman says, eyes flicking down the road.</p>
+    <p>Shola nods. <span class="dialogue">"We've come from Irawo."</span></p>
+    <p><span class="dialogue">"Tonight is Òrò."</span></p>
+    <p><span class="dialogue">"I see. Is there an inn nearby?"</span></p>
+    <p>The woman studies us, then nods toward a narrowing street. <span class="dialogue">"Come."</span></p>
+    <p>She leads us, her three goats pulling at their ropes, to an <span class="yoruba-word">ilé àlejò</span>.</p>
+    <p>The place reeks of <span class="yoruba-word">burúkútù</span> and men who have drunk past sense. Their laughter is a dull blade; their eyes linger too long on my wife. I draw her closer.</p>
+    <p>There is no choice. On a night like this, no woman should be outside when Òrò begins. I press two cowries into the keeper's palm. He says nothing, only leads us to our hut.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Night settles by the time we step into the yard to bathe. Shola lathers herself while I keep watch beside the bath shed. Nearby, two men share a keg of palm wine.</p>
+    <p><span class="dialogue">"The festival could not have come at a better time. These are troubling times."</span></p>
+    <p><span class="dialogue">"It's that mind-piercer in Irawo many go to see."</span></p>
+    <p><span class="dialogue">"He indulges immorality. That's why the Òrò must be called."</span></p>
+    <p><span class="inner-thought">Fools.</span> I pull thorns from broken spirits. It lasts only a moment, but sometimes a moment is all that's needed to change a life.</p>
+    <p>We return to our hut when Shola emerges. She slips off her wrapper and dries her hair with it, slow and deliberate.</p>
+    <p><span class="dialogue">"I would give anything to sit by a warm fire."</span></p>
+    <p>Outside, the bullroarer bellows.</p>
+    <p><span class="dialogue">"Do you hear that? It's the festival. I want to experience it."</span></p>
+    <p><span class="dialogue">"You can't go out there — you're an outsider."</span></p>
+    <p><span class="dialogue">"My body will remain here."</span></p>
+    <p>She hesitates. <span class="dialogue">"Anjorin, please. Don't leave."</span></p>
+    <p><span class="dialogue">"If anything frightens you, touch me, and I will sense your panic. But don't alarm me without cause."</span></p>
+    <p>I lie on my side and step outside her protests, extending beyond her worry into the emotional landscape.</p>
+    <p>Anger streams past — the Àṣẹ of the ancestors — restless, agitated, swirling around the bullroarer. They mark their presence through footpaths — a surge of wrath, then a wash of sorrow.</p>
+    <p>The bullroarer bellows again — closer.</p>
+    <p>The sound presses against the air, heavy, waiting.</p>
+    <p>I feel something I cannot make out.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>I wake with a wince. Light pierces my eyes. Morning. The sun warms the air. Shola squeezes a loincloth into her sack.</p>
+    <p><span class="dialogue">"We should have left before sunrise,"</span> I say, shielding my face. <span class="dialogue">"We will need to cover our faces now."</span></p>
+    <p><span class="dialogue">"I think we should see a priest."</span></p>
+    <p><span class="dialogue">"A priest? Why?"</span></p>
+    <p>She stares. <span class="dialogue">"You remember nothing from last night?"</span></p>
+    <p>She tells me how I awoke, choking on tears, my voice shaking as I spoke of going to Odàrà to soothe the anguish of a godforsaken. To harvest the punishment of one abandoned and fold it into my reserves. She tells me how I wrestled aloud with whether it would be mercy or blasphemy.</p>
+    <p>I'm conscious of my breathing. <span class="inner-thought">What in Eshu's name loosened my tongue?</span> Now she knows everything.</p>
+    <p><span class="dialogue">"What will a priest do, besides pray?"</span></p>
+    <p><span class="dialogue">"A message from the gods, perhaps. Something you can both accept."</span></p>
+    <p>I exhale. <span class="dialogue">"I will not see a priest."</span></p>
+    <p>She folds the cloth into her sack and turns to me. <span class="dialogue">"Then we part here. You go your way; I go mine."</span></p>
+    <p><span class="dialogue">"You're serious."</span></p>
+    <p><span class="dialogue">"I said no more secrets, and you lied."</span> She meets my gaze. <span class="dialogue">"Someone needs to save you from yourself."</span></p>
+    <p><span class="dialogue">"Fine. Let's go."</span></p>
+    <p>We throw cowls over our heads, pull the cloth across our mouths, and slip into the street. A slow tide of worshippers carries us along between hamlets.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>At a pantheon, incense hangs thick. A drum pulses beneath murmured confessions. After the festival, the place swells with penitents and people ready to shed old skins.</p>
+    <p>During prayer, I lean toward Shola. <span class="dialogue">"My stomach growls."</span></p>
+    <p><span class="dialogue">"Sssh. Pray. Offer your fasting."</span></p>
+    <p>When the prayers end, she pays for a private consultation with the priest who led the session — a man of a lower calling than me.</p>
+    <p>We wait alone in a shrine.</p>
+    <p>I lean toward her. <span class="dialogue">"I am an <span class="yoruba-word">amoye</span>. His training could never match my calling."</span></p>
+    <p><span class="dialogue">"Humble yourself. If darkness sits inside you, isn't it better that he cannot see it clearly?"</span></p>
+    <p>Good foresight. But she's forgetting one thing: <span class="inner-thought">mediums like me can shape these moments.</span></p>
+    <p>The priest shuffles in, ankle beads clinking. We hold our greetings as he lowers himself onto a mat, face tightening with effort. Not old — heavy. Flesh burdens him more than years.</p>
+    <p><span class="dialogue">"So what answers do you seek?"</span></p>
+    <p><span class="dialogue">"We are on our way to Odàrà,"</span> Shola says, <span class="dialogue">"to grant a dying man a swift, painless death. What lies in store for us?"</span></p>
+    <p>He works the Ifá Oracle, chanting as he summons Òrúnmìlà. When the sign falls, he gathers Shola's hands. <span class="dialogue">"You will triumph."</span></p>
+    <p>He turns to repeat the rite for me.</p>
+    <p><span class="dialogue">"Don't touch him. He was recently treated for a contagion. We are not sure if it has passed."</span></p>
+    <p>The priest presses his hands together.</p>
+    <p>He peers into my eyes, gaze clouding. <span class="dialogue">"A man who fears nothing has no boundaries"</span> — Shola's heart pounds — <span class="dialogue">"Suffering is often needed for repentance. Mercy isn't always the road that reunites you with your manifest destiny..."</span></p>
+    <p>I slip into him before he finishes. I lend clarity to his words.</p>
+    <p><span class="dialogue">"Fear is often an obstacle. But you have overcome yours. Go with the gods."</span></p>
+    <p>I sever the link. The priest blinks awake.</p>
+    <p>Shola's heart relaxes.</p>
+    <p>We leave the shrine before the priest fully recovers.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>We eat in silence at a stall near the pantheon's gate. By the time the sun climbs higher, Shola is humming and breaking yams with her fingers. With palm oil gleaming on her lips, she's a different woman from the one who recounted my words.</p>
+    <p>I place my hand over hers. She does not pull away. <span class="dialogue">"You don't seem to have reservations about Odàrà."</span></p>
+    <p>She shrugs. <span class="dialogue">"You're mistaken about the man. He's sick, not godforsaken. The priest told you to go with the gods."</span></p>
+    <p>I force a smile. <span class="dialogue">"What if he has smallpox?"</span></p>
+    <p>Her fingers still. <span class="dialogue">"Then the gods want his punishment eased."</span></p>
+    <p><span class="dialogue">"Including the One Who Shall Not Be Named."</span></p>
+    <p>She sighs. <span class="dialogue">"Yes."</span></p>
+    <p class="inner-thought">It's a mistake to touch her.</span> She tastes my guilt. <span class="inner-thought">She knows I'm hiding something.</span></p>
+    <p><span class="dialogue">"I never feared losing you. I thought if I needed to know whether you loved me, I would only need to touch you. But now... you can send emotions that aren't yours. I don't know you anymore. That frightens me."</span></p>
+    <p><span class="dialogue">"Oracles must grow to fulfill their purpose."</span></p>
+    <p><span class="dialogue">"I worry your path won't include me."</span></p>
+    <p>I pull her close and press a kiss to her forehead.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>When we finish eating, the sun climbs high, casting broken light through the canopy. The village loosens its hold; hamlets spread farther apart.</p>
+    <p>Ahead, the forest beckons.</p>
+    <p>Under the shade of leafy canopies, gnarled roots bulge from the soil like knuckled hands. Dry leaves crack underfoot.</p>
+    <p>We pick our way through the forest, Shola close, her shoulder brushing mine. Tension hums through her. I trade my calm for her state of mind and startle at once — the bushes rasp too loudly, each sound pricking her nerves.</p>
+    <p>Off the path, a river hurtles downhill, its black-and-silver skin splitting into restless seams. Shola edges toward it, soles testing slick earth. We fill our gourds.</p>
+    <p>A prickle runs along my spine.</p>
+    <p><span class="dialogue">"Let's get out of the water,"</span> I say. <span class="dialogue">"Something's hiding beneath."</span></p>
+    <p>She freezes, eyes locked on the shifting current.</p>
+    <p>I reach into the water. A crocodile erupts, thrashing.</p>
+    <p>Shola runs up the bank and doesn't stop until her lungs burn.</p>
+    <p>I release the crocodile, and it swims downstream.</p>
+    <p><span class="dialogue">"The gods be praised,"</span> Shola coos, making her way back a step at a time.</p>
+    <p>Something resting in the trees pricks up.</p>
+    <p>A pulse. Distant. Hungry.</p>
+    <p>I withdraw my spirit force. Too late. The damage is done. Whatever-it-is sensed the Pleasurepain and is now aware of us.</p>
+    <p>Shola's hand finds mine. She's shaking from almost being caught by a crocodile. We have bigger worries.</p>
+    <p><span class="dialogue">"We need to move,"</span> I say. <span class="dialogue">"Now."</span></p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+    <footer>“FORSAKEN” — the cost of carrying others' pain, and the road that may lead to ruin.</footer>
+</div>
+</body>
+</html>

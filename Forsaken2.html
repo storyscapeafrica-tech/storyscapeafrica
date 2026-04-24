@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>FORSAKEN · Part 2 · The Mindpiercer's Descent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1c1a17;
+            color: #e0dacf;
+            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            font-size: 1.08rem;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #2a2822;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+            border: 1px solid #6c6452;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.2rem;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            border-left: 6px solid #9e8b6b;
+            padding-left: 1.2rem;
+            color: #f4ecd9;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 0 #2d2b1f;
+        }
+
+        .sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #c8ae7a;
+            margin-bottom: 2rem;
+            margin-top: 0.2rem;
+            border-left: 6px solid #9e8b6b;
+            padding-left: 1.2rem;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .dialogue {
+            font-weight: 450;
+            color: #eedbaa;
+        }
+
+        .yoruba-word {
+            font-family: 'Courier Prime', monospace;
+            background: #42402e;
+            padding: 0.1rem 0.4rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #efdead;
+            font-style: normal;
+        }
+
+        .inner-thought {
+            font-style: italic;
+            color: #dbc88f;
+            background: #3b3929;
+            padding: 0.05rem 0.2rem;
+            border-radius: 6px;
+        }
+
+        .dark-moment {
+            background: #312f26;
+            padding: 1.2rem 1.8rem;
+            border-radius: 32px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            border-left: 4px solid #9e8b6b;
+            color: #efe6cf;
+            box-shadow: inset 0 0 6px #00000020, 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #6c6452, #9e8b6b, #6c6452);
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem 0.75rem;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        .divider-stars {
+            text-align: center;
+            letter-spacing: 4px;
+            color: #9e8b6b;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #b89f6e;
+            border-top: 1px solid #6c6452;
+            padding-top: 2rem;
+            font-family: monospace;
+        }
+
+        .slaughter-beat {
+            font-weight: 600;
+            color: #eacc94;
+        }
+    </style>
+    <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+<div class="container">
+    <h1>FORSAKEN</h1>
+    <div class="sub">Part 2 · the forest of egberes · five buried, one bound</div>
+
+    <p>With the sun at its peak, we rest on the banks. Shola's hand drifts to my arm, a teasing brush. The contact flips our states — her feelings flood me, mine spill into her.</p>
+    <p>She jerks back, eyes widening.</p>
+    <p><span class="dialogue">"You're tense. Something bothers you."</span></p>
+    <p>There's a mystic force in the woods. And it's aware of me. I don't want to alarm her so I smile.</p>
+    <p><span class="dialogue">"Relax,"</span> she says. <span class="dialogue">"You're the gods' chosen. You have their protection."</span></p>
+    <p><span class="dialogue">"What if you are right? What if there's darkness in me? I've felt the darkness of others..."</span></p>
+    <p><span class="dialogue">"Sssh. Don't speak like that. You have a purpose."</span> She glances over my shoulder and flinches.</p>
+    <p>I turn.</p>
+    <p><span class="dialogue">"I saw someone."</span> She points toward a pocket of shadow.</p>
+    <p>A hunter stumbles through brush and vanishes behind palm fronds, lean, ribs shifting beneath taut skin. He lowers his face to bark and roots, dragging his nose along them.</p>
+    <p><span class="dialogue">"He's starving,"</span> Shola says.</p>
+    <p>Unease winds like a python around me. <span class="inner-thought">I should have sensed him as a man.</span> But I sensed no human presence.</p>
+    <p>The hunter crawls into the bushes.</p>
+    <p><span class="dialogue">"That man isn't what he seems."</span> I spring forward into the undergrowth.</p>
+    <p>Shola runs after me. <span class="dialogue">"Anjorin!"</span></p>
+    <p><span class="dialogue">"I need to know what it is."</span></p>
+    <p>I crash through brush taller than my shoulders. Roots snag my feet.</p>
+    <p><span class="inner-thought">Where did it go?</span></p>
+    <p>Shapes ahead resolve into the hunter, then collapse back into stumps.</p>
+    <p><span class="inner-thought">I've lost it.</span></p>
+    <p>Shola stumbles across roots to get to me. <span class="dialogue">"What madness came over you?"</span></p>
+    <p>I peer behind fronds. <span class="dialogue">"It vanished somewhere."</span></p>
+    <p><span class="dialogue">"Are you even listening?"</span></p>
+    <p><span class="dialogue">"Woman. This 'madness' is what I am. I keep things from you because you refuse to see me."</span></p>
+    <p>She stares, wide-eyed, silent.</p>
+    <p>A shadow shifts ahead.</p>
+    <p>The hunter.</p>
+    <p>I follow.</p>
+    <p>Branches close behind him without sound.</p>
+    <p>The path disappears.</p>
+    <p>My foot catches —</p>
+    <p>The ground tilts.</p>
+    <p>Something moves above me.</p>
+    <p>I look up —</p>
+    <p>Teeth.</p>
+    <p>Darkness.</p>
+    <p>The hunter hangs in the branches, eyes bulging with a strangled stare.</p>
+    <p>It opens its mouth, and something sears through me.</p>
+    <p>My vision tears.</p>
+    <p>Then it holds.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>I float between branches, looking down as my body hangs limp in the hunter's arms. My head lolls, chest rising.</p>
+    <p>I am outside it. Watching.</p>
+    <p>I'm in a strange limbo devoid of emotions.</p>
+    <p>I could stay like this forever. I'm neither happy nor sad — no inner drive. Nothing concerns me, and I care about nothi...</p>
+    <p><span class="inner-thought">Òlórun. What inhabits my body?</span></p>
+    <p>Shola kneels beside my slack form. <span class="dialogue">"Anjorin."</span></p>
+    <p>I strike it —</p>
+    <p>not with my hands, but with the force of a link.</p>
+    <p>I reach for it.</p>
+    <p>And it reaches back.</p>
+    <p><span class="inner-thought">I care. I care about getting back to my body.</span></p>
+    <p>The connection catches.</p>
+    <p>For a moment, we share one space.</p>
+    <p>I wrench.</p>
+    <p>I rip it from my body.</p>
+    <p>It howls.</p>
+    <p><span class="inner-thought">Kill it, Anjorin. It's evil.</span></p>
+    <p>The voice grows. Not a thought. A reflex. Mindless, ancient, patient — the way a river rises and floods. The way rot finds the soft part of fruit.</p>
+    <p>I am hollow. Like the space between the ribs of a skeleton.</p>
+    <p>No grief. No fear. No love.</p>
+    <p>I won't mourn it.</p>
+    <p><span class="inner-thought">Go on. End its existence in the physical world.</span></p>
+    <p><span class="inner-thought">No. Stop.</span></p>
+    <p>It's mischief, not malice. A lonely spirit reaching — longing to be human.</p>
+    <p>In a heartbeat, I'm back.</p>
+    <p>My empathy is back.</p>
+    <p>Pain tears through me, and I release it.</p>
+    <p>The vagabond spirit slips back into my body.</p>
+    <p>As with the cockerel, its will to live surges into me. I despair. I fight, then yield. Once again, I cannot hold what I am meant to kill.</p>
+    <p><span class="dialogue">"Anjorin."</span> Shola pounds my chest.</p>
+    <p>Her touch opens a path.</p>
+    <p><span class="inner-thought">No.</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Time splits. I am nowhere. And then...</p>
+    <p>I snap upright in my body. The hunter has gathered me in his arms and is holding my head up.</p>
+    <p>Shola convulses on the grass.</p>
+    <p>She sits up, something feral in her gaze.</p>
+    <p>I reach for her and fall into the same void I felt with the hunter; her familiar warmth, now an empty shell — a dead end. I lose track of time and wake up on the grass, sun rays glinting through leafy branches.</p>
+    <p>Her body lifts. First a tremor, then a pull, as if something beneath her has let go.</p>
+    <p>Her feet leave the ground.</p>
+    <p>She rises into the branches — too smooth, too wrong.</p>
+    <p>I scramble after her, looking upward and crashing through brush.</p>
+    <p>I lose her behind thick leaves. Shapes flicker between the trees — her outline, then not. I lunge after each one. Branches whip my face. I trip and roll onto my back, shuddering.</p>
+    <p>The hunter vanishes.</p>
+    <p><span class="inner-thought">I saved a stranger and lost my wife in the same breath.</span></p>
+    <p>I drag myself to my hands and knees.</p>
+    <p>Trees lean inward, branches knitting a narrow corridor, a strong wind blowing with the sibilance of voices.</p>
+    <p><span class="inner-thought">You have lost your way, Anjorin.</span></p>
+    <p>Shola hovers at the end of the corridor.</p>
+    <p><span class="inner-thought">I need to save you from yourself.</span></p>
+    <p>I scream.</p>
+    <p>A storm of crows rises. The corridor vanishes. So does whatever held me.</p>
+    <p>My legs drag numb below the knee. Each step sends a dull shock through my spine.</p>
+    <p>The wind pries leaves apart.</p>
+    <p>Then nothing.</p>
+    <p>Light returns in fragments — the sway of bodies, the sense of being carried.</p>
+    <p>I lie among falling leaves — then arms lift me.</p>
+    <p>The smell of damp earth clings to me. Not memory — presence.</p>
+    <p>It sits in my throat, thick as rot.</p>
+    <p>Two men lower me to the ground and tip a calabash to my lips. Water spills; I swallow what I can. Hands raise my head, careful, almost gentle.</p>
+    <p>My breathing slows, lengthens. My guard loosens. I settle into stillness — and wait.</p>
+    <p>The forest does not leave. It presses close behind my eyes. Branches creak where there are no trees.</p>
+    <p>A hut replaces it. Smoke-blackened walls breathe in and out of focus. Faces gather above me — dark, indistinct — rising and receding.</p>
+    <p>For a moment, their mouths open without sound.</p>
+    <p>I swallow, cough, swallow again.</p>
+    <p>The haze thins. But the smell of wet root stays.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Strangers form a loose circle.</p>
+    <p>My throat burns. <span class="dialogue">"What chiefdom is this?"</span></p>
+    <p><span class="dialogue">"Odàrà,"</span> someone says.</p>
+    <p>Relief leaks from me.</p>
+    <p><span class="dialogue">"Please, notify the Ọ̀runṣọlá Clan that Anjorin the <span class="yoruba-word">amoye</span> has arrived — as promised."</span></p>
+    <p>Heads nod. Someone leaves to inform my hosts.</p>
+    <p><span class="inner-thought">I need them now more than they need me.</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Four men lift me by the wrists and ankles and put me on a stretcher. Folded into a contraption for carrying an antelope's carcass, I sway and tilt as they carry me into the sunset.</p>
+    <p>They smell of sweat and iron, of damp cloth, of something faintly medicinal ground into their skin. Each step jolts me; it finds my injured leg without fail, a blunt pulse that blooms, fades, returns, keeping time with their stride.</p>
+    <p>Behind us, voices call — wavering, breaking, gathering again, never reaching me.</p>
+    <p>We pass through the village in half-light. Murmurs trail us, low and constant, like flies. Children peer from doorways, eyes wide, fingers hooked into wood. Elders pause mid-task — hands hovering above baskets, tools stilled — their faces set in grave calm.</p>
+    <p>They carry me to a hamlet where Tade waits with her kin in the courtyard. Relief breaks across her face, like a crack through stone. She steps forward and welcomes me without question. Hands guide me down. I close my eyes as they set me on the ground and surrender to the stillness that follows.</p>
+    <p>A dark, elderly man steps forward. <span class="dialogue">"I am the Baale of this clan. I welcome you."</span></p>
+    <p>Hands guide me down. I close my eyes as they lower me to the ground.</p>
+    <p><span class="dialogue">"Welcome, Mindpiercer."</span></p>
+    <p><span class="dialogue">"Thank you. My wife should be here. An <span class="yoruba-word">egbere</span> took her."</span></p>
+    <p>The Baale's face crinkles more. <span class="dialogue">"There are too many of them here, stealing travelers, taking their speech — their direction — and wiping their memories."</span></p>
+    <p>The younger man beside him leans forward. <span class="dialogue">"By morning, she may not know her own name. We must move at dawn."</span> He studies me. <span class="dialogue">"Finding her is easy. Driving the <span class="yoruba-word">egbere</span> out is another matter."</span></p>
+    <p><span class="dialogue">"I would like to join the search."</span></p>
+    <p><span class="dialogue">"What do you mean?"</span></p>
+    <p><span class="dialogue">"She may not return unchanged."</span></p>
+    <p><span class="dialogue">"I will not leave her."</span></p>
+    <p>Tade, her mother, the Baalẹ, and two uncles file out.</p>
+    <p>Later, footsteps return. A tray rests beside me: <span class="yoruba-word">amala</span> and <span class="yoruba-word">ewedu</span>. I swallow a few bites and turn on my side.</p>
+    <p>I close my eyes.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>The forest returns.</p>
+    <p>The moment before Shola tries to wake me.</p>
+    <p><span class="inner-thought">Stop. Don't touch me. An egbere is inside me.</span></p>
+    <p>She does not hear.</p>
+    <p><span class="inner-thought">I should have killed it when I had the chance.</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Light presses against my eyelids.</p>
+    <p>I open them.</p>
+    <p>Darkness fills the room, broken by a lantern. Its flame wavers too close, heat grazing my skin. Early morning — or the hour before it claims the night. I recall the men who carried me.</p>
+    <p>The oil smokes, thickening the air with a bitter scent. Shadows of two men stretch along the walls. A chill in my chest. A cold knot behind my sternum. Small. Quiet. I press my fingers to it, rubbing. Nothing. No warmth, no pulse, no pain.</p>
+    <p>I told myself it was nothing.</p>
+    <p><span class="dialogue">"We're leaving to look for your wife. You can stay."</span></p>
+    <p><span class="dialogue">"No. I'm coming."</span> My voice scrapes as I rise. My joints protest, rippling.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Outside, five figures wait.</p>
+    <p>The sky hangs low, drained gray over mud walls and packed earth. The ground cool, damp. Night clings to corners.</p>
+    <p>I step forward. Every gaze weighs me.</p>
+    <p>They give their names. <span class="dialogue">"Ranti,"</span> says the only woman among them.</p>
+    <p>When they finish, Gbanko speaks. I recognize him from last night. He was the one who stood by the Baale and talked about leaving at dawn. A looped rope moves in his hands like a prayer bead. The others grip cutlasses.</p>
+    <p><span class="dialogue">"What are those for?"</span></p>
+    <p><span class="dialogue">"For clearing brush,"</span> Sheyi says.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>In the forest, we step beneath canopies darker than the sky. They close in, sealing off the last of the light.</p>
+    <p>Gbanko pauses. His hand lifts — not to halt us, but to measure something above. <span class="dialogue">"Watch the branches. They glide — before they learn to move like us."</span></p>
+    <p>His gaze lingers upward a beat too long. The others follow it, not trusting the ground to hold what they already know.</p>
+    <p>We fall into a single file, moving with the steadiness of a run before a foray. No scanning of the undergrowth, no second looks. The path matters less than the end of it.</p>
+    <p>Unease settles in me.</p>
+    <p>I sense their resentment. It comes in restrained currents.</p>
+    <p><span class="dialogue">"Why not check for footprints? There should be a trail."</span></p>
+    <p>Gbanko slows, but not enough to break from the rest. He glances at me. <span class="dialogue">"You're the Mindpiercer, aren't you?"</span></p>
+    <p><span class="dialogue">"That's what some call me."</span></p>
+    <p>A flicker of a smile crosses Sheyi's mouth. The others shift, small adjustments of shoulders and breath.</p>
+    <p><span class="dialogue">"You're here to grant Ọ̀runṣọlá a painless death, they say."</span></p>
+    <p><span class="dialogue">"I am."</span></p>
+    <p>The air seems to draw inward.</p>
+    <p>Sheyi shuffles closer, curious.</p>
+    <p><span class="dialogue">"You're an <span class="yoruba-word">amoye</span>, aren't you? Tell me — do you know what he did to me as a child?"</span></p>
+    <p>Her voice is even, almost careful. The words land without tremor.</p>
+    <p><span class="dialogue">"I don't judge. I simply leave them lighter."</span></p>
+    <p>Something slips out of her, a sound that might have been a laugh.</p>
+    <p>She steps closer and stops inches from me. Heat rises from her skin. <span class="dialogue">"You defy the gods by easing their punishment? Or do you think you know justice better than they do?"</span></p>
+    <p>The forest recedes.</p>
+    <p><span class="dialogue">"You think easing his pain changes what's coming to him?"</span></p>
+    <p><span class="dialogue">"Let him suffer. And die."</span></p>
+    <p>I turn to Gbanko.</p>
+    <p>Tension gathers. His jaw locks. His shoulders rise. <span class="dialogue">"He violated my brother for years. My brother killed himself. Is that justice?"</span> His gaze drifts into the trees.</p>
+    <p>They form a loose crescent around me — Gbanko to my left; Sheyi too close on my right; Ranti, and the other two, behind.</p>
+    <p><span class="dialogue">"Seize him."</span></p>
+    <p>Hands grab my arms. My cutlass is gone before I feel it leave. A knee drives into my back. I drop forward.</p>
+    <p>The ground hits my cheek.</p>
+    <p>I cry out as they tie me.</p>
+    <p>Rope bites into my wrists — tight, deliberate, the knots pulled with more care than haste.</p>
+    <p><span class="dialogue">"What is this?"</span> I ask.</p>
+    <p>Gbanko spits.</p>
+    <p><span class="dialogue">"I want to find my wife,"</span> I yell.</p>
+    <p>A palm cracks across my face. My head snaps sideways.</p>
+    <p><span class="dialogue">"Your wife met her fate of the forsaken — of those unprotected by the gods."</span> He pares down his words, anything more could slip into something he can't control.</p>
+    <p>Ranti stands behind me. The uncertainty that once clung to her is gone; in its place — something deliberate.</p>
+    <p>Gbanko's shifts drag at him.</p>
+    <p>His grief hasn't softened over time like corn in salt water. It sits in him, a scar tissue thickening.</p>
+    <p>Sheyi stands closest. Too close. His anger comes in waves. Beneath it is a sharp, restless vigilance. He watches everything — my hands, my breath, the space between us — as if waiting for something to slip.</p>
+    <p>My breath falters. <span class="dialogue">"I'm no judge."</span></p>
+    <p>Ranti laughs. The sound is thin.</p>
+    <p><span class="dialogue">"You are lost."</span></p>
+    <p>I flinch from the pressure of her words — from her need to believe it.</p>
+    <p>The woman is not a child anymore. She is not trying to be whole. She learned how to carry emotional weight without letting it show. Until now.</p>
+    <p>Now, she must correct a silence she can no longer bear.</p>
+    <p><span class="dialogue">"Be quiet, demoniac,"</span> one of the two others shouts. <span class="dialogue">"Your madness ends today."</span></p>
+    <p><span class="dialogue">"Hold him still."</span></p>
+    <p>A foot drives into my spine. Pain flares.</p>
+    <p>Sheyi presses down harder.</p>
+    <p class="inner-thought">I could break them if I chose.</p>
+    <p class="inner-thought">If I don't do it now, it will be too late.</p>
+    <p class="inner-thought">I breathe in. Hold it.</p>
+    <p class="inner-thought">Their hands press harder. Rope bites deeper.</p>
+    <p class="inner-thought">My chest tightens.</p>
+    <p class="inner-thought">A flicker —</p>
+    <p class="inner-thought">Feathers between my fingers.</p>
+    <p class="inner-thought">The cockerel's pulse against my palm. Wild. Desperate. Alive.</p>
+    <p class="inner-thought">I loosen my grip —</p>
+    <p class="inner-thought">Laughter.</p>
+    <p class="inner-thought">Not here. Not now.</p>
+    <p class="inner-thought">But it comes anyway.</p>
+    <p class="inner-thought">Their faces blur into the past — open mouths, pointing fingers —</p>
+    <p class="inner-thought">He cannot kill.</p>
+    <p class="inner-thought">The rope tightens.</p>
+    <p class="inner-thought">A knee digs into my spine.</p>
+    <p class="inner-thought">My breath stutters.</p>
+    <p class="inner-thought">If I let them decide —</p>
+    <p class="inner-thought">If I fold again —</p>
+    <p class="inner-thought">It ends.</p>
+    <p class="inner-thought">The blade rises. Waiting.</p>
+    <p class="inner-thought">For me to decide.</p>
+    <p class="inner-thought">I am what they awaken.</p>
+    <p class="inner-thought">I recoil — not from death.</p>
+    <p class="inner-thought">From becoming that boy.</p>
+    <p class="inner-thought">The cringing coward is still here.</p>
+    <p class="inner-thought">Or is he?</p>
+    <p class="inner-thought">The Pleasurepain slips loose, weaves behind them.</p>
+    <p>Their grief. Their heat. If I could take away their anger, I could loosen their hands...</p>
+    <p>A thread slips into Ranti...</p>
+    <p>She stiffens.</p>
+    <p>Into Gbanko.</p>
+    <p>A fist slams into my jaw.</p>
+    <p>The world snaps back.</p>
+    <p><span class="dialogue">"Finish him. He's doing something,"</span> Gbanko says.</p>
+    <p>The blow lands. Then another.</p>
+    <p>Hands force my head down, my neck exposed.</p>
+    <p class="inner-thought">Their certainty. Their right to decide what I am.</p>
+    <p class="inner-thought">Restraint is... thin.</p>
+    <p class="inner-thought">Worn.</p>
+    <p class="inner-thought">How many times have I held back? For people like this?</p>
+    <p>A blade rises.</p>
+    <p><span class="dialogue">"Make it quick."</span></p>
+    <p>Something in me ripples in pattern.</p>
+    <p>Not rage.</p>
+    <p>Not fear.</p>
+    <p>Void.</p>
+    <p>Pain strips you down. What remains cannot fend off despair. Go ahead and fault me for wanting to spare a soul; the gods will exalt me in this world and the next.</p>
+    <p>My essence coils — then spears outward.</p>
+    <p>It pierces Ranti first.</p>
+    <p>Then Gbanko.</p>
+    <p>It spreads through all five, linking them —</p>
+    <p>one body, a shared pain.</p>
+    <p>They convulse. Eyes roll white.</p>
+    <p>Their bodies jerk against the link — five throats stunned to silence. Each body rattles as the anguish of the slaughtered hollows them out.</p>
+    <p>My grip tightens.</p>
+    <p>I feel where to stop.</p>
+    <p>But I don't.</p>
+    <p>My ribs stiffen.</p>
+    <p>No flow of air.</p>
+    <p>I struggle for breath.</p>
+    <p class="inner-thought">They convulse at my feet. I wait for something to twist inside me.</p>
+    <p class="inner-thought">Nothing comes.</p>
+    <p class="inner-thought">A fly lands on the bridge of my nose.</p>
+    <p class="inner-thought">Can't lift my hand to brush it away.</p>
+    <p>I release them, and they collapse to the ground.</p>
+
+    <div class="dark-moment">
+        <p>The ringing returns.</p>
+        <p>Insects.</p>
+        <p>Wind.</p>
+        <p>Silence.</p>
+        <p>I remain on my knees.</p>
+        <p>Ranti lies twisted, face emptied.</p>
+        <p>Gbanko's eyes stare without sight.</p>
+        <p>The others lie broken.</p>
+        <p>I stand over their stillness, legs firm.</p>
+        <p>No nausea.</p>
+        <p>No cringe.</p>
+        <p>My stomach doesn't turn.</p>
+        <p>I look at my hands. They are steady.</p>
+        <p>No tremor. No recoil.</p>
+        <p>I wait.</p>
+        <p>My hands stay steady.</p>
+        <p>Since my encounter with the egbere, I've blanked out a couple of times.</p>
+        <p>With the cockerel, I fought harder not to kill.</p>
+        <p>I stand over my search party, refusing to look at their pain-sculpted faces.</p>
+        <p>The forest waits.</p>
+        <p>Vultures will descend on this spot and so will curious passers. Unless... Unless I mask their smell with leaves and incense.</p>
+        <p>Shifting soil and cutting fronds, I cover them, one by one.</p>
+        <p>By the time I stand, the sun has crossed the sky.</p>
+        <p>I burn the prayer incense in my pouch.</p>
+        <p>My eyes don't twitch with tears.</p>
+        <p>And I don't make a request to the gods on their behalf.</p>
+        <p>Putting out sparks of sentience — even those as small as bugs — used to destroy me.</p>
+        <p>The deed is done. Embrace the dark.</p>
+    </div>
+
+    <p>I crouch over the mound of leaves and earth that hides five bodies.</p>
+    <p>Five lives. Gone.</p>
+    <p>By my hand.</p>
+    <p>Done with my gift — a gift meant for discernment.</p>
+    <p>Crows scream overhead.</p>
+    <p>I follow.</p>
+    <p>Palms slip against grit and damp leaves. I push myself forward. My legs struggle to remember their purpose. The ground tilts, sways.</p>
+    <p>I retrace my path by instinct. The forest presses close — branches snagging at my clothes, roots rising like knotted bones — then loosens.</p>
+    <p>Space opens.</p>
+    <p>The forest thins.</p>
+    <p>Crows scream overhead.</p>
+    <p>I follow their flight.</p>
+    <p>Mud walls appear between trees. A goat bleats. A child laughs.</p>
+    <p>Human sounds.</p>
+    <p>I step into Odàrà as if I never left it — as if I do not have blood on my hands.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Word has spread through the village about a possessed woman who was found near a creek. I follow the murmurs to the center of the large gathering, a circle that keeps its distance.</p>
+    <p>At the center, Shola — bound to a stake driven deep into the earth.</p>
+    <p>Her presence unsettles. Egberes hold no power beyond the deep forest, yet no one risks it.</p>
+    <p>She snarls. Saliva threads from bared teeth. Her body jerks against the rope, wrists and ankles raw. The sound that tears from her throat carries no language. Her eyes blaze — unmoored — skidding past faces, searching.</p>
+    <p>My stomach drops.</p>
+    <p><span class="inner-thought">This is not my wife.</span></p>
+    <p><span class="dialogue">"Is this your wife?"</span> the Baalẹ asks.</p>
+    <p><span class="dialogue">"Yes. Thank you."</span></p>
+    <p><span class="dialogue">"Where is your party?"</span></p>
+    <p><span class="dialogue">"I don't know. I injured my foot and they went ahead."</span></p>
+    <p>The Baalẹ studies me too long.</p>
+    <p>They still need the Mindpiercer.</p>
+    <p>I ask to be taken to Ọ̀runṣọlá's solitude so I can finish what I came to do. Urgency prickles across my skin. <span class="inner-thought">I need to leave before they uncover what lies beneath leaves and loam.</span></p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Sunlight stands at its peak when we stop at a small tent at the end of a narrow path. A human consciousness pulses inside — faint, fading. The air carries bitterness.</p>
+    <p>Tade and her mother pull cloaks over their faces, murmur prayers, and slip inside.</p>
+    <p>When they emerge, their cheeks shine with tears.</p>
+    <p>I turn to the Baalẹ. <span class="dialogue">"Shall I proceed?"</span></p>
+    <p><span class="dialogue">"Will you not pray for his soul?"</span></p>
+    <p>I consider the tent. <span class="dialogue">"That is not my work."</span></p>
+    <p>They call a priest. He mutters a hurried prayer from a distance, words tumbling, fear thinning his voice. He does not step closer.</p>
+    <p>When he finishes, I close my eyes and open myself.</p>
+    <p>Pain floods in.</p>
+    <p>Heat surges beneath my skin. My temples throb. My lower back locks tight. Strength drains. My limbs fill with ash. A gust slips through my clothes — I shudder, teeth rattling.</p>
+    <p>My stomach lurches. I drop to my knees and vomit, bile burning my throat.</p>
+    <p>I sever the link.</p>
+    <p>The fever vanishes. The pressure lifts. I take his sickness, then release it. His pain remains only as a memory.</p>
+    <p><span class="dialogue">"Are you ill?"</span> the Baale asks.</p>
+    <p><span class="dialogue">"I am fine now,"</span> I say, wiping my mouth. <span class="dialogue">"I traded my health for his sickness."</span></p>
+    <p><span class="dialogue">"Thank you,"</span> Tade's mother whispers.</p>
+    <p><span class="dialogue">"It is time. To send him on."</span></p>
+    <p>They nod.</p>
+    <p>I guide the Pleasurepain into the fading consciousness, sharpening and twisting until the consciousness clings and spasms in agony.</p>
+    <p>It slips free.</p>
+    <p>My sixth kill. In a close span.</p>
+    <p><span class="dialogue">"It is done,"</span> I shout to the crowd.</p>
+    <p>They set the tent ablaze. Flames climb. Cloth snaps. Smoke rises straight into the sky.</p>
+    <p>Some weep.</p>
+    <p>Others leave.</p>
+    <p>—</p>
+    <p>The circle around me widens.</p>
+    <p>—</p>
+    <p>The distance grows.</p>
+    <p>The priest leaves without looking at me.</p>
+    <p>An old woman spits into the dust.</p>
+    <p>The wind shifts. Ash from the burning tent drifts toward me.</p>
+    <p>No one speaks to me.</p>
+    <p>Tade's mother invites me to join them for lunch, but I decline.</p>
+    <p>Can't please everyone. The least I can do is embrace those who embrace me, but time is against me. If my search party is found, questions will be raised — and so will my neck, with the help of a rope.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>Late afternoon. I prepare to leave. Shola thrashes as they strap her belly-down across a donkey, limbs hanging on either side. The animal stamps, uneasy.</p>
+    <p><span class="dialogue">"Be careful in the forest. Egberes are strongest there. Strong enough to take your body. But the gods protect you."</span></p>
+    <p>I lead the donkey away.</p>
+    <p>Their eyes follow, feeling sorry for me.</p>
+
+    <div class="divider-stars">✦ ✦ ✦</div>
+
+    <p>The forest exhales fumes of damp soil and manure.</p>
+    <p>On a lonely footpath, I gaze at what remains of my wife.</p>
+    <p>My last words to her cut with pride.</p>
+    <p>Now I walk beside a body that is not hers.</p>
+    <p>I stretch and seize the <span class="yoruba-word">egbere</span> through the Pleasurepain.</p>
+    <p>Shola screams — a sound too large for a human throat. She convulses, face twisting, foam gathering at her lips.</p>
+    <p>I force smallpox into it — fever, pain, weakness.</p>
+    <p>It resists.</p>
+    <p>Her body writhes. The Pleasurepain recoils.</p>
+    <p>She slumps.</p>
+    <p><span class="inner-thought">What now?</span></p>
+    <p><span class="inner-thought">If I swap our states, I risk trapping myself in her body — leaving the egbere in mine.</span></p>
+    <p>Fear presses in.</p>
+    <p>My vision blurs.</p>
+    <p><span class="inner-thought">No.</span></p>
+    <p><span class="inner-thought">She is not lost.</span></p>
+    <p><span class="inner-thought">The egbere must leave.</span></p>
+    <p>The thought forms, grows.</p>
+    <p>Before I consider <span class="inner-thought">self-sacrifice...</span></p>
+    <p>Seek Moloju — the most powerful oracle in the land, a claircognizant — who lives alone on Ilẹ̀ Ìmọ̀, the steep forest hills far removed from the restless pull of souls. If anyone can come up with a solution, it's him.</p>
+    <!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <img src="storyscape africa logo2.jpeg" alt="Storyscape Africa Penmanship" class="logo" />
+  </div>
+
+  <div class="flex flex-col">
+    <a href="index.html" class="hover:text-orange-400 py-2">Home</a>	
+    <a href="index.html#books" class="hover:text-orange-400 py-2">Books</a>
+    <a href="index.html#about" class="hover:text-orange-400 py-2">About</a>
+</div>
+</nav>
+    <footer>“FORSAKEN — Part 2” — where the empath becomes the executioner, and the forest takes its toll.</footer>
+</div>
+</body>
+</html>
