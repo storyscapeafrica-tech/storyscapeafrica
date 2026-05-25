@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>I Am Legion · A Case of Too Many</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fef9ef;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: #1e1a17;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page-container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffdf9;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+        }
+
+        /* header styling */
+        .story-header {
+            text-align: center;
+            border-bottom: 2px solid #e2dcd2;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .story-header h1 {
+            font-size: 2.4rem;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            color: #2c221b;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #2b2b2b, #5e3a2b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.4rem;
+        }
+
+        .story-header .sub {
+            font-size: 1rem;
+            font-style: italic;
+            color: #7f6b5c;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* main prose */
+        .prose {
+            font-size: 1.08rem;
+            text-align: left;
+        }
+
+        .prose p {
+            margin-bottom: 1.35rem;
+             color: black;
+        }
+
+        /* make dialogue pop a bit */
+        .prose p:has(em, strong) {
+            color: #7f6b5c;
+        }
+
+        /* block quotes / memorable lines */
+        .prose hr {
+            margin: 1.8rem 0;
+            border: 0;
+            height: 1px;
+            background: #ece2d6;
+        }
+
+        /* small caps for Legion mentions */
+        .legion-name {
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #8b3c1c;
+        }
+
+        /* scene break */
+        .scene-break {
+            text-align: center;
+            font-size: 1.3rem;
+            letter-spacing: 6px;
+            color: #c7b59b;
+            margin: 1.6rem 0;
+            font-weight: 300;
+        }
+
+        /* make the story readable on phones */
+        @media (max-width: 600px) {
+            body {
+                padding: 0.8rem;
+            }
+            .page-container {
+                padding: 1.3rem;
+            }
+            .story-header h1 {
+                font-size: 1.8rem;
+            }
+            .prose {
+                font-size: 1rem;
+            }
+        }
+
+        /* subtle signature */
+        .credits-note {
+            margin-top: 2.8rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #b9aa98;
+            border-top: 1px solid #ede3d7;
+            padding-top: 1.5rem;
+            font-family: monospace;
+        }
+</style>
+<!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6 relative z-10">
+  <div class="flex items-center gap-3">
+    <img src="2.png" alt="Storyscape Africa Logo" class="logo" />
+    <h1 class="text-xl tracking-widest">Storyscape Africa</h1>
+  </div>
+
+  <div>
+    <a href="#books" class="mx-3 hover:text-orange-400">Books</a>
+    <a href="#about" class="mx-3 hover:text-orange-400">About</a>
+  </div>
+</nav>
+<div class="page-container">
+    <div class="story-header">
+        <h1>A CASE OF TOO MANY</h1>
+        <div class="sub">(I AM LEGION)</div>
+    </div>
+
+    <div class="prose">
+        <p>You know a party is winding down when Old School Music starts to play, and the only ones dancing are wasted or geeks. Two of your pals, Osarodion and Michael, are doing something they call breakdance. They're no good at it, but no one cares. They're geeks.</p>
+
+        <p>I'm a geek too—a socially conscious one. I know when to keep my distance. No chick wants to be seen with those clowns. Least of all, Ema Benson.</p>
+
+        <p>She's spent the last hour making passes at me. She's done the eye-roll, the laugh, the backward hair flip—she's sporting braids—and even flirted with a few cats to make me jealous. That was an hour ago. She's since given up.</p>
+
+        <p>I scan the hall, pushing through crowds. I pray Ema and I don't run into each other. Too sudden. I wouldn't know what to say.</p>
+
+        <p>Dark shapes kiss at every corner. She could be one of them. I wouldn't want to run into that.</p>
+
+        <p>There she is. On the stairs, steps above my world.</p>
+
+        <p>Time to approach.</p>
+
+        <p>Her eyes narrow as she takes a sip. Her wineglass doesn't come off. I stroll up to her ensemble, bump shoulders with Abebe and Chike, nod to her and the other girls. I don't want to talk to her right away. Safer to worm my way in.</p>
+
+        <p>"Chike, my guy," I say to the six-footer on the basketball team who isn't really my guy. "What do you think of the party? Slamming, wasn't it?"</p>
+
+        <p>"Off-the-chains, man."</p>
+
+        <p>"Everyone's just chilling now."</p>
+
+        <p>"Soaking it up, man."</p>
+
+        <p>"Except for those guys." I point to my buddies in full robot mode.</p>
+
+        <p>"Losers, man."</p>
+
+        <p>We're shouting side-by-side. The music's too loud.</p>
+
+        <p>"I didn't see you on the dance floor, Fine Boy," Abebe says.</p>
+
+        <p>"I don't know how to dance."</p>
+
+        <p>"Who's talking about dancing?" He laughs. "I'm talking about getting some of that grind on you."</p>
+
+        <p>I saw them doing that earlier. Looked like a mating ritual. No, thank you.</p>
+
+        <p>Ema watches, frowning. She was bantering with Abebe before I arrived. Her friends notice her mood and stop speaking too. Copying her. Not cool. What did I do? I try to keep the conversation going, but they're frosty. I'm practically talking to myself.</p>
+
+        <p>"Where did you guys get the glasses? Everyone else is drinking from a bottle..."</p>
+
+        <p>Their silence is working. I should go.</p>
+
+        <p>But it's Ema who leaves first. She glides down the steps, all curves and calves.</p>
+
+        <p>I should go after her. I think.</p>
+
+        <p>I track her to the swimming pool.</p>
+
+        <p>The tank glows aqua like a giant flashlight. Ema's a dark silhouette gazing into the water. Judging from the slant of her wineglass, she's absent-minded.</p>
+
+        <p>I come up behind. She glances over her shoulder, says nothing. Sixteen heartbeats of silence. I can't think of an opening line.</p>
+
+        <p>"What's your favourite position?" she asks.</p>
+
+        <p>"Position where?"</p>
+
+        <p>"How do you like to be fucked?"</p>
+
+        <p>She's either tipsy or despairing. She sort of asked me out two weeks ago. I kind of blew her off—said I'd get back to her.</p>
+
+        <p>"I haven't really thought about it."</p>
+
+        <p>"Let me guess. Doggy style."</p>
+
+        <p>I laugh to break the ice. "Why do you think that?"</p>
+
+        <p>"Because you're pretty. You're too pretty."</p>
+
+        <p>I laugh again. It seems the right thing to do.</p>
+
+        <p>"I bet boys like you too. And you like how they give it."</p>
+
+        <p>"I'm not gay, if that's what you're getting at."</p>
+
+        <p>She turns to face me squarely, brings her lips within kissing distance. Gahd! Those eyes, those lips, that perfume...</p>
+
+        <p>"Then how come you don't have a girlfriend? How come you don't want this?"</p>
+
+        <p>She spins around. Skirt too short for Wonder Woman. Killer legs.</p>
+
+        <p>In what universe does someone like me get to blow off Emamuzou Benson, the most popular girl in my class? Guys like me don't get chances with girls like her.</p>
+
+        <p>I don't respond—not because I'm gawking—so she says, "You're such a dick."</p>
+
+        <p>I titter. She doesn't know how funny that is.</p>
+
+        <p>I've gotta do something before she walks out again. Say something.</p>
+
+        <p>What the hell. No easy way to let her down. Let her have it, Jimi. She looks ready to pass out anyway.</p>
+
+        <p>"Can I show you something?"</p>
+
+        <p>She tosses down her drink and widens her eyes, flirting.</p>
+
+        <p>I unbutton my shirt and expose my left shoulder.</p>
+
+        <p>A small bump appears. Dimples. Writhes. Something crawling under my skin. Then it shoots up like a stalk. Not a plant. An arm. Starts knobby, then bursts with fingers like a flower blossom.</p>
+
+        <p>I wiggle the fingers at her.</p>
+
+        <p>She stares. If this were a cartoon, her eyes would pop out, and her Adam's apple would hang like a wattle.</p>
+
+        <p>She gasps. "How did you do that?"</p>
+
+        <p>"I don't know. I just know I can."</p>
+
+        <p>"Good trick. You're an illusionist."</p>
+
+        <p>"You see, Ema. This is why I can't go out with you. I can grow extra arms, legs—even a head. But I can't grow a dick."</p>
+
+        <p>I thought she'd laugh. Even a prude would agree it's funny.</p>
+
+        <p>She keeps a straight face.</p>
+
+        <p>"Say something."</p>
+
+        <p>She lifts a hand to feel the forearm rooted to my shoulder. Touches it. Studies it. Lets her fingers crawl to its palm. Stays there like a palm reader. Reaching higher, she feels the itty-bitty finger.</p>
+
+        <p>Then her body goes limp. She slumps forward.</p>
+
+        <p>I catch her before she hits the floor.</p>
+
+        <p>When she recovers, I overhear her telling her friends about "the freakiest thing she ever saw." They tell her she was pass-out drunk. She's not entirely convinced but thinks they're probably right. Great. My secret's safe.</p>
+
+        <p>Hmmm.</p>
+
+        <p>Fact is, I'm still waking up to parts of it myself. Like the part that Ema Benson wants me. I can't go out with her because she'd want sex. And I wouldn't know what to do. Yes, I'm a virgin. Not by choice—it's not like I'm saving myself for marriage.</p>
+
+        <p>My strange ability? I wasn't bitten by a radioactive hydra, or anything like that. I was born with aphallia—sounds like "a failure." The older I get, the more embarrassing. I never share bathrooms. Never let anyone see me naked. My teammates once broke into my shower stall at the National JETS Competition hoping to see my "Mr. Fantastic." They didn't catch me.</p>
+
+        <p>Here's the thing: I don't have a Mr. Fantastic because I don't need one. I can procreate on my own. No, not a hermaphrodite—I'd need genitals for that. I'm like a hydra. I bud. I can grow a new me from any part of my body. And it can make more and more of me. Dad calls them "ephemerals" or "pseudo-clones." I call them copies. They last five hours tops, can't live independently, so I keep them in sync. It's easier that way. Mom's grateful—she says how would she have fed us all?</p>
+
+        <p>That's when the irony hit me. My country has a high population. Powers like mine could spell national disaster. Or maybe I'm a sign that our real potential lies in unity.</p>
+
+        <p>I'm standing before the kitchen sink, staring at dishes I'm expected to wash. I consider making five of me to get it done quicker. But that's what I'd usually do. Want to try something new.</p>
+
+        <p>I like fooling around with my powers at home. Sometimes I walk around with two front sides. "Look at me," I'd tell Dad. "I'm Two-fronts, the superhero who watches his own back."</p>
+
+        <p>Once I formed an index finger from inside my nostril. Dad looked up from his newspaper, and I curled the finger at him, beckoning. He returned to his paper. He taught me never to stick my finger in my nose, but not to stick one <em>out</em> of my nose.</p>
+
+        <p>Dad's still at the table, reading, not minding his coffee. I know what I'll do. I'll become Frog-face and taste Dad's coffee through the door. I'll create the longest human tongue ever, grow a new tongue from the midsection of an old one so it looks like one long tongue rather than a chain.</p>
+
+        <p>I guide the muscular stretch of flesh with its tapering tip through the door toward the breakfast table, aiming for Dad's mug.</p>
+
+        <p>Mom walks in.</p>
+
+        <p>She frowns. "Cut it out."</p>
+
+        <p>I wonder if she means this in literal terms.</p>
+
+        <p>I was born in my parents' bathroom in the middle of the night. Dad's a vet, so he didn't panic. But he panicked when he saw me. Rushed to the hospital at 1 a.m. I didn't have a... that's why. The doctors had never seen anything like me. Convinced my parents to sign on for further tests. After another medic stuck yet another needle into me, they took me back home.</p>
+
+        <p>Today I'm their best-kept secret.</p>
+
+        <p>"You can never show anyone," Dad said when I was six. "If you do, you'll become a specimen in a government science lab."</p>
+
+        <p>"Okay," I said. People learning about my powers doesn't bother me as much as my aphallia.</p>
+
+        <p>"They won't be laughing," Dad said, as if he heard my thoughts. "They'll put you in a cage and treat you like a lab rat for the rest of your life." He's a professor of veterinary medicine. He knows about lab rats.</p>
+
+        <p>Mom used to dream about alien abductions before I was born. Dad doubted her—she'd called them witches. He thinks I'm part of a failed alien invasion. He no longer asks if anyone's tried to contact me, but I know he wonders how many more like me are out there.</p>
+
+        <p>I'm a matrix for clones. Not superhuman. Just inhuman. What's super about reproducing asexually and missing out on sex? How many clones can I make? I don't know. Probably need another planet to find out. I don't want to overpopulate Earth and risk discovery. Also, keeping all my clones in sync would give me a massive headache.</p>
+
+        <p>It works like this: I push and push, and out pops a new me. Feels like sneezing a slimy bubble with one nostril closed. I practically blow out full bodies or body parts. I give myself the best "blow jobs."</p>
+
+        <p>Sorry. That came out wrong.</p>
+
+        <p>Osarodion, Michael, and I are killing time before the closing bell. They're helping me come up with a superhero name. "It's for a comic-book character I created," I tell them. We sit on cracked steps behind the science block. Afternoon heat presses against our skin. Chalk dust hangs in the air mixed with frying akara from the school gate. A generator drones nearby.</p>
+
+        <p>We come up with the Outnumberer, the One-Man Multitude, Mr. Clones. I hate them. More brainstorming: The Human Populator, Pack Man, The Multiplier, Matrix, King Collabo, Yeast Man, Budder, Buddy—yeesh. They wonder about the last three. Those were mine.</p>
+
+        <p>"His clones start out as tiny buds on his skin," I say, "the way hydras and yeast cells reproduce."</p>
+
+        <p>That inspires Hydra-Man and Bud-out Boy. Useless.</p>
+
+        <p>At home I ask Dad. He suggests Tupleteer and Replicon. Too geeky.</p>
+
+        <p>Later that night, staring at my <em>Legion of Superheroes</em> comic book, it hits me. Legion. I'll call myself The Legion. Or just Legion.</p>
+
+        <p>One Saturday, I play against my neighbourhood soccer team as Legion FC. I am a soccer team all by myself. I play all eleven positions, including goalie. It's most fun you can have with the game. I wear a mask so the other team won't know it's me in eleven places. When they ask why "we" wear masks, "we" tell them it's cheaper than jerseys.</p>
+
+        <p>Our games have become a regular fixture. I've never lost. I'm the best team there is. Nothing beats a one-track mind. The rest of me always knows what I'm about to do before I do it.</p>
+
+        <p>But today, a player notices something odd about my team. He can't decide what it is.</p>
+
+        <p>I made sure I'm not all the same height—grew some of me to twelve, thirteen, fourteen, fifteen, sixteen years old. But we have similar statures and head shapes. Nothing I can do about that.</p>
+
+        <p>"You all run the same," he finally says.</p>
+
+        <p>"Take off your masks," another says. "All of you."</p>
+
+        <p>"Or what?" I ask.</p>
+
+        <p>"Or I will beat you till you shit in your pants." He grabs at my mask.</p>
+
+        <p>I try to duck, but he's quicker. Mask off. One down.</p>
+
+        <p>He shoves me in the chest. Sore loser. They want to play a new game called "take off their masks." Need a distraction.</p>
+
+        <p>The unmasked me runs back to the rest of me, and we start to dance. Perfect sync. Easiest thing I've done all day—like dancing by myself. They're impressed. Never seen moves this perfectly timed. They love us. Unfortunately, superheroes with secret identities don't stick around. All eleven of me dash off together. They applaud. Those guys are awesome, they say. Where do they live? Who are they? All I can think is: Whew. Close call.</p>
+
+        <p>Closer call came at the JETS National Competition in Ibadan. I was twelve, away from home for the first time. My friends barged into my stall curious to see my dick. Luckily I was showering in two stalls at once—just me fooling around with myself. I blew up—sorry, Dad hates that term—I <em>ACE-ed</em> the clone in the stall they broke into. Auto-catabolic erupting. They broke into the second, third, fourth stalls. Found me in the fifth: a six-year-old version they didn't recognize.</p>
+
+        <p>When I ACE, my clone degenerates to a single cell invisible to the naked eye, which dies after a while—or reproduces me. Never hurts. Sort of like bursting a nose bubble. The opposite of "grow"? Shrink. Degenerate. Whatever. You know what I mean.</p>
+
+        <p>At dinner, Dad shares a newspaper item: workers' strike at YemCo, a cement-block company. "Our chance to make a quick buck," he says. I've done this before—I've ridged farmlands for my grandparents, and I've scaffolded and painted our house after dark. (I did it naked because I can't reproduce clothes. Me naked looks like skin-colored spandex anyway—no nipples, and no...)</p>
+
+        <p>"But Odejimi doesn't know how to mix concrete," Mom says.</p>
+
+        <p>"I'll teach him. I'll be on-site to operate the mixer."</p>
+
+        <p>We drive to YemCo and present ourselves as Tuple Project Managers. Mr. Yemi can't believe our price—downright cheap. Dad explains that our workers only work at night. Mr. Yemi says fine. We shake hands on an advance payment, with the balance to be paid after completion.</p>
+
+        <p>Dad surprises me with sixty masks and sixty tracksuits—black with white stripes. My superhero costumes. Nice. Dad learned masonry growing up rough, putting himself through school. He says if I work my butt off without getting caught, I could become a billionaire. I tell him I couldn't agree more.</p>
+
+        <div class="scene-break">— ✦ —</div>
+
+        <p>That night, we worked in silence—Dad and I, and sixty of me in costume. Dad operated the mixer, watching carefully as I measured sand, gravel, cement, and emptied wheelbarrows into the spinning drum. Ten of me hauled water. Twenty more shovelled. The others stacked blocks. By dawn, six thousand blocks sat in perfect rows. Dad just nodded. I took one night, one shower, and a lot of rest.</p>
+
+        <p>Three months later, I've joined a gym. Need muscles for the costumes. On the first day, I broke the national weightlifting record for my weight class. I cheated. Four extra arms—a pair from my chest, a pair from my scapula, fanning out like blades.</p>
+
+        <p>I asked Ema out. Dad talked me into it. Asked if I wanted to spend my whole life alone and miserable. I even got a bouncing job—lost it when my workforce arrived in masks. Thought bouncers were supposed to look scary.</p>
+
+        <p>I erected a thirty-man pyramid. Previous best: twenty-two. I'm getting better at erections.</p>
+
+        <p>I'm a record-breaker no one knows about. Going from swelling to almost-adult organism in just over a minute—definitely a Guinness record. The problem with making so many of me is a wardrobe one. I pop naked. If I use my powers in public, I could get arrested for indecent exposure. Or laughed at for not having a... I'm not Tony Stark.</p>
+
+        <p>Three months pass. Mr. Yemi's cheque still hasn't arrived. Still owes us a hundred thousand naira. YemCo's running again. Dad says Mr. Yemi even opened a new branch on Ring Road. Dad says it's his fault—if he'd registered our company, he could've taken him to court. I think Dad's too much of a gentleman. I refused to join the Nigerian army because I don't like being owed. And here I am getting the same deal.</p>
+
+        <p>Another month. I can't stand it. Fuck it. A promise is a promise. Dad can overlook it. I can't. It was my sweat.</p>
+
+        <p>One Thursday after school, I take a cab to YemCo.</p>
+
+        <p>The perimeter wall is scabbed with posters, dusted pale grey like the sky. Trucks idle at the gate. Someone points me to a steel cabin on skids—the admin office. AC rattles, puffing cold air that smells of metal and dust.</p>
+
+        <p>Mr. Yemi remembers me. He asks about my father. When we get down to business, he levels with me. No money right now, and frankly, no intention of paying. Ever. He doesn't put it like that. Says we had a gentleman's agreement. No paperwork. He really intended to pay at the time, but the way things are now...</p>
+
+        <p>At home, Dad is furious. "Did I ask you to go to his office?"</p>
+
+        <p>"I just wanted to remind him. Maybe he forgot."</p>
+
+        <p>"Jimi, don't go back there. Let it go."</p>
+
+        <p>He wants me to drop it. Just like that. I won't. I can't. That's a lot of money.</p>
+
+        <p>That night, I sneak out and drive to the city's centre.</p>
+
+        <p>I didn't know Ring Road and its environs could be this empty, even at past midnight.</p>
+
+        <p>I drive to YemCo, pop twenty of me and put on my costumes. I surprise the two security men. They don't fight, so I tie them up. Angry, I run riot. Break every concrete block I can find. Smash windows. Climb into Mr. Yemi's office and thrash the place. Satisfied, I untie the security men, drive a short distance, and degenerate back to a single being. You're probably thinking I'm a degenerate. I'm not. It's the justice system that's degenerated.</p>
+
+        <p>I'm in SS3—final year. My school is the staff children's school run by the University of Benin, where Dad lectures. Some college girls make passes at me now. Happens more when I'm not in uniform.</p>
+
+        <p>Less than two weeks to graduation, and I still haven't chosen a career. Dad says civil engineer or architect—I could design anything and build it myself. Sometimes I think reporter, detective, lawyer—closer to superhero work. Mom says to become a doctor if I want to save lives. Hmmm. I never thought of that.</p>
+
+        <p>There's one aspect of medicine that interests me: sex reassignment surgery. I've been reading up. Someday I'll make enough money for it. I won't be transgender after—just gender. Nothing really distinguishes me as male or female, so I figure I'm neutral. I have haircuts and think of myself as a boy because my folks decided that. Good thing I like girls, because gay people still live with secret identities in this country.</p>
+
+        <p>Admission into a university won't be easy. Even with high scores, you pay bribes. Kola thinks I don't need to work hard—since Osas, Michael, and I are staff kids, our parents will pull stops for us. He may be right. Still, I want to study. Don't want to embarrass Dad with low scores. Times like this I wish growing an extra head were an advantage.</p>
+
+        <p>Kola shows up when exams are close. Not part of our gang. Drugs, misses class, hangs with varsity boys. When he spares time for us—especially during exams—we're his clique. Ema doesn't like him—he used and discarded her friend Agatha. She hates that Michael won't stand up to him. Kola sits next to Michael at exams, and Michael has to slip him answers. Too meek. I've told him he's got to stop being such a pushover.</p>
+
+        <p>Osa and Michael don't mind Kola. They like his stories—orgies, girls eager to fuck several guys at once. I know Kola's trouble. Don't like his humour or his two-facedness. He teases the others but never me. Smart. Knows I won't fold. If he crosses that line, I'll let him know who lets him hang with us.</p>
+
+        <p>We used to be a gang of three before Ema joined. The others might say she isn't part of our group—she has her girlfriends and their singing quartet—but I say she is. We're not in her league, which is probably why they think that. To her credit, she's learned our nerdy ways and our sometimes-vulgar humour.</p>
+
+        <p>Exams over. Last three weeks of term. Ema, Osa, Michael, and I hang out more. Hardly see Kola. Good riddance. Ema and I are on the graduation party planning committee. We accost our form mates about unpaid levies.</p>
+
+        <p>I'm parked outside Ema's house, waiting. Fifteen minutes later, she struts down the front steps. She always sees my travelling bag in the trunk when I let down the tailgate. Today she stops at the trunk, lowers the tailgate for no apparent reason, and peers in.</p>
+
+        <p>"What's in the bag?"</p>
+
+        <p>"It's stuff I'm selling."</p>
+
+        <p>"Oh. I thought it was laundry. May I see?"</p>
+
+        <p>I'd rather she didn't, but she doesn't wait. Opens the bag. Picks through tracksuits and masks. When she joins me in the truck, she doesn't say a word. Not even about the masks. My secret's practically out of the bag. When Legion debuts, Ema will know it's me. She won't know I'm <em>behind</em> all the masks—she'll think I'm a member of a group. My secret identity won't be so secret, but my inhumanity will still be safe.</p>
+
+        <p>Days later, Osa calls. "Did you get a call from Kola's father?"</p>
+
+        <p>"No. Why?"</p>
+
+        <p>"Kola's missing. Michael's been questioned by the police. I gave them your number."</p>
+
+        <p>Graduation night approaches. Everyone's talking about Kola's disappearance. Police interrogated us, his university friends. We learn his mom is late, his father was hardly around, he has a stepmother and four stepsiblings. Also: he was in a cult. The Black Axe.</p>
+
+        <p>What grabs my attention: his father put up a $500,000 reward for anyone who knows his whereabouts. Wow. With that kind of money, I could pay for my surgery.</p>
+
+        <p>"What if he's dead?" I ask. "Will he still pay if we find him?"</p>
+
+        <p>The looks on their faces. I didn't mean it like that. I hope Kola's alive. I do. But he's been missing for days, and I just thought...</p>
+
+        <p>My phone rings. Mom. Come to the university teaching hospital immediately. Emergency ward. She cuts the call mid-question. Did something happen to Dad? His B.P.?</p>
+
+        <p>Ema insists on coming.</p>
+
+        <p>At the hospital, Dad lies in a private bed, head wrapped in bandages stained purple with iodine. Mom holds his hand. I burst out. Dad beckons me. I crouch close. Croaking, he asks if I raided Mr. Yemi's factory about a month ago.</p>
+
+        <p>I shudder with tears.</p>
+
+        <p>"Dad, I'm sorry. I'm so sorry."</p>
+
+        <p>What I did was stupid. I put my family in danger. The men who beat Dad traced him to the university. Could've gone to our house, hurt Mum too. Luckily Dad's injuries aren't serious—he'll be discharged in a couple of days.</p>
+
+        <p>Dad's discharged. As soon as he's home, he takes back his Chevrolet truck. Speaks to me only when he must. I'm a ghost. The house is cheerless. Ema tries to brighten my mood whenever she's around. She doesn't think I'm a bad person, and she's attracted to me more than ever—the bad-boy factor. All I know: there's a difference between a hero and an avenger. Word to Captain America.</p>
+
+        <p>It's a dark Monday. Kola's body has been found. Dead over a week. Cut into pieces, ritual-style. Not the first time. Cults carry out such killings. They're the law here, everyone's afraid. Campus parties end at the first sign of a faceoff between rival cults.</p>
+
+        <p>Shops close before 10 p.m. Strong police presence now—people feel safer. We know the drill. Investigations will last two weeks tops, no arrests. Then things return to normal.</p>
+
+        <p>The gang and I are at Kola's place—a mansion in the GRA. We sit with mourners in the parlour, listening to funeral silence and sporadic wails from a back room—his aunt, someone says. Through an open curtain, I see Kola's dad talking with the police inspector. He wants Kola's killers found. Justice. I feel his pain. If Mr. Yemi's thugs had killed Dad, I'd feel the same.</p>
+
+        <p>Osa thinks more bodies will turn up when Kola's cult retaliates. I think so too. Killings will restart after the police leave.</p>
+
+        <p>Graduation night goes ahead. Strange watching my virgin friends arrive with dates, awkward and shining, but I'm glad for Osa and Michael. Guys pop bottle caps, pour foamy liquor into plastic cups that sweat in their hands. Outside the hall, around parked cars, music blares, laughter and dancing spill beyond the ceremony.</p>
+
+        <p>Inside, Ema and I dance as a couple. Sit as a couple. Stroll outside and find a dark spot as a couple. Have sex as a couple. In the back of my truck under a blanket. I grow two fingers where my dick should be, cover them with the condom Ema gives me, keep them stiff. Both hands on her breasts so she doesn't suspect. Hearing her moan "Jimi, Jimi" before she comes makes me gasp with relief.</p>
+
+        <p>Screams.</p>
+
+        <p>Not Ema.</p>
+
+        <p>A fight.</p>
+
+        <p>I scramble out, pulling on clothes. Ema says wait, but I'm too hurried.</p>
+
+        <p>Dimeji, from my class, is fighting an older boy. Dimeji says "fuck you" to his face and fends him off. Dimeji is bigger, stronger, and wins easily. The crowd laughs at the defeated older boy. Embarrassed, he tells Dimeji, "You're a dead man," and leaves.</p>
+
+        <p>College kid. A Pirate—one of the campus cults. Michael worries. Dimeji calls it a bluff. Five days later, Dimeji is rushed to the teaching hospital, after being stabbed several times in the stomach. He doesn't make it.</p>
+
+        <p>For three days, I design flyers: "Say no to cultism, or you'll be sorry—signed Legion the cult-buster." Litter the campus. Doesn't stop the deaths. Cultists aren't listening.</p>
+
+        <p>So, I put on my costumes and go after their leaders. You don't need to be a detective. Cult leaders are like mob bosses—you know who they are, where they live, but you stay out of their way. That's not what I do. I drag them out of their hostels one by one and beat them in broad daylight. No one does that. Ever. 'Orlando' is the leader of The Black Axe; he's the loudmouth who talks tough during the initiations that I break up. I strip him and his cohorts naked and whip their bare buttocks with their belts. They flee, clutching clothes over their groins. When they're certain I'm not pursuing, they turn and shout: "You're fucking dead. We know who you are. We know where you live. All of you."</p>
+
+        <p>In my first week as Legion, I tuple-whelm cultists and send them packing. I'm 5'9". Not the biggest. But my clones can take a beating—even a severed head. I'm a marathon fighter. Knocked down, I rise back up instantly. Even when they're stronger and can take two or three of me, I come like ants—numbers working in my favour.</p>
+
+        <p>More than one head means extra pairs of eyes, plus one focal pair I can jump in and out of. When a copy is destroyed, I lose sight in that area. Painless—like shutting down a security camera. I've tried being in three places at once—I dropped myself off at a market, an amusement park, and a lecture hall. For the first time, I was conscious of my consciousness—how it worked, how I had to keep shifting between clones, leaving them unresponsive for brief whiles.</p>
+
+        <p>I can hurt them, but they can't hurt me. I never get tired, so they can't outlast me. I just wait for them to tire. In the end, I beat the Banner out of them. Always.</p>
+
+        <p>Going up against me is like struggling in the coils of a python. Flailing in the deep end, growing weaker. I have eyes in the back of my head and hands everywhere. Never a fair fight. Not even two against two.</p>
+
+        <p>Saturday. The gang's at my place, controllers clicking, when Ema, Chichi, and Alero drop in. Alero says the whole school is buzzing that the Legion boys are from Ekpoma, the university not far from ours.</p>
+
+        <p>"Who says they're called legionnaires?" I ask.</p>
+
+        <p>"Because people who belong to a legion are called that, dummy," Osa says.</p>
+
+        <p>"Not necessarily. They could be legionaries. But that's not the point."</p>
+
+        <p>"So what should we call their members?" Alero asks.</p>
+
+        <p>"Call them Legions."</p>
+
+        <p>"That doesn't sound right," Michael says. "A legion can't belong to a legion."</p>
+
+        <p>"Yes it can. Legions of people make up a legion."</p>
+
+        <p>"But one person can't be a 'legion of people.'"</p>
+
+        <p>"Why do you think they're called that?" Chichi asks. "Have you spoken with any of them?"</p>
+
+        <p>"It so happens that I have."</p>
+
+        <p>"Who?" Ema asks.</p>
+
+        <p>"Sorry. Sworn to secrecy."</p>
+
+        <p>"Liar."</p>
+
+        <p>"Suit yourself."</p>
+
+        <p>Nine-thirty p.m. Campus thinned to shadows and sodium light. Hostels breathing music and laughter. Trees and lampposts hunch over walkways. My third night of patrol.</p>
+
+        <p>Two young men with backpacks stride toward me, eyes fixed on mine. Wondering if I'm the real thing or a costumed wannabe. What idiot would stroll around campus dressed as the most wanted man in the history of culthood?</p>
+
+        <p>They hesitate. "Legion forever." Stamp their feet. Salute like I'm a soldier. They know I'm keeping the peace.</p>
+
+        <p>Everything looks okay so far.</p>
+
+        <p>A roar. Car engines. A convoy of three vehicles screeches round the bend, lights at full blast. The first car paces alongside me. I ignore it. Swagger on.</p>
+
+        <p>The guy in the passenger seat winds down.</p>
+
+        <p>It's Orlando.</p>
+
+        <p>"See him trying to look brave," he says. "I bet he's pissing his pants. There's no place for you to hide, asshole. We're going to beat you shitless and cut you into little pieces. I'll save your dick for myself."</p>
+
+        <p>Car doors bang. Twelve guys jump out, rush me.</p>
+
+        <p>They've walked into a trap. The rest of me is hiding in the bushes near an abandoned building—my fifty-nine-man army. Each of them takes on at least five of me. I gang up like termites. Now they want to run back to their cars. I grab them, hold them still while another me takes potshots at their faces.</p>
+
+        <p>Bam. Bam. Bam.</p>
+
+        <p>The one who spoke through the window now begs: "Please, it was the devil. Let me go, and I'll leave this life. Go back to the church boy I used to be."</p>
+
+        <p>I beat them till they beg me to stop. And I do.</p>
+
+        <p>I jack one car up with twenty of me and stand it on its side.</p>
+
+        <p>Headlights flicker on. A car parked in front. Blankets my vision with white. I zone out of that clone into another, not in the path of the light. The third car in the convoy jerks forward, stops, revs, slams the gas—plunges into a group of me. Rams us. We fly in all directions. The car zooms off. Wise move. Run like a scaredy-cat.</p>
+
+        <p>Then he stops. Wheels around. Seriously?</p>
+
+        <p>Okay. No more Mister Nice Guy.</p>
+
+        <p>I gather myself into a 6-3-1 pyramid and wait. He comes at breakneck speed. More yards this time—greater impact.</p>
+
+        <p>Whump.</p>
+
+        <p>The base of my pyramid takes the hit. I come crashing down on the car. The driver runs over us. Stops. Reverses. Climbs over us again, mangling and breaking bones. But I'm on top of the situation as much as under it. I climb through the open windows, seize the wheel, and kill the engine. His jaw drops when he sees not one, not two, not three, but six zombie-like resurrections—me getting up from the ground, snapping back into shape. I wind up the windows and open the doors for thirteen of me to enter. Let's see how he likes getting crushed. We pack in like sardines. Hardly enough room for him to inflate his chest. All he can manage is a slight push when he tries to punch. Now I just wait till his air runs out.</p>
+
+        <p>Cultists have an in-crowd mentality. Pussies who ally to bully others. Separate them, they're just pussies. I knock some sense into them. Make them cry. Make them promise to be good. I never hand them over to the police—our jails are overcrowded hell-houses, not places of reform. I let them go because I want them to live in fear. Fear of Legion. Give them a taste of their own medicine. The only way to get them off the drug called "Power Over People."</p>
+
+        <p>Over the next month, cult activities fall to an all-time low. Streets fuller at night. Students ask how to join 'The Legion.' I'm trending on TikTok. The superstar. Also, a witness the police want to question.</p>
+
+        <p>Today, I risk arrest to introduce myself to the good people of UniBen. March through the school in a thirty-man parade. People cheer. First time many have seen me in person. They touch me as I pass. Makes me feel like the judges of Mega City. A crowd follows me to Liberation Square. I stand on the podium.</p>
+
+        <p>"I am... We are Legion. I stand for justice. I stand for peace. If you like trouble, I have my ways of making you peaceful. I belong to no side. My only interest is ending violence and ending cultism on campus. And protecting the law-abiding. No one needs to fear me if they're not disturbing the peace."</p>
+
+        <p>I see Dad in the crowd.</p>
+
+        <p>"If you don't do as you're told, you'll do greater harm to yourself. There are repercussions for every action. Some will last your whole life and leave regrets you can never change. Be good. Or I will be that repercussion."</p>
+
+        <p>Dad claps. One person at a time, others join.</p>
+
+        <p>Someone waves hard at me. Ema. Cups her mouth and hollers. The noise drowns her out. I can't make out what she's saying, but she's trying to get my attention. What do you think you're doing, Ema? You'll blow my cover. How can you tell I'm the one on the podium? I could be any of these masked people.</p>
+
+        <p>What will I do with her? I'm crazy about her too. But sometimes she can be so naïve.</p>
+    </div>
+    <div class="credits-note">“A Case of Too Many (I Am Legion)” — the end</div>
+</div>
+</body>
+</html>
