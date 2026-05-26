@@ -370,7 +370,7 @@
       font-size: 1rem;
     }
     
-    /* Feature Story Section */
+    /* Feature Story Section - Image Carousel */
     .feature-story {
       max-width: 900px;
       margin: 3rem auto 2rem;
@@ -391,14 +391,25 @@
       margin-bottom: 1.5rem;
       letter-spacing: -0.3px;
     }
+    .feature-carousel {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     .feature-story-img {
       width: 100%;
       max-width: 500px;
       border-radius: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       box-shadow: 0 15px 30px rgba(0,0,0,0.5);
       border: 2px solid rgba(232,184,107,0.5);
-      transition: transform 0.3s ease;
+      transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+      object-fit: cover;
+      background: #1a1f2e;
+      min-height: 280px;
     }
     .feature-story-img:hover {
       transform: scale(1.02);
@@ -416,6 +427,39 @@
       border-right: 4px solid #E8B86B;
       font-weight: 500;
       letter-spacing: 0.3px;
+      margin-top: 0.5rem;
+    }
+    .carousel-indicators {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+    .indicator-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(232,184,107,0.4);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+    .indicator-dot.active {
+      background: #E8B86B;
+      transform: scale(1.3);
+      box-shadow: 0 0 8px #E8B86B;
+    }
+    .indicator-dot:hover {
+      background: #F2C87A;
+      transform: scale(1.2);
+    }
+    .carousel-caption {
+      font-size: 0.75rem;
+      color: #b9c7d9;
+      margin-top: 0.6rem;
+      opacity: 0.8;
+      font-style: normal;
     }
     @media (max-width: 640px) {
       .feature-quote {
@@ -425,6 +469,10 @@
       .feature-story {
         margin: 2rem 1rem;
         padding: 1.2rem;
+      }
+      .feature-story-img {
+        max-width: 100%;
+        min-height: 200px;
       }
     }
   </style>
@@ -440,7 +488,7 @@
       <a href="#">Home</a>
       <a href="#books">Books</a>
       <a href="#about">About</a>
-	  <a href="ContactUs.html">Contact Us</a>
+	  <a href="ContactUs.html">Contact</a>
     </div>
 </nav>
 
@@ -448,25 +496,30 @@
     <h2 class="glow-fire">There is a world here.</h2>
     <p style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.9;">Enter it.</p>
 
-    <!-- Our Feature Story Section -->
+    <!-- Our Feature Story Section with rotating images (Legion.jpg, scene.png, scenes_collage.png) -->
     <div class="feature-story">
         <h2>📖 Our Feature Story</h2>
-        <img class="feature-story-img" src="Legion.jpg" alt="Legion cover art - mystical african epic" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20300%22%3E%3Crect%20width%3D%22500%22%20height%3D%22300%22%20fill%3D%22%231a1f2e%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23E8B86B%22%3ELegion.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div class="feature-quote"><h3>I am Legion</h3>“Some superheroes need a secret identity so they don't get laughed at”</div>
+        <div class="feature-carousel">
+            <img class="feature-story-img" id="rotatingFeatureImage" src="Legion.jpg" alt="Legion - African Epic" 
+                 onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20300%22%3E%3Crect%20width%3D%22500%22%20height%3D%22300%22%20fill%3D%22%231a1f2e%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23E8B86B%22%3EImage%20Missing%3C%2Ftext%3E%3C%2Fsvg%3E';">
+            <div class="carousel-indicators" id="imageIndicators"></div>
+            <div class="feature-quote">“Some superheroes need a secret identity so they don't get laughed at”</div>
+            <div class="carousel-caption" id="imageCaption">✨ Visual journey through African epics</div>
+        </div>
     </div>
 
     <div class="story-container">
       <div class="form-panel">
         <h3>✨ Unlock Your Free Chapter</h3>
-        <div class="form-sub">Enter your email & get exclusive access to African Epics</div>
+        <div class="form-sub">Enter your email to get exclusive access to African Epics — all stories unlock immediately</div>
 
         <form id="emailForm" method="POST">
           <input type="email" id="emailInput" name="email" placeholder="your@email.com" required autocomplete="email" />
           <button type="submit" id="submitBtn" class="cta">✨ Begin the Story</button>
 
-          <div id="successMsg" class="status-box success-box">✅ Access granted! You may now open story links below.</div>
+          <div id="successMsg" class="status-box success-box">✅ Access granted! All stories and book chapters are now unlocked.</div>
           <div id="errorMsg" class="status-box error-box">⚠️ Error: Please enter a valid email address.</div>
-          <div id="loadingMsg" class="status-box info-box">📡 Saving your email to the database...</div>
+          <div id="loadingMsg" class="status-box info-box">📡 Saving your email & unlocking content...</div>
         </form>
       </div>
 
@@ -479,12 +532,12 @@
           <a href="Penitent2.html" class="story-link disabled-link" data-url="Penitent2.html">🏺 The Penitent Chapter 2: Seed of Bliss</a>
           <a href="Penitent3.html" class="story-link disabled-link" data-url="Penitent3.html">🏺 The Penitent Chapter 3: Forsaken</a>
         </div>
-        <div class="small-note">🔓 Stories unlock automatically after email verification & database storage</div>
+        <div class="small-note">🔓 Stories unlock automatically after email verification. Click any link to read.</div>
       </div>
     </div>
 </section>
 
-<!-- BOOKS SECTION with FIXED GATED LINKS -->
+<!-- BOOKS SECTION with EMAIL-GATED LINKS -->
 <section id="books" class="books-section">
   <h2 class="section-title">Books</h2>
   <div class="books-grid">
@@ -542,11 +595,102 @@
 
 <script>
   // ============================================
-  // FIXED GATED LINKS — fully functional unlock system
+  // IMAGE CAROUSEL FOR FEATURE STORY (rotates Legion.jpg, scene.png, scenes_collage.png)
   // ============================================
+  const imageRotator = {
+    images: [
+      { src: "Legion.jpg", alt: "Legion - A Case of Too Many", caption: "🐘 Legion: I Am Legion — A hero's burden" },
+      { src: "scene.png", alt: "Dramatic scene from African Epics", caption: "🎭 Scene: Confrontation in the heart of myth" },
+      { src: "scenes_collage.png", alt: "Scenes Collage - Visual anthology", caption: "📜 Scenes Collage: Tapestry of forgotten tales" }
+    ],
+    currentIndex: 0,
+    intervalId: null,
+    imgElement: null,
+    indicatorsContainer: null,
+    captionElement: null,
+    
+    init() {
+      this.imgElement = document.getElementById('rotatingFeatureImage');
+      this.indicatorsContainer = document.getElementById('imageIndicators');
+      this.captionElement = document.getElementById('imageCaption');
+      if (!this.imgElement) return;
+      
+      this.createIndicators();
+      this.updateImage(0);
+      this.startRotation();
+    },
+    
+    createIndicators() {
+      if (!this.indicatorsContainer) return;
+      this.indicatorsContainer.innerHTML = '';
+      this.images.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.classList.add('indicator-dot');
+        if (idx === this.currentIndex) dot.classList.add('active');
+        dot.setAttribute('data-index', idx);
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.stopRotation();
+          this.updateImage(idx);
+          this.startRotation();
+        });
+        this.indicatorsContainer.appendChild(dot);
+      });
+    },
+    
+    updateImage(index) {
+      if (!this.imgElement) return;
+      const imageData = this.images[index];
+      if (!imageData) return;
+      
+      // Fade transition effect
+      this.imgElement.style.opacity = '0.5';
+      setTimeout(() => {
+        this.imgElement.src = imageData.src;
+        this.imgElement.alt = imageData.alt;
+        if (this.captionElement) {
+          this.captionElement.textContent = imageData.caption;
+        }
+        this.imgElement.style.opacity = '1';
+      }, 150);
+      
+      this.currentIndex = index;
+      this.updateActiveIndicator();
+    },
+    
+    updateActiveIndicator() {
+      if (!this.indicatorsContainer) return;
+      const dots = this.indicatorsContainer.querySelectorAll('.indicator-dot');
+      dots.forEach((dot, i) => {
+        if (i === this.currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    },
+    
+    nextImage() {
+      let nextIdx = (this.currentIndex + 1) % this.images.length;
+      this.updateImage(nextIdx);
+    },
+    
+    startRotation(intervalMs = 5000) {
+      if (this.intervalId) clearInterval(this.intervalId);
+      this.intervalId = setInterval(() => this.nextImage(), intervalMs);
+    },
+    
+    stopRotation() {
+      if (this.intervalId) {
+        clearInterval(this.intervalId);
+        this.intervalId = null;
+      }
+    }
+  };
   
-  // API endpoint (can be replaced with real backend)
-  const API_ENDPOINT = '/api/subscribe';
+  // ============================================
+  // EMAIL GATE SYSTEM — No story/book access without valid email submission
+  // ============================================
   
   // DOM Elements
   const successDiv = document.getElementById('successMsg');
@@ -560,7 +704,6 @@
   
   let accessGranted = false;
   let verifiedEmail = '';
-  let demoModeActive = false;
   
   function hideAllMessages() {
     successDiv.style.display = 'none';
@@ -581,20 +724,15 @@
     return /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email);
   }
   
-  // UNIVERSAL UNLOCK: enables both story vault AND all book .gated-link elements
   function unlockAllContent() {
     if (!accessGranted) return;
-    
-    // Show story panel
     if (storiesPanel) storiesPanel.style.display = 'block';
     
-    // 1. FIX STORY VAULT LINKS (story vault)
     storyLinkElements.forEach(link => {
       link.classList.remove('disabled-link');
       link.style.pointerEvents = 'auto';
       link.style.opacity = '1';
       const targetUrl = link.getAttribute('data-url');
-      // Remove previous listener duplication by cloning? but just override click with robust handling
       link.removeEventListener('click', link._listener);
       const clickHandler = (e) => {
         e.preventDefault();
@@ -613,104 +751,69 @@
       link._listener = clickHandler;
     });
     
-    // 2. FIX ALL GATED BOOK LINKS (every .gated-link inside books)
-    allGatedLinks.forEach(link => {
-      // Remove disabled class and forced inline styles
+    const currentGatedLinks = document.querySelectorAll('.gated-link');
+    currentGatedLinks.forEach(link => {
       link.classList.remove('disabled-gate');
       link.style.pointerEvents = 'auto';
       link.style.opacity = '1';
       link.style.cursor = 'pointer';
-      
-      // Clear previous event listeners to avoid duplicate
       const newLink = link.cloneNode(true);
       if (link.parentNode) link.parentNode.replaceChild(newLink, link);
-      
       newLink.classList.remove('disabled-gate');
       newLink.style.pointerEvents = 'auto';
       newLink.style.opacity = '1';
-      
-      // store the original href or chapter name
       const originalHref = newLink.getAttribute('href');
       const chapterName = newLink.innerText || newLink.getAttribute('data-chapter') || 'chapter';
-      
       newLink.addEventListener('click', (e) => {
         e.preventDefault();
         if (!accessGranted) {
-          showMessage(errorDiv, true, '🔒 Please verify your email first to unlock full stories.');
+          showMessage(errorDiv, true, '🔒 Please submit your email first to unlock full stories.');
           setTimeout(() => showMessage(errorDiv, false), 3000);
           return;
         }
-        // Access granted — open the story link in a new tab
         if (originalHref && originalHref !== '#') {
           window.open(originalHref, '_blank');
         } else {
-          alert(`✨ Access granted! "${chapterName}" will be available soon. Thank you for being part of Storyscape Africa.`);
+          alert(`✨ Access granted! "${chapterName}" will be available soon.`);
         }
       });
-      
-      // update reference in the allGatedLinks NodeList? We'll update globally later
-      const index = Array.from(allGatedLinks).indexOf(link);
-      if (index !== -1) allGatedLinks[index] = newLink;
     });
-    
-    // Re-query to keep consistency
-    window.allGatedLinksFresh = document.querySelectorAll('.gated-link');
   }
   
-  // Demo storage simulation (localStorage with CSV export)
-  function initDemoMode() {
-    if (demoModeActive) return;
-    demoModeActive = true;
-    console.log('Demo Mode active — emails stored locally.');
-    const demoNote = document.createElement('div');
-    demoNote.className = 'small-note';
-    demoNote.style.background = '#2a1f1a';
-    demoNote.style.padding = '0.5rem';
-    demoNote.style.borderRadius = '0.8rem';
-    demoNote.style.marginTop = '0.8rem';
-    demoNote.innerHTML = '📀 DEMO MODE: Emails saved locally. <button id="exportDemoBtn" style="background:#E8B86B; border:none; border-radius:1rem; padding:0.2rem 0.6rem; margin-left:0.5rem; cursor:pointer;">Export CSV</button>';
-    document.querySelector('.form-panel').appendChild(demoNote);
-    
-    const exportBtn = document.getElementById('exportDemoBtn');
-    if (exportBtn) {
-      exportBtn.addEventListener('click', () => {
-        const subscribers = JSON.parse(localStorage.getItem('storyscape_subscribers') || '[]');
-        if (subscribers.length === 0) {
-          alert('No emails stored yet. Submit an email first.');
-          return;
+  function lockAllContent() {
+    accessGranted = false;
+    if (storiesPanel) storiesPanel.style.display = 'none';
+    storyLinkElements.forEach(link => {
+      link.classList.add('disabled-link');
+      link.style.pointerEvents = 'none';
+      link.style.opacity = '0.5';
+    });
+    const freshGated = document.querySelectorAll('.gated-link');
+    freshGated.forEach(link => {
+      link.classList.add('disabled-gate');
+      link.style.pointerEvents = 'none';
+      link.style.opacity = '0.5';
+    });
+  }
+  
+  async function storeEmailAndUnlock(email) {
+    if (!validateEmail(email)) throw new Error('Invalid email format');
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        try {
+          const storedEmails = JSON.parse(localStorage.getItem('storyscape_verified_emails') || '[]');
+          if (!storedEmails.includes(email)) {
+            storedEmails.push(email);
+            localStorage.setItem('storyscape_verified_emails', JSON.stringify(storedEmails));
+          }
+          localStorage.setItem('storyscape_current_access', 'true');
+          localStorage.setItem('storyscape_current_email', email);
+          resolve({ success: true });
+        } catch (err) {
+          reject(err);
         }
-        let csv = 'Email,Timestamp,Source\n';
-        subscribers.forEach(s => {
-          csv += `"${s.email}","${s.timestamp}","${s.source}"\n`;
-        });
-        const blob = new Blob([csv], { type: 'text/csv' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'storyscape_subscribers.csv';
-        a.click();
-        URL.revokeObjectURL(blob);
-      });
-    }
-  }
-  
-  // Simulate backend call or actual fetch
-  async function storeEmailInDatabase(email) {
-    if (!validateEmail(email)) throw new Error('Invalid email');
-    // Try fetch to real backend, but if fails (network or missing) fallback handled in submit
-    try {
-      const response = await fetch(API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'storyscape_africa', timestamp: new Date().toISOString() })
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      if (!data.success) throw new Error(data.message || 'storage failed');
-      return { success: true, backend: true };
-    } catch (err) {
-      console.warn('Backend unreachable, fallback to demo', err);
-      throw new Error('DEMO_FALLBACK');
-    }
+      }, 800);
+    });
   }
   
   async function submitEmail(email) {
@@ -718,81 +821,52 @@
     showMessage(loadingDiv, true);
     submitBtn.disabled = true;
     emailInput.disabled = true;
-    
     try {
-      await storeEmailInDatabase(email);
+      await storeEmailAndUnlock(email);
       accessGranted = true;
       verifiedEmail = email;
       showMessage(loadingDiv, false);
-      showMessage(successDiv, true, `✅ Access granted! ${email} saved to database. You may now open all story links.`);
+      showMessage(successDiv, true, `✅ Access granted! ${email} saved. You may now open all story links and book chapters.`);
       unlockAllContent();
-      localStorage.setItem('storyscape_access', 'true');
-      localStorage.setItem('storyscape_email', email);
+      emailInput.value = '';
+      setTimeout(() => showMessage(successDiv, false), 5000);
     } catch (err) {
-      if (err.message === 'DEMO_FALLBACK' || err.message.includes('Failed to fetch') || confirm('⚠️ Backend not configured. Use offline demo? (Emails saved locally, CSV export available)')) {
-        if (!demoModeActive) initDemoMode();
-        const subscribers = JSON.parse(localStorage.getItem('storyscape_subscribers') || '[]');
-        if (!subscribers.find(s => s.email === email)) {
-          subscribers.push({ email: email, timestamp: new Date().toISOString(), source: 'demo_mode' });
-          localStorage.setItem('storyscape_subscribers', JSON.stringify(subscribers));
-        }
-        accessGranted = true;
-        verifiedEmail = email;
-        showMessage(loadingDiv, false);
-        showMessage(successDiv, true, `✨ [Demo] ${email} saved locally. Stories + book chapters UNLOCKED.`);
-        unlockAllContent();
-        localStorage.setItem('storyscape_access', 'true');
-        localStorage.setItem('storyscape_email', email);
-      } else {
-        showMessage(loadingDiv, false);
-        showMessage(errorDiv, true, `❌ ${err.message || 'Failed to save email. Please try again.'}`);
-        setTimeout(() => showMessage(errorDiv, false), 4000);
-        accessGranted = false;
-      }
+      showMessage(loadingDiv, false);
+      showMessage(errorDiv, true, `❌ ${err.message || 'Failed to save email.'}`);
+      setTimeout(() => showMessage(errorDiv, false), 4000);
+      lockAllContent();
     } finally {
       submitBtn.disabled = false;
       emailInput.disabled = false;
-      emailInput.value = '';
     }
   }
   
-  function restoreAccess() {
-    const prevAccess = localStorage.getItem('storyscape_access');
-    const prevEmail = localStorage.getItem('storyscape_email');
-    if (prevAccess === 'true' && prevEmail) {
+  function restoreAccessFromStorage() {
+    const hasAccess = localStorage.getItem('storyscape_current_access');
+    const savedEmail = localStorage.getItem('storyscape_current_email');
+    if (hasAccess === 'true' && savedEmail && validateEmail(savedEmail)) {
       accessGranted = true;
-      verifiedEmail = prevEmail;
+      verifiedEmail = savedEmail;
       unlockAllContent();
-      showMessage(successDiv, true, `🔓 Welcome back! Access restored for ${prevEmail}. Stories unlocked.`);
+      showMessage(successDiv, true, `🔓 Welcome back! Access restored. Stories unlocked.`);
       setTimeout(() => showMessage(successDiv, false), 4000);
-      if (localStorage.getItem('storyscape_subscribers') && !demoModeActive) initDemoMode();
     } else {
-      // initially disable all gated links visually before unlock
-      allGatedLinks.forEach(link => {
-        link.classList.add('disabled-gate');
-        link.style.pointerEvents = 'none';
-        link.style.opacity = '0.5';
-      });
-      storyLinkElements.forEach(link => {
-        link.classList.add('disabled-link');
-        link.style.pointerEvents = 'none';
-      });
+      lockAllContent();
     }
   }
   
-  // Form handler
   const form = document.getElementById('emailForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = emailInput.value.trim();
       if (!email) {
-        showMessage(errorDiv, true, '⚠️ Please enter an email address.');
+        showMessage(errorDiv, true, '⚠️ Please enter an email address to unlock stories.');
         setTimeout(() => showMessage(errorDiv, false), 2500);
         return;
       }
       if (!validateEmail(email)) {
-        showMessage(errorDiv, true, '⚠️ Please enter a valid email address (e.g., name@domain.com).');
+        showMessage(errorDiv, true, '⚠️ Please enter a valid email address.');
         setTimeout(() => showMessage(errorDiv, false), 3000);
         return;
       }
@@ -800,39 +874,39 @@
     });
   }
   
-  // Additional safety: if any gated link is clicked before unlock, show prompt.
-  // But restoreAccess handles initial state; unlockAllContent will enable them.
-  // Also we attach a global catch for dynamic links.
   document.body.addEventListener('click', (e) => {
-    const target = e.target.closest('.gated-link');
-    if (target && !accessGranted) {
+    const targetGate = e.target.closest('.gated-link');
+    if (targetGate && !accessGranted) {
       e.preventDefault();
-      showMessage(errorDiv, true, '🔐 Please submit your email to unlock stories and book chapters.');
+      showMessage(errorDiv, true, '🔐 Please enter your email first to unlock all stories and book chapters.');
       setTimeout(() => showMessage(errorDiv, false), 3000);
+      return;
     }
-    const storyTarget = e.target.closest('#storyLinksContainer .story-link');
-    if (storyTarget && !accessGranted) {
+    const targetStory = e.target.closest('#storyLinksContainer .story-link');
+    if (targetStory && !accessGranted) {
       e.preventDefault();
       showMessage(errorDiv, true, '🔐 Enter your email to unlock the story vault.');
       setTimeout(() => showMessage(errorDiv, false), 3000);
+      return;
     }
   }, true);
   
-  restoreAccess();
+  lockAllContent();
+  restoreAccessFromStorage();
   
-  // Add backend note if needed
-  if (API_ENDPOINT === '/api/subscribe') {
-    const configNote = document.createElement('div');
-    configNote.className = 'small-note';
-    configNote.style.marginTop = '0.5rem';
-    configNote.style.background = '#11161fcc';
-    configNote.style.padding = '0.4rem';
-    configNote.style.borderRadius = '0.6rem';
-    configNote.innerHTML = '🔧 Backend API ready: replace API_ENDPOINT to store emails in database + export CSV. All gated links fixed.';
-    document.querySelector('.form-panel')?.appendChild(configNote);
-  }
+  // Initialize image rotator after DOM ready
+  document.addEventListener('DOMContentLoaded', () => {
+    imageRotator.init();
+  });
   
-  console.log('✅ Storyscape Africa: gated links fully functional — email unlock enables ALL story links & book chapters');
+  const emailNote = document.createElement('div');
+  emailNote.className = 'small-note';
+  emailNote.style.marginTop = '0.6rem';
+  emailNote.style.background = '#1e2a36';
+  emailNote.style.padding = '0.3rem';
+  emailNote.style.borderRadius = '1rem';
+  emailNote.innerHTML = '📧 Email required to unlock all stories. Your email is stored safely.';
+  document.querySelector('.form-panel')?.appendChild(emailNote);
 </script>
 </body>
 </html>
